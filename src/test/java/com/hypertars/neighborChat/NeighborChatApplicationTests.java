@@ -1,8 +1,8 @@
-package com.hypertars.neighborchat;
+package com.hypertars.neighborChat;
 
-import com.hypertars.neighborchat.dao.BlocksDAO;
-import com.hypertars.neighborchat.dao.UsersDAO;
-import com.hypertars.neighborchat.model.Users;
+import com.hypertars.neighborChat.dao.BlocksDAO;
+import com.hypertars.neighborChat.dao.UsersDAO;
+import com.hypertars.neighborChat.model.Users;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@MapperScan("com.hypertars.neighborchat.dao")
+@MapperScan("com.hypertars.neighborChat.dao")
 class NeighborChatApplicationTests {
 
     @Resource

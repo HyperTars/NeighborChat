@@ -1,13 +1,13 @@
-package com.hypertars.neighborchat.service.user.impl;
+package com.hypertars.neighborChat.service.user.impl;
 
-import com.hypertars.neighborchat.dao.BlocksDAO;
-import com.hypertars.neighborchat.dao.UsersDAO;
-import com.hypertars.neighborchat.enums.NBCResultCodeEnum;
-import com.hypertars.neighborchat.exception.NBCException;
-import com.hypertars.neighborchat.model.Users;
-import com.hypertars.neighborchat.service.user.UserService;
-import com.hypertars.neighborchat.utils.AssertUtils;
-import com.hypertars.neighborchat.utils.StringUtils;
+import com.hypertars.neighborChat.dao.BlocksDAO;
+import com.hypertars.neighborChat.dao.UsersDAO;
+import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
+import com.hypertars.neighborChat.exception.NBCException;
+import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.utils.AssertUtils;
+import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

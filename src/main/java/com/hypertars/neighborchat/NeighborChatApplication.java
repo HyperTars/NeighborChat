@@ -1,4 +1,4 @@
-package com.hypertars.neighborchat;
+package com.hypertars.neighborChat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

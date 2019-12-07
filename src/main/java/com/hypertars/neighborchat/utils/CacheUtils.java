@@ -1,4 +1,4 @@
-package com.hypertars.neighborchat.utils;
+package com.hypertars.neighborChat.utils;
 
 import com.alibaba.fastjson.JSONObject;
 /**

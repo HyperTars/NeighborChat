@@ -1,6 +1,6 @@
-package com.hypertars.neighborchat.enums;
+package com.hypertars.neighborChat.enums;
 
-import com.hypertars.neighborchat.utils.StringUtils;
+import com.hypertars.neighborChat.utils.StringUtils;
 
 public enum  NBCResultCodeEnum {
 

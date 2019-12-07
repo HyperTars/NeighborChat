@@ -1,6 +1,6 @@
-package com.hypertars.neighborchat.exception;
+package com.hypertars.neighborChat.exception;
 
-import com.hypertars.neighborchat.enums.NBCResultCodeEnum;
+import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import lombok.Data;
 
 @Data

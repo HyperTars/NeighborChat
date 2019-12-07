@@ -1,6 +1,6 @@
-package com.hypertars.neighborchat.service.user;
+package com.hypertars.neighborChat.service.user;
 
-import com.hypertars.neighborchat.model.Users;
+import com.hypertars.neighborChat.model.Users;
 
 public interface UserService {
 

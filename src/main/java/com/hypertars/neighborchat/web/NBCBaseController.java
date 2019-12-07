@@ -1,11 +1,11 @@
-package com.hypertars.neighborchat.web;
+package com.hypertars.neighborChat.web;
 
-import com.hypertars.neighborchat.enums.NBCResultCodeEnum;
-import com.hypertars.neighborchat.exception.NBCException;
-import com.hypertars.neighborchat.model.Users;
-import com.hypertars.neighborchat.service.user.UserService;
-import com.hypertars.neighborchat.utils.AssertUtils;
-import com.hypertars.neighborchat.utils.StringUtils;
+import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
+import com.hypertars.neighborChat.exception.NBCException;
+import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.utils.AssertUtils;
+import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.ui.ModelMap;
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;

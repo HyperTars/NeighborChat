@@ -1,7 +1,7 @@
-package com.hypertars.neighborchat.utils;
+package com.hypertars.neighborChat.utils;
 
-import com.hypertars.neighborchat.enums.NBCResultCodeEnum;
-import com.hypertars.neighborchat.exception.NBCException;
+import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
+import com.hypertars.neighborChat.exception.NBCException;
 
 /**
  * 断言工具

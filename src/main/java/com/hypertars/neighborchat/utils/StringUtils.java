@@ -1,4 +1,4 @@
-package com.hypertars.neighborchat.utils;
+package com.hypertars.neighborChat.utils;
 
 public class StringUtils {
 

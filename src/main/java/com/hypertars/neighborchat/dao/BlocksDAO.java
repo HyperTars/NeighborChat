@@ -1,6 +1,6 @@
-package com.hypertars.neighborchat.dao;
+package com.hypertars.neighborChat.dao;
 
-import com.hypertars.neighborchat.model.Blocks;
+import com.hypertars.neighborChat.model.Blocks;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

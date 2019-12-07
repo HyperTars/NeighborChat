@@ -1,4 +1,4 @@
-package com.hypertars.neighborchat.web;
+package com.hypertars.neighborChat.web;
 
 import lombok.Data;
 
