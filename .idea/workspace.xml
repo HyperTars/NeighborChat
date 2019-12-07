@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../PhpStorm/DB_w3/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PhpStorm/DB_w3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PhpStorm/DB_w3/p1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../neighborChat/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../neighborChat_Spring/web/WEB-INF/web.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -85,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575692491701</updated>
       <workItem from="1575692494227" duration="3746000" />
+      <workItem from="1575699480176" duration="556000" />
     </task>
     <servers />
   </component>
