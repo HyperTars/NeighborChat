@@ -8,3 +8,4 @@ import org.apache.ibatis.annotations.Param;
 public interface FriendsDAO {
     Friends selectFriends(@Param("uidA") int uidA, @Param("uidB") int uidB);
 }
+
