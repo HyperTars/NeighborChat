@@ -2,7 +2,7 @@ package com.hypertars.neighborChat.web;
 
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
-import com.hypertars.neighborChat.model.User;
+import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.user.UserService;
 import com.hypertars.neighborChat.utils.AssertUtils;
 import com.hypertars.neighborChat.utils.StringUtils;
@@ -17,7 +17,7 @@ public class NBCBaseController {
     private UserService userService;
 
     /** 登录用户 */
-    protected ThreadLocal<User> loginUsers = new ThreadLocal<>();
+    protected ThreadLocal<Users> loginUsers = new ThreadLocal<>();
 
     /** cookie user */
     private static String USER_COOKIE = "userSession";
@@ -75,7 +75,7 @@ public class NBCBaseController {
             AssertUtils.stringNotEmpty(session);
 
             // 取出缓存中的user
-            User user = userService.getUserBySession(session);
+            Users user = userService.getUserBySession(session);
             AssertUtils.assertNotNull(user);
             loginUsers.set(user);
 

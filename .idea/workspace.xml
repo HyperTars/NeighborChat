@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Block.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCBaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/dao/BlockDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/model/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/user/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/NBCBaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/NBCBaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/BlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/BlockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/hypertars/neighborChat/NeighborChatApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/hypertars/neighborChat/NeighborChatApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -33,7 +52,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1UdhgbVLckJulmXwyZHexBklZ01" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -83,50 +104,102 @@
       <option name="presentableId" value="Default" />
       <updated>1575692491701</updated>
       <workItem from="1575692494227" duration="3746000" />
-      <workItem from="1575699480176" duration="2142000" />
+      <workItem from="1575699480176" duration="3767000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1575725887937</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575725887937</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1575694230434">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1575694230434" />
-    <state width="846" height="246" key="GridCell.Tab.0.bottom" timestamp="1575725758593">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1575727302587">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758593" />
-    <state width="846" height="246" key="GridCell.Tab.0.center" timestamp="1575725758585">
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575727302587" />
+    <state width="1326" height="246" key="GridCell.Tab.0.bottom" timestamp="1575727078504">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758585" />
-    <state width="846" height="246" key="GridCell.Tab.0.left" timestamp="1575725758567">
+    <state width="1326" height="246" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078504" />
+    <state width="1326" height="246" key="GridCell.Tab.0.center" timestamp="1575727078503">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758567" />
-    <state width="846" height="246" key="GridCell.Tab.0.right" timestamp="1575725758593">
+    <state width="1326" height="246" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078503" />
+    <state width="1326" height="246" key="GridCell.Tab.0.left" timestamp="1575727078503">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758593" />
-    <state width="846" height="246" key="GridCell.Tab.1.bottom" timestamp="1575725758594">
+    <state width="1326" height="246" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078503" />
+    <state width="1326" height="246" key="GridCell.Tab.0.right" timestamp="1575727078504">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758594" />
-    <state width="846" height="246" key="GridCell.Tab.1.center" timestamp="1575725758593">
+    <state width="1326" height="246" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078504" />
+    <state width="1326" height="246" key="GridCell.Tab.1.bottom" timestamp="1575727078506">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758593" />
-    <state width="846" height="246" key="GridCell.Tab.1.left" timestamp="1575725758593">
+    <state width="1326" height="246" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078506" />
+    <state width="1326" height="246" key="GridCell.Tab.1.center" timestamp="1575727078505">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758593" />
-    <state width="846" height="246" key="GridCell.Tab.1.right" timestamp="1575725758594">
+    <state width="1326" height="246" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078505" />
+    <state width="1326" height="246" key="GridCell.Tab.1.left" timestamp="1575727078504">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="846" height="246" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575725758594" />
+    <state width="1326" height="246" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078504" />
+    <state width="1326" height="246" key="GridCell.Tab.1.right" timestamp="1575727078505">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1326" height="246" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575727078505" />
     <state width="1326" height="320" key="GridCell.Tab.2.bottom" timestamp="1575696250829">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -143,13 +216,17 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1326" height="320" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1575726176360">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1575726176360" />
     <state x="593" y="401" key="com.intellij.ide.util.TipDialog" timestamp="1575699482799">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="593" y="401" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575699482799" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1575695580760">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1575726665381">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1575695580760" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1575726665381" />
   </component>
 </project>

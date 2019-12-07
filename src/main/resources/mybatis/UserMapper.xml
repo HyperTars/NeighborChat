@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hypertars.neighborChat.UserDAO">
+<mapper namespace="com.hypertars.neighborChat.UsersDAO">
 
     <sql id="UserCols">
         uname, passwd, fName, lName, addr1, addr2, intro, photo, nRange, lastLog
@@ -10,7 +10,7 @@
         Users
     </sql>
 
-    <select id="selectByUid" resultType="com.hypertars.neighborChat.model.User" >
+    <select id="selectByUid" resultType="com.hypertars.neighborChat.model.Users" >
         SELECT
         uid, <include refid="UserCols" />
         FROM
@@ -19,7 +19,7 @@
         uid = #{uid}
     </select>
 
-    <insert id="insert" parameterType="com.hypertars.neighborChat.model.User" useGeneratedKeys="true"
+    <insert id="insert" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
             keyProperty="uid">
         INSERT INTO
         <include refid="UserTable"/>
@@ -31,7 +31,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.hypertars.neighborChat.model.User">
+    <update id="update" parameterType="com.hypertars.neighborChat.model.Users">
         UPDATE
         <include refid="UserTable"/>
         <set>

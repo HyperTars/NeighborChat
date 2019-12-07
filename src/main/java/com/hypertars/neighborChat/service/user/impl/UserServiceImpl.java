@@ -1,10 +1,10 @@
 package com.hypertars.neighborChat.service.user.impl;
 
-import com.hypertars.neighborChat.dao.BlockDAO;
-import com.hypertars.neighborChat.dao.UserDAO;
+import com.hypertars.neighborChat.dao.BlocksDAO;
+import com.hypertars.neighborChat.dao.UsersDAO;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
-import com.hypertars.neighborChat.model.User;
+import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.user.UserService;
 import com.hypertars.neighborChat.utils.AssertUtils;
 import com.hypertars.neighborChat.utils.StringUtils;
@@ -19,22 +19,22 @@ public class UserServiceImpl implements UserService {
 
     /** user dao */
     @Resource
-    private UserDAO userDAO;
+    private UsersDAO usersDAO;
 
     /** block dao */
     @Resource
-    private BlockDAO blockDAO;
+    private BlocksDAO blocksDAO;
 
     /** users session map */
-    private ConcurrentHashMap<String, User> userMap = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, Users> userMap = new ConcurrentHashMap<>();
     private int maxLoginUsers = 100;
 
     @Override
-    public String loginIn(User user) {
+    public String loginIn(Users user) {
 
         // 1. check pass
         AssertUtils.assertNotNull(user);
-        User userSelected = selectByUid(user.getUid());
+        Users userSelected = selectByUid(user.getUid());
         AssertUtils.assertNotNull(userSelected);
         String session = getRandomString(30);
 
@@ -80,26 +80,26 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User getUserBySession(String session) {
+    public Users getUserBySession(String session) {
         return userMap.get(session);
     }
 
     @Override
-    public User selectByUid(int uid) {
-        return userDAO.selectByUid(uid);
+    public Users selectByUid(int uid) {
+        return usersDAO.selectByUid(uid);
     }
 
     @Override
-    public int insert(User user) {
+    public int insert(Users user) {
         checkUserInfo(user);
-        return userDAO.insert(user);
+        return usersDAO.insert(user);
     }
 
     /**
      * check whther user info is valid
      * @param user user model
      */
-    private void checkUserInfo(User user) {
+    private void checkUserInfo(Users user) {
         if (user == null || !(StringUtils.isNotEmpty(user.getUname()) &&
                 StringUtils.isNotEmpty(user.getPasswd()) &&
                 StringUtils.isNotEmpty(user.getFName()) &&
@@ -109,11 +109,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int update(User user) {
+    public int update(Users user) {
         if (user == null) {
             return -1;
         }
-        return userDAO.update(user);
+        return usersDAO.update(user);
     }
 
     @Override

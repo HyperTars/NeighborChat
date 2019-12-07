@@ -1,6 +1,6 @@
 package com.hypertars.neighborChat.service.user;
 
-import com.hypertars.neighborChat.model.User;
+import com.hypertars.neighborChat.model.Users;
 
 public interface UserService {
 
@@ -9,34 +9,34 @@ public interface UserService {
      * @param user user model
      * @return 1, if success;0 or -1, else
      */
-    int insert(User user);
+    int insert(Users user);
 
     /**
      * update an user info to db
      * @param user user model
      * @return 1, if success;0 or -1, else
      */
-    int update(User user);
+    int update(Users user);
 
     /**
      * select by user id
      * @param uid user id
      * @return user
      */
-    User selectByUid(int uid);
+    Users selectByUid(int uid);
 
     /**
      * login in
      * @param user attr: uid, pass needed
      */
-    String loginIn(User user);
+    String loginIn(Users user);
 
     /**
      * get user by session value
      * @param session session
      * @return user
      */
-    User getUserBySession(String session);
+    Users getUserBySession(String session);
 
     /**
      * join in a block
