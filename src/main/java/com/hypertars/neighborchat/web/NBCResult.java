@@ -6,8 +6,6 @@ import java.io.Serializable;
 
 /**
  * web result
- * @author christopher
- * @since 2019/12/7 0:44
  */
 @Data
 public class NBCResult<T> implements Serializable {
