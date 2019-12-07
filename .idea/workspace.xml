@@ -1,53 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/DB_Project.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/createDB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/Controller/UserController.java~Stashed changes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/NeighborChatApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/NeighborChatApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlockApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlockApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlocksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/HoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/HoodsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MailBoxDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MailBoxDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MessageDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/NeighborsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/NeighborsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/RecipientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/RecipientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/ReplyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/ReplyDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UserBlockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/enums/NBCResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/enums/NBCResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/exception/NBCException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/exception/NBCException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/BlockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/BlockApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Blocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Blocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/FriendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/FriendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Friends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Hoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Hoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/MailBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Neighbors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Neighbors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Recipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/UserBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/UserBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/AssertUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/AssertUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/CacheUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/CacheUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/Controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCBaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCLogicCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCLogicCallBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborchat/NeighborChatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +166,7 @@
       <workItem from="1575692494227" duration="3746000" />
       <workItem from="1575699480176" duration="5906000" />
       <workItem from="1575739171593" duration="5673000" />
-      <workItem from="1575758828238" duration="771000" />
+      <workItem from="1575758828238" duration="1514000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -261,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575729363734</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1575759621216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575759621216</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -349,46 +312,46 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="428" y="372" width="522" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.1027@0.23.1680.1027" timestamp="1575759218795" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1575759598855">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1575759620550">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598855" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575759620550" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1575759560519">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575759560519" />
-    <state width="1172" height="251" key="GridCell.Tab.0.bottom" timestamp="1575759598936">
+    <state width="1172" height="251" key="GridCell.Tab.0.bottom" timestamp="1575761265827">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598936" />
-    <state width="1172" height="251" key="GridCell.Tab.0.center" timestamp="1575759598935">
+    <state width="1172" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265827" />
+    <state width="1172" height="251" key="GridCell.Tab.0.center" timestamp="1575761265826">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598935" />
-    <state width="1172" height="251" key="GridCell.Tab.0.left" timestamp="1575759598934">
+    <state width="1172" height="251" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265826" />
+    <state width="1172" height="251" key="GridCell.Tab.0.left" timestamp="1575761265825">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598934" />
-    <state width="1172" height="251" key="GridCell.Tab.0.right" timestamp="1575759598935">
+    <state width="1172" height="251" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265825" />
+    <state width="1172" height="251" key="GridCell.Tab.0.right" timestamp="1575761265826">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598935" />
-    <state width="1172" height="251" key="GridCell.Tab.1.bottom" timestamp="1575759598938">
+    <state width="1172" height="251" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265826" />
+    <state width="1172" height="251" key="GridCell.Tab.1.bottom" timestamp="1575761265829">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598938" />
-    <state width="1172" height="251" key="GridCell.Tab.1.center" timestamp="1575759598937">
+    <state width="1172" height="251" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265829" />
+    <state width="1172" height="251" key="GridCell.Tab.1.center" timestamp="1575761265828">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598937" />
-    <state width="1172" height="251" key="GridCell.Tab.1.left" timestamp="1575759598936">
+    <state width="1172" height="251" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265828" />
+    <state width="1172" height="251" key="GridCell.Tab.1.left" timestamp="1575761265827">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598936" />
-    <state width="1172" height="251" key="GridCell.Tab.1.right" timestamp="1575759598937">
+    <state width="1172" height="251" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265827" />
+    <state width="1172" height="251" key="GridCell.Tab.1.right" timestamp="1575761265828">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1172" height="251" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575759598937" />
+    <state width="1172" height="251" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575761265828" />
     <state width="1326" height="320" key="GridCell.Tab.2.bottom" timestamp="1575696250829">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -413,10 +376,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="143" y="213" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1575758921391" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1575729371964">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1575759638570">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1575729371964" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1575759638570" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
