@@ -10,6 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
     @RequestMapping("helloworld")
     public String getUserById(HttpServletRequest request) {
-        return "ok";
+        return "oJBk";
     }
 }
