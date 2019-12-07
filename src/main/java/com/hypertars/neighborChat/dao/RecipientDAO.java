@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface RecipientDAO {
+    Recipient selectByMsgid(@Param("msgid") int msgid);
 }

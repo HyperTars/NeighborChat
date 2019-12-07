@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface MailBoxDAO {
+    MailBox selectMailBox(@Param("msgid") int msgid, @Param("uid") int uid);
 }
