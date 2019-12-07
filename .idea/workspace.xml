@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Friends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Hoods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/MailBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Neighbors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Recipient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Reply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/UserBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendApplicationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MessageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/NeighborsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/RecipientDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/ReplyDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +24,8 @@
         <option value="Enum" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -99,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575692491701</updated>
       <workItem from="1575692494227" duration="3746000" />
-      <workItem from="1575699480176" duration="4633000" />
+      <workItem from="1575699480176" duration="5093000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -115,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575727341580</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1575728208314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575728208314</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1575728239315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575728239315</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,10 +177,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1575694230434" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1575728214398">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1575728239058">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575728214398" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1575728239058" />
     <state width="1326" height="246" key="GridCell.Tab.0.bottom" timestamp="1575727349149">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -223,10 +233,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="393" y="291" key="RollbackChangesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575727631995" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1575726176360">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1575728247758">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1575726176360" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1575728247758" />
     <state x="593" y="401" key="com.intellij.ide.util.TipDialog" timestamp="1575699482799">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
