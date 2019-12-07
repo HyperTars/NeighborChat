@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hypertars.neighborchat.dao.UsersDAO">
+
+    <sql id="UserCols">
+        uname, passwd, fName, lName, addr1, addr2, intro, photo, nRange, lastLog
+     </sql>
+
+    <sql id="UserTable">
+        Users
+    </sql>
+
+    <select id="selectByUid" resultType="com.hypertars.neighborchat.model.Users" parameterType="java.lang.Integer">
+        SELECT
+        uid, <include refid="UserCols" />
+        FROM
+        <include refid="UserTable" />
+        WHERE
+        uid = #{uid}
+    </select>
+
+    <insert id="insert" parameterType="com.hypertars.neighborchat.model.Users" useGeneratedKeys="true"
+            keyProperty="uid">
+        INSERT INTO
+        <include refid="UserTable"/>
+        (
+        <include refid="UserCols"/>
+        )
+        VALUES (
+        #{uname}, #{passwd}, #{fName}, #{lName}, #{addr1}, #{addr2}, #{intro}, #{photo}, #{nRange}, #{lastLog}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.hypertars.neighborchat.model.Users">
+        UPDATE
+        <include refid="UserTable"/>
+        <set>
+            <if test="uname != null">uname = #{uname},</if>
+            <if test="passwd != null">passwd = #{passwd},</if>
+            <if test="fName != null">fName = #{fName},</if>
+            <if test="lName != null">lName = #{lName},</if>
+            <if test="addr1 != null">addr1 = #{addr1},</if>
+            <if test="addr2!= null">addr2 = #{addr2},</if>
+            <if test="intro!=null">intro=#{intro},</if>
+            <if test="photo != null">photo = #{photo},</if>
+            <if test="nRange != null">nRange = #{nRange},</if>
+            <if test="lastLog != null">lastLog = #{lastLog},</if>
+            uid = #{uid}
+        </set>
+        WHERE uid = #{uid};
+    </update>
+
+
+
+</mapper>
