@@ -7,6 +7,7 @@ import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,9 @@ public class UserController extends NBCBaseController {
     private UserService userService;
 
     @GetMapping("loginIn")
+    @RequestMapping()
+    @PostMapping
+    /* @RequestMapping */
     public String loginIn(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("uid");
         int uid = Integer.parseInt(id);
