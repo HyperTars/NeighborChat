@@ -2,12 +2,10 @@
      "use strict";
      // toat popup js
      $.toast({
-         heading: 'Welcome to Ample admin',
-         text: 'Use the predefined ones, or specify a custom position object.',
+         heading: 'Welcome to neighborChat!',
          position: 'top-right',
          loaderBg: '#fff',
-         icon: 'warning',
-         hideAfter: 3500,
+         hideAfter: 3000,
          stack: 6
      })
 

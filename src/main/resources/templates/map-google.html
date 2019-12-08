@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../static/plugins/images/favicon.png">
-    <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Google Map</title>
     <!-- Bootstrap Core CSS -->
     <link href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -19,6 +19,7 @@
     <link href="../static/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="../static/css/colors/default.css" id="theme" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,19 +48,7 @@
             <div class="navbar-header">
                 <div class="top-left-part">
                     <!-- Logo -->
-                    <a class="logo" href="dashboard.html">
-                        <!-- Logo icon image, you can use font-icon also --><b>
-                            <!--This is dark logo icon--><img src="../static/plugins/images/admin-logo.png" alt="home"
-                                class="dark-logo" />
-                            <!--This is light logo icon--><img src="../static/plugins/images/admin-logo-dark.png" alt="home"
-                                class="light-logo" />
-                        </b>
-                        <!-- Logo text image you can use text also --><span class="hidden-xs">
-                            <!--This is dark logo text--><img src="../static/plugins/images/admin-text.png" alt="home"
-                                class="dark-logo" />
-                            <!--This is light logo text--><img src="../static/plugins/images/admin-text-dark.png" alt="home"
-                                class="light-logo" />
-                        </span> </a>
+
                 </div>
                 <!-- /Logo -->
                 <ul class="nav navbar-top-links navbar-right pull-right">
@@ -101,31 +90,27 @@
                         <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw"
                                 aria-hidden="true"></i>Profile</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw"
                                 aria-hidden="true"></i>Basic Table</a>
                     </li>
                     <li>
                         <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw"
                                 aria-hidden="true"></i>Icons</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw"
                                 aria-hidden="true"></i>Google Map</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw"
                                 aria-hidden="true"></i>Blank Page</a>
                     </li>
                     <li>
                         <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw"
                                 aria-hidden="true"></i>Error 404</a>
-                    </li>
+                    </li> -->
                 </ul>
-                <div class="center p-20">
-                    <a href="#" target="_blank"
-                        class="btn btn-danger btn-block waves-effect waves-light">Upgrade to Pro</a>
-                </div>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -140,24 +125,14 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Google Map</h4>
                     </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <a href="#" target="_blank"
-                            class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Upgrade
-                            to Pro</a>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Dashboard</a></li>
-                            <li class="active">Google Map</li>
-                        </ol>
-                    </div>
-                    <!-- /.col-lg-12 -->
                 </div>
                 <!-- row -->
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Simple Basic Map</h3>
-                            <div id="gmaps-simple" class="gmaps"></div>
-                            <!-- <div id = "Google_Map"></div> -->
+                            <h3 class="box-title">Map</h3>
+                            <!-- <div id="gmaps-simple" class="gmaps"></div> -->
+                            <div id="map" class="gmaps"></div>
                         </div>
                     </div>
                 </div>
@@ -180,21 +155,9 @@
     <script src="../static/js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../static/js/custom.min.js"></script>
-    <!-- google maps api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBLTM5-7zsSoCgnvkpJURRTbkZmrMhc84&callback=initMap" async defer></script>
-    <script>
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('Google_Map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8,
-            });
-        }
-        initMap();
-    </script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="../static/plugins/bower_components/gmaps/gmaps.min.js"></script>
-    <script src="../static/plugins/bower_components/gmaps/jquery.gmaps.js"></script>
+
+    <script src = "../static/js/myMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuumuAQ19P2grC89fnlOD9aRgJHC48gw&callback=initMap" async defer></script>
 </body>
 
 </html>
