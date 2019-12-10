@@ -16,4 +16,7 @@ public class UserBlock {
     /** ubtime */
     private Date ubTime;
 
+    /** status */
+    private Boolean status;
+
 }

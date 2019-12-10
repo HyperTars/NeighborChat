@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hypertars.neighborChat.dao.UserBlockDAO">
+
+    <select id="getUserBlocksByBid" resultType="com.hypertars.neighborChat.model.UserBlock" >
+        select * from UserBlock where bid = #{bid} and status = true
+    </select>
+
+    <select id="getUserBlocksByUid" resultType="com.hypertars.neighborChat.model.UserBlock" >
+        select * from UserBlock where uid = #{uid} and status = true
+    </select>
+
+    <select id="getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" >
+        select * from Blocks where hid = #{hid}
+    </select>
+
+</mapper>

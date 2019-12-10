@@ -11,7 +11,7 @@ public class Blocks {
     private String bname;
 
     /** hid */
-    private String hid;
+    private int hid;
 
     /** SW */
     private String SW;

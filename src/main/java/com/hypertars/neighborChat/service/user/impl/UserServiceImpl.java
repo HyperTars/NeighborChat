@@ -1,9 +1,13 @@
 package com.hypertars.neighborChat.service.user.impl;
 
 import com.hypertars.neighborChat.dao.BlocksDAO;
+import com.hypertars.neighborChat.dao.UserBlockDAO;
 import com.hypertars.neighborChat.dao.UsersDAO;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
+import com.hypertars.neighborChat.model.Blocks;
+import com.hypertars.neighborChat.model.Hoods;
+import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.user.UserService;
 import com.hypertars.neighborChat.utils.AssertUtils;
@@ -11,7 +15,7 @@ import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
@@ -25,6 +29,9 @@ public class UserServiceImpl implements UserService {
     @Resource
     private BlocksDAO blocksDAO;
 
+    @Resource
+    private UserBlockDAO userBlockDAO;
+
     /** users session map */
     private ConcurrentHashMap<String, Users> userMap = new ConcurrentHashMap<>();
     private int maxLoginUsers = 100;
@@ -34,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
         // 1. check pass
         AssertUtils.assertNotNull(user);
-        Users userSelected = selectByUid(user.getUid());
+        Users userSelected = usersDAO.selectByUName(user.getUname());
         AssertUtils.assertNotNull(userSelected);
         String session = getRandomString(30);
 
@@ -88,6 +95,31 @@ public class UserServiceImpl implements UserService {
     public Users selectByUid(int uid) {
         return usersDAO.selectByUid(uid);
 //        return null;
+    }
+
+    @Override
+    public List<Users> getUsersByBid(int bid) {
+        List<UserBlock> userBlocks = userBlockDAO.getUserBlocksByBid(bid);
+        List<Users> users = new ArrayList<>();
+        for (UserBlock userBlock: userBlocks) {
+            users.add(usersDAO.selectByUid(userBlock.getUid()));
+        }
+        return users;
+    }
+
+    @Override
+    public UserBlock getUserBlockByUid(int uid) {
+        return userBlockDAO.getUserBlocksByUid(uid);
+    }
+
+    @Override
+    public Map<String, List<Users>> getUsersByHid(int hid) {
+        List<Blocks> blocks = userBlockDAO.getBlocksByHid(hid);
+        Map<String, List<Users>> usersByBlock = new HashMap<>();
+        for (Blocks block: blocks) {
+            usersByBlock.put(block.getBname(), getUsersByBid(block.getBid()));
+        }
+        return usersByBlock;
     }
 
     @Override

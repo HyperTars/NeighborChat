@@ -1,6 +1,11 @@
 package com.hypertars.neighborChat.service.user;
 
+import com.hypertars.neighborChat.model.Hoods;
+import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
+
+import java.util.List;
+import java.util.Map;
 
 public interface UserService {
 
@@ -37,6 +42,12 @@ public interface UserService {
      * @return user
      */
     Users getUserBySession(String session);
+
+    List<Users> getUsersByBid(int bid);
+
+    UserBlock getUserBlockByUid(int uid);
+
+    Map<String, List<Users>> getUsersByHid(int hid);
 
     /**
      * join in a block

@@ -12,6 +12,9 @@ public class Users {
     /** user pass */
     private String passwd;
 
+    /** email */
+    private String email;
+
     /** first name */
     private String fName;
 
@@ -35,4 +38,7 @@ public class Users {
 
     /** lastLog */
     private String lastLog;
+
+    /** notify */
+    private short notify;
 }

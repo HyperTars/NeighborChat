@@ -1,8 +1,10 @@
 package com.hypertars.neighborChat;
 
 import com.hypertars.neighborChat.dao.BlocksDAO;
+import com.hypertars.neighborChat.dao.UserBlockDAO;
 import com.hypertars.neighborChat.dao.UsersDAO;
 import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.service.user.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import javax.annotation.Resources;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -22,20 +25,16 @@ class NeighborChatApplicationTests {
     @Resource
     private BlocksDAO blocksDAO;
 
+    @Resource
+    private UserBlockDAO userBlockDAO;
+
+    @Resource
+    private UserService userService;
+
     @Test
     void contextLoads() {
 
-        System.out.println(usersDAO.selectByUid(1));
-
-//        Users users = new Users();
-//        users.setUid(1);
-//        users.setUname("hxyyy");
-//        users.setPasswd("123");
-//        users.setFName("a");
-//        users.setLName("dd");
-//        usersDAO.insert(users);
-
-//        blocksDAO.selectByBid(1);
+        System.out.println(blocksDAO.selectByBid(1));
 
 
     }

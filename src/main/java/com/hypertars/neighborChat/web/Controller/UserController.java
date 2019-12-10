@@ -24,19 +24,20 @@ public class UserController extends NBCBaseController {
     private UserService userService;
 
     @GetMapping("loginIn")
-    @RequestMapping()
-    @PostMapping
+//    @RequestMapping()
+//    @PostMapping
     /* @RequestMapping */
     public String loginIn(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("uid");
-        int uid = Integer.parseInt(id);
+        String uname = request.getParameter("uname");
         String pass = request.getParameter("pass");
 
         Users user = new Users();
-        user.setUid(uid);
+        user.setUname(uname);
         user.setPasswd(pass);
         String session = userService.loginIn(user);
         Cookie cookie = new Cookie("userSession", session);
+//        cookie.setDomain("/");
+        cookie.setPath("/");
         response.addCookie(cookie);
 
         user = userService.getUserBySession(session);

@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface HoodsDAO {
     Hoods selectByHid(@Param("hid") int hid);
+
+    Hoods selectByBid(@Param("bid") int bid);
 }

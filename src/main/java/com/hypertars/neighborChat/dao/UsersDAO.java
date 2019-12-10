@@ -26,4 +26,6 @@ public interface UsersDAO {
      * @return user
      */
     Users selectByUid(@Param("uid") Integer uid);
+
+    Users selectByUName(@Param("uname") String uname);
 }

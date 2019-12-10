@@ -29,9 +29,9 @@ public class NBCBaseController {
      * @param logicCallBack 处理逻辑
      * @param params 扩展参数
      */
-    final protected NBCResult<Object> protectController(HttpServletRequest request, ModelMap modelMap,
-                                                        NBCLogicCallBack logicCallBack, String... params) {
-        NBCResult<Object> result = new NBCResult<>();
+    final protected com.hypertars.neighborChat.web.NBCResult<Object> protectController(HttpServletRequest request, ModelMap modelMap,
+                                                                                       com.hypertars.neighborChat.web.NBCLogicCallBack logicCallBack, String... params) {
+        com.hypertars.neighborChat.web.NBCResult<Object> result = new com.hypertars.neighborChat.web.NBCResult<>();
         try {
             // 1. 前置操作
             verifyLogin(request);
