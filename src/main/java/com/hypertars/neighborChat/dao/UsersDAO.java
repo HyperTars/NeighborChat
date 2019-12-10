@@ -4,6 +4,8 @@ import com.hypertars.neighborChat.model.Users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface UsersDAO {
 
@@ -13,13 +15,13 @@ public interface UsersDAO {
      * @param uname user name
      * @return Integer (count uname)
      */
-    boolean checkUName(@Param("uname") String uname);
+    int checkUName(@Param("uname") String uname);
 
     /**
      * register user
      *
      * @param user user model
-     * @return void
+     * @return 1 or 0
      */
     boolean userReg(Users user);
 
@@ -45,7 +47,7 @@ public interface UsersDAO {
      * @param uid user id
      * @return user
      */
-    Users selectByUid(@Param("uid") Integer uid);
+    Users getUserInfoByUid(@Param("uid") Integer uid);
 
     /**
      * update an user info into db
@@ -54,6 +56,19 @@ public interface UsersDAO {
      * @return 1 or 0
      */
     boolean userUpdate(Users user);
+
+    /**
+     * get users from same building
+     * @param uid user id
+     * @return List<Users> users models
+     */
+    List<Users> getSameBulding(@Param("uid") Integer uid);
+
+    /**
+     * update lastLog
+     * @return 1 or 0
+     */
+    boolean updateLastLog();
 }
 
 

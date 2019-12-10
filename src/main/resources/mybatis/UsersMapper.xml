@@ -2,18 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.UsersDAO">
 
-    <sql id="UserCols">
+    <sql id="UsersCols">
         uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
      </sql>
 
-    <sql id="UserTable">
+    <sql id="UsersTable">
         Users
     </sql>
 
     <select id="checkUName" resultType="java.lang.Integer" parameterType="java.lang.String">
         SELECT COUNT (uname)
         FROM
-        <include refid="UserTable"/>
+        <include refid="UsersTable"/>
         WHERE
         uname = #{uname}
     </select>
@@ -21,9 +21,9 @@
     <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
             keyProperty="uid">
         INSERT INTO
-        <include refid="UserTable"/>
+        <include refid="UsersTable"/>
         (
-        <include refid="UserCols"/>
+        <include refid="UsersCols"/>
         )
         VALUES (
         #{uname}, #{passwd}, #{email}
@@ -34,7 +34,7 @@
         SELECT
         uid, passwd
         FROM
-        <include refid="UserTable"/>
+        <include refid="UsersTable"/>
         WHERE
         uname = #{uname}
         OR
@@ -43,7 +43,7 @@
 
     <update id="restorePasswd" parameterType="com.hypertars.neighborChat.model.Users">
         UPDATE
-        <include refid="refid=UserTable"/>
+        <include refid="refid=UsersTable"/>
         <set>
             <if test="passwd != null">passwd = #{passwd}</if>
         </set>
@@ -53,18 +53,18 @@
         email = #{email}
     </update>
 
-    <select id="selectByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+    <select id="getUserInfoByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT
-        uid, <include refid="UserCols" />
+        uid, <include refid="UsersCols" />
         FROM
-        <include refid="UserTable" />
+        <include refid="UsersTable" />
         WHERE
         uid = #{uid}
     </select>
 
     <update id="userUpdate" parameterType="com.hypertars.neighborChat.model.Users">
         UPDATE
-        <include refid="UserTable"/>
+        <include refid="UsersTable"/>
         <set>
             <if test="uname != null">uname = #{uname},</if>
             <if test="passwd != null">passwd = #{passwd},</if>
