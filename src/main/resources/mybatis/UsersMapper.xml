@@ -10,6 +10,49 @@
         Users
     </sql>
 
+    <select id="checkUName" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT COUNT (uname)
+        FROM
+        <include refid="UserTable"/>
+        WHERE
+        uname = #{uname}
+    </select>
+
+    <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
+            keyProperty="uid">
+        INSERT INTO
+        <include refid="UserTable"/>
+        (
+        <include refid="UserCols"/>
+        )
+        VALUES (
+        #{uname}, #{passwd}, #{email}
+        )
+    </insert>
+
+    <select id="userAuth" resultType="java.lang.String" parameterType="com.hypertars.neighborChat.model.Users">
+        SELECT
+        uid, passwd
+        FROM
+        <include refid="UserTable"/>
+        WHERE
+        uname = #{uname}
+        OR
+        email = #{email}
+    </select>
+
+    <update id="restorePasswd" parameterType="com.hypertars.neighborChat.model.Users">
+        UPDATE
+        <include refid="refid=UserTable"/>
+        <set>
+            <if test="passwd != null">passwd = #{passwd}</if>
+        </set>
+        WHERE
+        uname = #{uname}
+        AND
+        email = #{email}
+    </update>
+
     <select id="selectByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT
         uid, <include refid="UserCols" />
@@ -19,47 +62,26 @@
         uid = #{uid}
     </select>
 
-    <insert id="insert" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
-            keyProperty="uid">
-        INSERT INTO
-        <include refid="UserTable"/>
-        (
-        <include refid="UserCols"/>
-        )
-        VALUES (
-        #{uname}, #{passwd}, #{email}, #{fName}, #{lName}, #{addr1}, #{addr2}, #{intro}, #{photo}, #{nRange}, #{lastLog}, #{notify}
-        )
-    </insert>
-
-    <update id="update" parameterType="com.hypertars.neighborChat.model.Users">
+    <update id="userUpdate" parameterType="com.hypertars.neighborChat.model.Users">
         UPDATE
         <include refid="UserTable"/>
         <set>
             <if test="uname != null">uname = #{uname},</if>
             <if test="passwd != null">passwd = #{passwd},</if>
-            <if test="passwd != null">email = #{email},</if>
+            <if test="email != null">email = #{email},</if>
             <if test="fName != null">fName = #{fName},</if>
             <if test="lName != null">lName = #{lName},</if>
             <if test="addr1 != null">addr1 = #{addr1},</if>
-            <if test="addr2!= null">addr2 = #{addr2},</if>
-            <if test="intro!=null">intro=#{intro},</if>
+            <if test="addr2 != null">addr2 = #{addr2},</if>
+            <if test="intro != null">intro = #{intro},</if>
             <if test="photo != null">photo = #{photo},</if>
             <if test="nRange != null">nRange = #{nRange},</if>
             <if test="lastLog != null">lastLog = #{lastLog},</if>
-            <if test="lastLog != null">notify = #{notify},</if>
-            uid = #{uid}
+            <if test="notify != null">notify = #{notify},</if>
         </set>
         WHERE uid = #{uid};
     </update>
 
-    <select id="selectByUName" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.String">
-        SELECT
-        uid, <include refid="UserCols" />
-        FROM
-        <include refid="UserTable" />
-        WHERE
-        uname = #{uname}
-    </select>
 
 
 
