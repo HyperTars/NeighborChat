@@ -7,32 +7,28 @@ import java.util.Date;
 @Data
 public class Message {
 
-    /**
-     * msg id
-     */
+    /** msg id */
     private int msgid;
 
-    /**
-     * author
-     */
+    /** author */
     private int author;
 
-    /**
-     * rRange
-     */
+    /** rRange */
     private int rRange;
 
-    /**
-     * mtime
-     */
+    /** mtime */
     private Date mtime;
 
+    /** title */
     private String title;
 
+    /** sub */
     private String sub;
 
+    /** text */
     private String txt;
 
+    /** coordinates */
     private String coord;
 
 }

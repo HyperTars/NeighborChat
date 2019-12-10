@@ -13,9 +13,13 @@ public class FriendApplication {
     /** recip id */
     private int recipient;
 
+    /** txt */
+    private String txt;
+
     /** fatime */
     private Date faTime;
 
-    /** txt */
-    private String txt;
+    /** decision */
+    private Boolean decision;
+
 }
