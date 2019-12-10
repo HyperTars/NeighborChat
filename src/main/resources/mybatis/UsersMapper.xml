@@ -62,7 +62,7 @@
         uid = #{uid}
     </select>
 
-    <update id="userUpdate" parameterType="com.hypertars.neighborChat.model.Users">
+    <update id="updateInfo" parameterType="com.hypertars.neighborChat.model.Users">
         UPDATE
         <include refid="UsersTable"/>
         <set>
@@ -82,7 +82,36 @@
         WHERE uid = #{uid};
     </update>
 
+    <update id="updateLastLog" parameterType="java.lang.Integer">
+        UPDATE
+        <include refid="UsersTable"/>
+        <set>
+            lastLog = CURRENT_TIMESTAMP
+        </set>
+        WHERE uid = #{uid}
+    </update>
 
+    <select id="userFromFriends" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
+        WHERE uid in ((SELECT uidA FROM Friends WHERE uidB = #{uid}) UNION (SELECT uidB FROM Friends WHERE uidA = #{uid}))
+    </select>
 
+    <select id="userFromNeighbors" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
+        WHERE uid in (SELECT uidB FROM Neighbors WHERE uidB = #{uid})
+    </select>
+
+    <select id="userFromSameBuilding" resultType="com.hypertars.neighborChat.model.Users" parameterType="com.hypertars.neighborChat.model.Users">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
+        WHERE addr1 = #{addr1} AND uid != #{uid}
+    </select>
+
+    <select id="userFromSameBlock">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
+    </select>
+
+    <select id="userFromSameHood">
+
+    </select>
 
 </mapper>

@@ -54,4 +54,11 @@ public interface NeighborsDAO {
      * @return 1 or 0
      */
     boolean deleteNeighbor(@Param("uidA") int uidA, @Param("uidB") int uidB);
+
+    /**
+     * delete all neighbors (when joining new block)
+     * @param uidA
+     * @return
+     */
+    boolean deleteAllNeighbors(@Param("uidA") int uidA);
 }

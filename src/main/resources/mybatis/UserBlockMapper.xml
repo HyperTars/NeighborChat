@@ -22,4 +22,25 @@
         select * from Blocks where hid = #{hid}
     </select>
 
+    <update id="exitBlock">
+
+    </update>
+
+    <select id="getSameBuilding">
+
+    </select>
+
+    <select id="getSameBlock">
+
+    </select>
+
+    <select id="getSameHood">
+
+    </select>
+
+    <insert id="addUserBlock">
+
+    </insert>
+
+
 </mapper>

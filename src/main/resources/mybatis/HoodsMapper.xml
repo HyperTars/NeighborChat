@@ -10,4 +10,11 @@
         Hoods
     </sql>
 
+    <select id="getHoodByHid">
+
+    </select>
+
+    <select id="getHoodByBid">
+
+    </select>
 </mapper>

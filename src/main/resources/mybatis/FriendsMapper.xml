@@ -10,4 +10,31 @@
         Friends
     </sql>
 
+    <select id="getFriends">
+
+    </select>
+
+    <select id="getFriendsFromBlock">
+
+    </select>
+
+    <select id="getFriendsFromHood">
+
+    </select>
+
+    <select id="getFriendsFromOld">
+
+    </select>
+
+    <select id="checkFriends">
+
+    </select>
+
+    <insert id="addFriend">
+
+    </insert>
+
+    <delete id="deleteFriend">
+
+    </delete>
 </mapper>

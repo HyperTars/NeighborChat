@@ -10,4 +10,11 @@
         Reply
     </sql>
 
+    <insert id="addNewReply">
+
+    </insert>
+
+    <select id="getReplyByMsgid">
+
+    </select>
 </mapper>

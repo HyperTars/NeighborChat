@@ -10,4 +10,31 @@
         Neighbors
     </sql>
 
+    <select id="getNeighbors">
+
+    </select>
+
+    <select id="getNeighborsFromBlock">
+
+    </select>
+
+    <select id="getNeighborsFromHood">
+
+    </select>
+
+    <select id="checkNeighbors">
+
+    </select>
+
+    <insert id="addNeighbors">
+
+    </insert>
+
+    <delete id="deleteNeighbor">
+
+    </delete>
+
+    <delete id="deleteAllNeighbors">
+
+    </delete>
 </mapper>

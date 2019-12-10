@@ -10,4 +10,35 @@
         FriendApplication
     </sql>
 
+    <select id="getFriendApplicationByApplicant">
+
+    </select>
+
+    <select id="getFriendApplicationByRecipient">
+
+    </select>
+
+    <update id="updateFriendApplication">
+
+    </update>
+
+    <update id="acceptFriendApplication">
+
+    </update>
+
+    <update id="rejectFriendApplication">
+
+    </update>
+
+    <select id="notifyFriendApplicationMade">
+
+    </select>
+
+    <select id="notifyNewFriendApplication">
+
+    </select>
+
+    <delete id="deleteFriendApplication">
+
+    </delete>
 </mapper>

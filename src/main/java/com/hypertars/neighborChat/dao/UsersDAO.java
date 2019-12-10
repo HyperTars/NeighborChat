@@ -55,14 +55,7 @@ public interface UsersDAO {
      * @param user user model
      * @return 1 or 0
      */
-    boolean userUpdate(Users user);
-
-    /**
-     * get users from same building
-     * @param uid user id
-     * @return List<Users> users models
-     */
-    List<Users> getSameBulding(@Param("uid") Integer uid);
+    boolean updateInfo(Users user);
 
     /**
      * update lastLog

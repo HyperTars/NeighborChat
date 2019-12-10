@@ -10,4 +10,43 @@
         BlockApplication
     </sql>
 
+    <select id = "getBlockApplicationByApplicant">
+
+    </select>
+
+    <select id = "getBlockApplicationByRecipient">
+
+    </select>
+
+    <insert id = "addBlockApplication">
+
+    </insert>
+
+    <update id = "acceptBlockApplication">
+
+    </update>
+
+    <update id = "rejectBlockApplication">
+
+    </update>
+
+    <select id = "notifyNewBlockApplication">
+
+    </select>
+
+    <select id = "notifyPassBlockApplication">
+        // Function
+    </select>
+
+    <select id = "norifyFailBlockApplication">
+        // Function
+    </select>
+
+    <delete id="deleteBlockApplication">
+
+    </delete>
+
+
+
+
 </mapper>

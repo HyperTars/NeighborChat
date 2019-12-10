@@ -10,13 +10,19 @@
         BlocksTable
     </sql>
 
-    <select id="selectBlockByBid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
+    <select id = "getAllBlocks" resultType="com.hypertars.neighborChat.model.Blocks">
+        SELECT * FROM Blocks
+    </select>
+
+    <select id = "getBlockByBid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         select * from <include refid="BlocksTable"/> where bid = #{bid}
     </select>
 
-    <select id="allBlocks" resultType="com.hypertars.neighborChat.model.Blocks">
-        SELECT * FROM Blocks
+    <select id = "getBlocksByHid">
+
     </select>
+
+
 
 
 </mapper>

@@ -33,6 +33,13 @@ public interface UserBlockDAO {
     boolean exitBlock(@Param("uid") int uid);
 
     /**
+     * get members from same building
+     * @param uid user id
+     * @return List<UserBlock> userblock model
+     */
+    List<UserBlock> getSameBuilding(@Param("uid") int uid);
+
+    /**
      * get members from same block
      * @param uid user id
      * @return List<UserBlock> userblock model

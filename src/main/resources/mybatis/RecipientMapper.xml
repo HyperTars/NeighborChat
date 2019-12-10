@@ -10,4 +10,7 @@
         Recipient
     </sql>
 
+    <select id="getRecipientyMsgid">
+
+    </select>
 </mapper>
