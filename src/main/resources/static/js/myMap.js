@@ -15,9 +15,6 @@ function initMap() {
 　　});
 
     google.maps.event.addListener(map,'click',function(event) {
-        // console.info(event.latLng.lat());  // print lat of click pos
-        // console.info(event.latLng.lng());  // print lng of click pos
-
         if (marker != null) marker.setMap(null);
         
         currentLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
@@ -28,6 +25,9 @@ function initMap() {
     　　});
 
         marker.setMap(map);
+
+        console.info(event.latLng.lat());  // print lat of click pos
+        console.info(event.latLng.lng());  // print lng of click pos
     });
 
 }
