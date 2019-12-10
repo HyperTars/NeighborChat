@@ -120,56 +120,35 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Message Box</h4>
+                        <h4 class="page-title">Message</h4>
                     </div>
                 </div>
 
                 <!-- ============================================================== -->
-                <!-- All messages -->
+                <!-- Recent Message & Chat List -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- .col -->
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">All Messages</h3>
-
-                            <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                                <input type="text" placeholder="Search a message" class="form-control"> <a href=""><i
-                                    class="fa fa-search"></i></a> </form>
-
+                            <h3 class="box-title">Messages</h3>
                             <div class="comment-center p-t-10">
                                 <div class="comment-body">
-                                    <div class="user-img"> <img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"></div>
-                                    <div class="mail-contnet">
+                                    <div class="user-img"> <img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle">
+                                    </div>
+                                    <div class="comment-body">
                                         <h5>Pavan kumar</h5><span class="time">10:20 AM   20  may 2016</span>
-                                        <br/><span class="mail-desc"><a href = "message_detail.html">
-                                            <h5>Title</h5>
+                                        <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus.
+                                        Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean
+                                        commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pellentesque pretium
+                                        lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.
+                                        Aenean commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pellentesque
+                                        pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.
+                                        Aenean commodo dui pellentesque molestie feugiat</span>
 
-                                            Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</a></span>
-                                    </div>
-                                </div>
-
-                                <div class="comment-body">
-                                    <div class="user-img"> <img src="../static/plugins/images/users/sonu.jpg" alt="user" class="img-circle"></div>
-                                    <div class="mail-contnet">
-                                        <h5>Sonu Nigam</h5><span class="time">10:20 AM   20  may 2016</span>
-                                        <br/><span class="mail-desc"><a href = "message_detail.html">
-                                            <h5>Title</h5>
-
-                                            Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pelle
-                                        </a></span>
-                                    </div>
-                                </div>
-
-                                <div class="comment-body">
-                                    <div class="user-img"> <img src="../static/plugins/images/users/arijit.jpg" alt="user" class="img-circle"></div>
-                                    <div class="mail-contnet">
-                                        <h5>Arijit singh</h5><span class="time">10:20 AM   20  may 2016</span>
-                                        <br/><span class="mail-desc"><a href = "message_detail.html">
-                                            <h5>Title</h5>
-                                            
-                                            Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pelle t. Aenea
-                                        </a></span>
+                                        <div class="white-box">
+                                            <div id="map" class="gmaps"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +156,62 @@
                     </div>
                 </div>
 
+                <!-- ============================================================== -->
+                <!-- Replys -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Replies</h3>
+                            <div class="comment-center p-t-10">
+                                <div class="comment-body">
+                                    <div class="user-img"> <img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle">
+                                    </div>
+                                    <div class="mail-contnet">
+                                        <h5>Pavan kumar</h5><span class="time">10:20 AM   20  may 2016</span>
+                                        <br/><span class="mail-desc">Very Good!</span>
+                                    </div>
+                                </div>
+                                <div class="comment-body">
+                                    <div class="user-img"> <img src="../static/plugins/images/users/sonu.jpg" alt="user" class="img-circle">
+                                    </div>
+                                    <div class="mail-contnet">
+                                        <h5>Sonu Nigam</h5><span class="time">10:20 AM   20  may 2016</span>
+                                        <br/><span class="mail-desc">Interesting!</span>
+                                    </div>
+                                </div>
+                                <div class="comment-body b-none">
+                                    <div class="user-img"> <img src="../static/plugins/images/users/arijit.jpg" alt="user" class="img-circle">
+                                    </div>
+                                    <div class="mail-contnet">
+                                        <h5>Arijit singh</h5><span class="time">10:20 AM   20  may 2016</span>
+                                        <br/><span class="mail-desc">Boring...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="white-box">
+                            <form class="form-horizontal form-material" action = "message.html">
+                                <div class="form-group">
+                                    <label class="col-md-12">Reply</label>
+                                    <div class="col-md-12">
+                                        <textarea rows="8" class="form-control form-control-line" placeholder="Add your reply here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button type = "submit" class="btn btn-success">Post Reply</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -206,6 +241,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="../static/js/custom.min.js"></script>
     <script src="../static/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+
+    <script src = "../static/js/myMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuumuAQ19P2grC89fnlOD9aRgJHC48gw&callback=initMap" async defer></script>
 </body>
 
 </html>
