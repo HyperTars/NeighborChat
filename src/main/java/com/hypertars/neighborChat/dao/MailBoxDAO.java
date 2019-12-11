@@ -10,15 +10,32 @@ import java.util.List;
 public interface MailBoxDAO {
 
     /**
-     * get whole mailbox by uid
+     * get all mailbox by uid
      * @param uid uid
      * @return List<MailBox> mailbox models
      */
-    List<MailBox> getMailBoxByUid(@Param("uid") int uid);
+    List<MailBox> getAllMsgthreadByUid(@Param("uid") int uid);
 
-    boolean setMsgUnread(MailBox mailBox);
+    /**
+     * get new message thread based on timestamp comparison
+     * @param uid
+     * @return
+     */
+    List<MailBox> notifyNewMsgthreadByUid(@Param("uid") int uid);
 
-    boolean setMsgRead(MailBox mailBox);
+    /**
+     * set messages unread
+     * @param mailBox mailbox models
+     * @return 1 or 0
+     */
+    boolean setMsgthreadUnread(MailBox mailBox);
 
-    List<MailBox> getNewMsgthreadByUid(@Param("uid") int uid);
+    /**
+     * set messages read
+     * @param mailBox mailbox models
+     * @return 1 or 0
+     */
+    boolean setMsgthreadRead(MailBox mailBox);
+
+
 }

@@ -10,5 +10,31 @@
         MailBox
     </sql>
 
+    <select id="getAllMsgthreadByUid" resultType="com.hypertars.neighborChat.model.MailBox" parameterType="java.lang.Integer">
+        SELECT <include refid="MailBoxCols"/> FROM <include refid="MailBoxTable"/>
+        WHERE uid = #{uid}
+    </select>
 
+    <select id="notifyNewMsgthreadByUid" resultType="com.hypertars.neighborChat.model.MailBox" parameterType="java.lang.Integer">
+        // Maybe SQL Funciton?
+        SELECT <include refid="MailBoxCols"/> FROM <include refid="MailBoxTable"/> NATURAL JOIN Message LEFT OUTER Reply ON Message.msgid = Reply.msgid
+        WHERE uid = #{uid} AND
+        (mtime > (SELECT lastLog FROM Users)
+        OR rTime > (SELECT lastLog FROM Users))
+        GROUP BY msgid
+        ORDER BY rTime DESC
+        LIMIT 1
+    </select>
+
+    <update id="setMsgthreadUnread" parameterType="com.hypertars.neighborChat.model.MailBox">
+        UPDATE <include refid="MailBoxTable"/>
+        SET rd = False
+        WHERE msgid = #{msgid} AND uid = #{uid}
+    </update>
+
+    <update id="setMsgthreadRead" parameterType="com.hypertars.neighborChat.model.MailBox">
+        UPDATE <include refid="MailBoxTable"/>
+        SET rd = True
+        WHERE msgid = #{msgid} AND uid = #{uid}
+    </update>
 </mapper>

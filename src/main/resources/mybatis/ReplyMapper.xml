@@ -11,11 +11,14 @@
     </sql>
 
     <insert id="addNewReply">
-        // Function: add new reply & update MailBox
+        // SQL Function: add new reply & update MailBox
     </insert>
 
     <select id="getReplyByMsgid" resultType="com.hypertars.neighborChat.model.Reply" parameterType="java.lang.Integer">
         SELECT <include refid="ReplyCols" /> FROM <include refid="ReplyTable" />
         WHERE msgid = #{msgid};
     </select>
+
+    // + New Msg Notify SQL Funtion?
+
 </mapper>

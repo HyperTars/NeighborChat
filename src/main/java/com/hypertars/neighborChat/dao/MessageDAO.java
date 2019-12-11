@@ -28,7 +28,7 @@ public interface MessageDAO {
      * @param uid user id
      * @return List<Message> messages models
      */
-    List<Message> getMsgByUid(@Param("uid") int uid);
+    List<Message> getAllMsgByUid(@Param("uid") int uid);
 
     /**
      * get messages by author
