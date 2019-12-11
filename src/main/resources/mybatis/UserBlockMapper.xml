@@ -10,36 +10,46 @@
         UserBlock
     </sql>
 
-    <select id="getUserBlocksByBid" resultType="com.hypertars.neighborChat.model.UserBlock" >
-        select * from UserBlock where bid = #{bid} and status = true
+    <select id="getUserBlockByBid" resultType="com.hypertars.neighborChat.model.UserBlock" parameterType="com.hypertars.neighborChat.model.UserBlock">
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE bid = #{bid} and status = true;
     </select>
 
-    <select id="getUserBlocksByUid" resultType="com.hypertars.neighborChat.model.UserBlock" >
-        select * from UserBlock where uid = #{uid} and status = true
+    <select id="getUserBlocksByUid" resultType="com.hypertars.neighborChat.model.UserBlock" parameterType="java.lang.Integer">
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE uid = #{uid};
     </select>
 
-    <select id="getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" >
-        select * from Blocks where hid = #{hid}
+    <select id="getUserBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE bid in (SELECT bid FROM Blocks WHERE hid = #{hid});
     </select>
 
-    <update id="exitBlock">
-
+    <update id="exitBlock" parameterType="java.lang.Integer">
+        UPDATE <include refid="UserBlockTable" />
+        <set>
+            status = False
+        </set>
+        WHERE uid = #{uid};
     </update>
 
     <select id="getSameBuilding">
-
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE uid != #{uid} AND addr1 = (SELECT addr1 FROM <include refid="UsersTable" /> WHERE uid = #{uid});
     </select>
 
     <select id="getSameBlock">
-
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid});
     </select>
 
     <select id="getSameHood">
-
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE bid in (SELECT bid FROM Blocks WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
     </select>
 
     <insert id="addUserBlock">
-
+        // SQL Function: New account: add || old account: update & add
     </insert>
 
 

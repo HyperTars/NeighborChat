@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +177,7 @@
       <workItem from="1575847219275" duration="350000" />
       <workItem from="1575847594231" duration="1045000" />
       <workItem from="1575896838096" duration="542000" />
-      <workItem from="1575997292942" duration="16833000" />
+      <workItem from="1575997292942" duration="18087000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -352,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576021507607</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="update user DAO &amp; Mapper">
+      <created>1576022630742</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1576022630742</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -438,6 +447,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="586" y="190" key="#SQL_Dialects/0.23.1680.1027@0.23.1680.1027" timestamp="1576021340368" />
+    <state x="533" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576023196907">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="533" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576023196907" />
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1575694230434">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -454,10 +467,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575997761313" />
-    <state x="167" y="128" key="CommitChangelistDialog2" timestamp="1576021507283">
+    <state x="167" y="128" key="CommitChangelistDialog2" timestamp="1576022630434">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="167" y="128" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576021507283" />
+    <state x="167" y="128" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576022630434" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576011970173">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -526,10 +539,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="602" y="248" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575847654492" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576021510318">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576022637932">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576021510318" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576022637932" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -562,9 +575,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="464" y="391" key="git4idea.ui.GitUnstashDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575847648572" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576021038799">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576023607772">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576021038799" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576023607772" />
   </component>
 </project>

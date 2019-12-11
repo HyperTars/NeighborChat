@@ -16,7 +16,7 @@ public interface UserBlockDAO {
      * @param bid block id
      * @return List<UserBlock> userBlock models
      */
-    List<UserBlock> getUserBlocksByBid(@Param("bid") int bid);
+    List<UserBlock> getUserBlockByBid(@Param("bid") int bid);
 
     /**
      * get userBlock by uid
@@ -24,6 +24,13 @@ public interface UserBlockDAO {
      * @return List<UserBlock> userBlock models
      */
     List<UserBlock> getUserBlocksByUid(@Param("uid") int uid);
+
+    /**
+     * get userBlocks by hid
+     * @param hid hood id
+     * @return List<UserBlock> userBlock models
+     */
+    List<UserBlock> getUserBlocksByHid(@Param("hid") int hid);
 
     /**
      * user exists block

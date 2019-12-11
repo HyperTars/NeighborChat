@@ -19,8 +19,7 @@
     </select>
 
     <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true" keyProperty="uid">
-        INSERT INTO
-        <include refid="UsersTable"/>
+        INSERT INTO <include refid="UsersTable"/>
         (uname, passwd, email)
         VALUES (#{uname}, #{passwd}, #{email});
     </insert>
