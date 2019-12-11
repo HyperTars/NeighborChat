@@ -10,6 +10,8 @@ public class BlockApplication {
     /** app id */
     private int applicant;
 
+    private int bid;
+
     /** batime */
     private Date baTime;
 
@@ -21,5 +23,7 @@ public class BlockApplication {
 
     /** decisions */
     private int decisions;
+
+    private boolean status;
 
 }

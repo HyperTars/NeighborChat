@@ -5,9 +5,15 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
+import java.util.List;
 
 @Mapper
 public interface BlockApplicationDAO {
-    BlockApplication selectBA(@Param("applicant") int applicant, @Param("baTime") Date baTime);
+
     int insert(BlockApplication blockApplication);
+
+    List<BlockApplication> selectByUidStatus(@Param("uid") int uid, @Param("status") boolean status);
+
+    List<BlockApplication> selectByBidStatus(@Param("bid") int bid, @Param("status") boolean status);
+
 }

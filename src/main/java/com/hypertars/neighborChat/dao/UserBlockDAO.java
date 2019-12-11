@@ -17,4 +17,8 @@ public interface UserBlockDAO {
 
     List<Blocks> getBlocksByHid(@Param("hid") int hid);
 
+    void update(UserBlock userBlock);
+
+    void insert(UserBlock userBlock);
+
 }

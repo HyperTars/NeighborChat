@@ -2,50 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/BlockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/NeighborChatApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/NeighborChatApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlockApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/FriendsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/HoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MailBoxDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MessageDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/NeighborsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/NeighborsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/RecipientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/RecipientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/ReplyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/ReplyDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/enums/NBCResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/enums/NBCResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/exception/NBCException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/exception/NBCException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/BlockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Blocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/FriendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Friends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Hoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Hoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/MailBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/MailBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Neighbors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Neighbors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Recipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/UserBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/UserBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/AssertUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/utils/AssertUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/CacheUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/utils/CacheUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCBaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCLogicCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCLogicCallBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborchat/web/NBCResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,64 +41,10 @@
       <file leaf-file-name="BlockController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="711">
+              <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blocks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlocksDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-              <folding>
-                <element signature="e#2608#2609#0" expanded="true" />
-                <element signature="e#2651#2652#0" expanded="true" />
-                <element signature="e#3386#3387#0" expanded="true" />
-                <element signature="e#3411#3412#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,29 +53,47 @@
       <file leaf-file-name="UserBlockDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeighborChatApplicationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java">
+      <file leaf-file-name="BlockService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/BlockService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="120">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java">
+      <file leaf-file-name="BlockServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="411">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockApplicationDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="16" column="101" selection-start-line="16" selection-start-column="101" selection-end-line="16" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockApplication.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -189,6 +120,7 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
@@ -200,18 +132,24 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/UserBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/BlockService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" />
       </list>
     </option>
   </component>
@@ -320,7 +258,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="neighborChat" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="neighborChat" type="b2602c69:ProjectViewProjectNode" />
@@ -329,7 +267,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="neighborChat" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="neighborChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="neighborChat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="neighborChat" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="block" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -698,7 +647,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9756000" />
+    <option name="totallyTimeSpent" value="14335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -714,15 +663,15 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.370283" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.370283" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32900944" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.25117925" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37617925" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32900944" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900944" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23680556" />
@@ -731,28 +680,54 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298611" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37617925" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23680556" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3298611" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900944" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.370283" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32900944" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Designer" order="2" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32879376" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info id="Image Layers" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32879376" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3298611" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32900944" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -761,7 +736,6 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="bottom" id="Find" order="2" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1875" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -770,8 +744,10 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.379717" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="right" id="Bean Validation" order="0" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.379717" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,6 +782,26 @@
                     </value>
                   </entry>
                 </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
               </option>
             </State>
           </value>
@@ -943,6 +939,103 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="40" column="102" selection-start-line="40" selection-start-column="102" selection-end-line="40" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/NeighborChatApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -977,23 +1070,9 @@
     <entry file="file://$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/dao/UsersDAO.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/BlockApplication.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/UsersDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/BlockMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/BlockApplication.xml" />
+    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/UsersDAO.xml" />
+    <entry file="file://$PROJECT_DIR$/target/classes/mybatis/BlockMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/utils/AssertUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1008,32 +1087,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/map-google.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Friends.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1049,20 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="219" column="43" lean-forward="true" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="38" column="47" lean-forward="true" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/UserBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1087,23 +1131,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="471">
           <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1111,61 +1141,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-          <folding>
-            <element signature="e#2608#2609#0" expanded="true" />
-            <element signature="e#2651#2652#0" expanded="true" />
-            <element signature="e#3386#3387#0" expanded="true" />
-            <element signature="e#3411#3412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="345">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Blocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1269">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="501">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/UserBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/BlockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="101" selection-start-line="16" selection-start-column="101" selection-end-line="16" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/BlockApplication.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="711">
+          <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

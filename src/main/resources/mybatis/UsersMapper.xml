@@ -46,7 +46,7 @@
             <if test="photo != null">photo = #{photo},</if>
             <if test="nRange != null">nRange = #{nRange},</if>
             <if test="lastLog != null">lastLog = #{lastLog},</if>
-            <if test="lastLog != null">notify = #{notify},</if>
+            <if test="notify != null">notify = #{notify},</if>
             uid = #{uid}
         </set>
         WHERE uid = #{uid};

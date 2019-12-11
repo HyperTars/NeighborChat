@@ -14,4 +14,21 @@
         select * from Blocks where hid = #{hid}
     </select>
 
+    <update id="update" parameterType="com.hypertars.neighborChat.model.UserBlock" >
+        update UserBlock
+        <set>
+            <if test="uid != null and uid != 0">uid = #{uid},</if>
+            <if test="bid != null and bid != 0">bid = #{bid},</if>
+            <if test="status != null">status = #{status},</if>
+            ubTime = now()
+        </set>
+        <where>
+            <if test="uid != null and uid != 0 or bid != null and bid != 0" >uid = #{uid} and bid = #{bid} and status = true</if>
+        </where>
+    </update>
+
+    <insert id="insert" parameterType="com.hypertars.neighborChat.model.UserBlock" >
+        insert into UserBlock (uid, bid, ubTime, status) values (#{uid}, #{bid}, now(), true)
+    </insert>
+
 </mapper>

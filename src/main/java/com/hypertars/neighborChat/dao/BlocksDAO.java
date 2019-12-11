@@ -8,4 +8,5 @@ import org.apache.ibatis.annotations.Param;
 public interface BlocksDAO {
 
     Blocks selectByBid(@Param("bid") int bid);
+
 }

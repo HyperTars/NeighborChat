@@ -2,10 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
 
-    <!--    <select id="selectByBid" parameterType="java.lang.String" resultType="com.hypertars.neighborChat.model.Block">-->
-    <!--        select * from Blocks where bid = #{bid}-->
-    <!--    </select>-->
+    <insert id="insert" parameterType="com.hypertars.neighborChat.model.BlockApplication" >
+        insert into BlockApplication (applicant, bid, txt, accepts, decisions, baTime, status)
+        values(#{applicants}, #{bid}, #{txt}, #{accepts}, #{decisions}, now(), true)
+    </insert>
 
-    <!--    <insert id="insert"-->
+    <select id="selectByUidStatus" resultType="com.hypertars.neighborChat.model.BlockApplication" >
+        select * from BlockApplication where uid = #{uid} and status = #{status}
+    </select>
+
+    <select id="selectByBidStatus" resultType="com.hypertars.neighborChat.model.BlockApplication" >
+        select * from BlockApplication where bid = #{bid} and status = #{status}
+    </select>
 
 </mapper>
