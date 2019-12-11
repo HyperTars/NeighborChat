@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlocksMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlocksMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/NeighborsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/NeighborsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/RecipientMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/RecipientMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ReplyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +176,7 @@
       <workItem from="1575847219275" duration="350000" />
       <workItem from="1575847594231" duration="1045000" />
       <workItem from="1575896838096" duration="542000" />
-      <workItem from="1575997292942" duration="19299000" />
+      <workItem from="1575997292942" duration="20214000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -372,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576023903255</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Half DAO &amp; Mapper completed">
+      <created>1576025194799</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1576025194799</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -448,7 +450,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="update user DAO &amp; Mapper" />
     <MESSAGE value="Update UserBlock DAO &amp; Mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update UserBlock DAO &amp; Mapper" />
+    <MESSAGE value="Half DAO &amp; Mapper completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Half DAO &amp; Mapper completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="202" key="#Notifications" timestamp="1575847531392">
@@ -479,10 +482,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575997761313" />
-    <state x="572" y="73" key="CommitChangelistDialog2" timestamp="1576023902981">
+    <state x="572" y="73" key="CommitChangelistDialog2" timestamp="1576025194496">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="572" y="73" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576023902981" />
+    <state x="572" y="73" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576025194496" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576011970173">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -551,10 +554,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="602" y="248" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575847654492" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576023906483">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576025197421">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576023906483" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576025197421" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

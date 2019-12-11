@@ -16,6 +16,6 @@
 
     <select id="getReplyByMsgid" resultType="com.hypertars.neighborChat.model.Reply" parameterType="java.lang.Integer">
         SELECT <include refid="ReplyCols" /> FROM <include refid="ReplyTable" />
-        WHERE msgid = #{msgid}
+        WHERE msgid = #{msgid};
     </select>
 </mapper>

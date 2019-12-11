@@ -12,6 +12,6 @@
 
     <select id="getRecipientyMsgid" resultType="java.lang.Integer" parameterType="java.lang.Integer">
         SELECT Recipient FROM <include refid="RecipientTable" />
-        WHERE msgid = #{msgid}
+        WHERE msgid = #{msgid};
     </select>
 </mapper>
