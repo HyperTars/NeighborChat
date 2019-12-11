@@ -49,18 +49,4 @@ public interface UserService {
 
     Map<String, List<Users>> getUsersByHid(int hid);
 
-    /**
-     * join in a block
-     * @param bid blockid
-     * @param uid user id
-     */
-    void applyJoinBlock(int bid, int uid);
-
-    /**
-     * approve or reject an application
-     * @param applicant app id
-     * @param uid user id
-     */
-    void decideApplication(int applicant, int uid);
-
 }

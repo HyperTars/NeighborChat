@@ -149,14 +149,4 @@ public class UserServiceImpl implements UserService {
         usersDAO.update(user);
     }
 
-    @Override
-    public void applyJoinBlock(int bid, int uid) {
-        // todo
-
-    }
-
-    @Override
-    public void decideApplication(int applicant, int uid) {
-        // todo
-    }
 }
