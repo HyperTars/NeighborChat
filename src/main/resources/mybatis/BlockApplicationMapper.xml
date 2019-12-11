@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
+
+    <sql id = "BlockApplicationCols">
+        applicant, baTime, bid, txt, accepts, decisions
+    </sql>
+
+    <sql id = "Bloc kApplicationTable">
+        BlockApplication
+    </sql>
+
+    <select id = "getBlockApplicationByApplicant" resultType="com.hypertars.neighborChat.model.BlockApplication" parameterType="java.lang.Integer">
+        SELECT <include refid="BlockApplicationCols"/> FROM <include refid="BlockApplicationTable"/>
+        WHERE applicant = #{applicant};
+    </select>
+
+    <select id = "getBlockApplicationByRecipient" resultType="com.hypertars.neighborChat.model.BlockApplication" parameterType="java.lang.Integer">
+        SELECT <include refid="BlockApplicationCols"/> FROM <include refid="BlockApplicationTable"/> NATURAL JOIN UserBlock
+        WHERE uid = #{uid} AND status = TRUE;
+    </select>
+
+    <insert id = "addBlockApplication" parameterType="com.hypertars.neighborChat.model.BlockApplication">
+        INSERT INTO <include refid="BlockApplicationTable"/>
+        (applicant, bid, txt)
+        VALUES
+        (#{applicant}, #{bid}, #{txt});
+    </insert>
+
+    <update id = "acceptBlockApplication" parameterType="com.hypertars.neighborChat.model.BlockApplication">
+        UPDATE <include refid="BlockApplicationTable"/>
+        <set>
+            accepts = accepts + 1,
+            decisions = decisions + 1
+        </set>
+        WHERE applicant = #{applicant} AND bid = #{bid};
+    </update>
+
+    <update id = "rejectBlockApplication" parameterType="com.hypertars.neighborChat.model.BlockApplication">
+        UPDATE <include refid="BlockApplicationTable"/>
+        <set>
+            decisions = decisions + 1
+        </set>
+        WHERE applicant = #{applicant} AND bid = #{bid};
+    </update>
+
+    <select id = "notifyNewBlockApplication" resultType="com.hypertars.neighborChat.model.BlockApplication" parameterType="java.lang.Integer">
+        SELECT <include refid="BlockApplicationCols"/> FROM <include refid="BlockApplicationTable"/> NATURAL JOIN UserBlock
+        WHERE uid = #{uid} AND status = TRUE
+        AND baTime &gt; (SELECT lastLog FROM Users WHERE uid = #{uid});
+    </select>
+
+    <select id = "notifyPassBlockApplication" resultType="com.hypertars.neighborChat.model.BlockApplication" parameterType="java.lang.Integer">
+        <!-- SQL Function-->
+    </select>
+
+    <select id = "notifyFailBlockApplication" resultType="com.hypertars.neighborChat.model.BlockApplication" parameterType="java.lang.Integer">
+        <!-- SQL Function-->
+    </select>
+
+    <delete id="deleteBlockApplication"  parameterType="java.lang.Integer">
+        DELETE FROM <include refid="BlockApplicationTable"/>
+        WHERE applicant = #{applicant} AND bid = #{bid};
+    </delete>
+
+
+
+
+</mapper>

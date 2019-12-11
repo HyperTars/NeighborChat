@@ -1,22 +1,22 @@
 -- Live in the same building, different nRange
-INSERT INTO Users VALUES (1, "user01", "12345678", "Justin", "Bieber", "343 Gold Street, Brooklyn", "Apt 4001", "Hello World!", "/users/photo/1.png", 0, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (2, "user02", "12345678", "Donald", "Trump", "343 Gold Street, Brooklyn", "Apt 4002", "Hello World!", "/users/photo/2.png ", 1, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (3, "user03", "12345678", "Chris", "Martin", "343 Gold Street, Brooklyn", "Apt 4201", "Hello World!", "/users/photo/3.png ", 2, "2019-01-01 12:00:00");
+INSERT INTO Users VALUES (1, "user01", "12345678", "test@gmail.com", "Justin", "Bieber", "343 Gold Street, Brooklyn", "Apt 4001", "Hello World!", "/users/photo/1.png", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (2, "user02", "12345678", "test@gmail.com", "Donald", "Trump", "343 Gold Street, Brooklyn", "Apt 4002", "Hello World!", "/users/photo/2.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (3, "user03", "12345678", "test@gmail.com", "Chris", "Martin", "343 Gold Street, Brooklyn", "Apt 4201", "Hello World!", "/users/photo/3.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in the same block, different nRange
-INSERT INTO Users VALUES (4, "user04", "12345678", "Lady", "Gaga", "270 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/4.png ", 0, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (5, "user05", "12345678", "Anne", "Hathaway", "320 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/5.png ", 1, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (6, "user06", "12345678", "Leonardo", "Dicaprio", "370 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/6.png ", 2, "2019-01-01 12:00:00");
+INSERT INTO Users VALUES (4, "user04", "12345678", "test@gmail.com", "Lady", "Gaga", "270 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/4.png ", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (5, "user05", "12345678", "test@gmail.com", "Anne", "Hathaway", "320 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/5.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (6, "user06", "12345678", "test@gmail.com", "Leonardo", "Dicaprio", "370 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/6.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in the same hood, different nRange
-INSERT INTO Users VALUES (7, "user07", "12345678", "Billie", "Ellish", "500 5th Avenue, New York", "", "Hello World!", "/users/photo/7.png", 2, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (8, "user08", "12345678", "James", "Bond", "1100 6th Avenue, New York", "", "Hello World!", "/users/photo/8.png ", 1, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (9, "user09", "12345678", "Adam", "Levine", "1166 6th Avenue, New York", "", "Hello World!", "/users/photo/9.png ", 2, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (10, "user10", "12345678", "Bruno", "Mars", "1167 6th Avenue, New York", "", "Hello World!", "/users/photo/10.png ", 0, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (11, "user11", "12345678", "Scarlett", "Johansson", "1167 6th Avenue, New York",  "","Hello World!", "/users/photo/11.png ", 1, "2019-01-01 12:00:00");
-INSERT INTO Users VALUES (12, "user12", "12345678", "Robert", "Downey", "1170 6th Avenue, New York",  "","Hello World!", "/users/photo/12.png ", 2, "2019-01-01 12:00:00");
+INSERT INTO Users VALUES (7, "user07", "12345678", "test@gmail.com", "Billie", "Ellish", "500 5th Avenue, New York", "", "Hello World!", "/users/photo/7.png", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (8, "user08", "12345678", "test@gmail.com", "James", "Bond", "1100 6th Avenue, New York", "", "Hello World!", "/users/photo/8.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (9, "user09", "12345678", "test@gmail.com", "Adam", "Levine", "1166 6th Avenue, New York", "", "Hello World!", "/users/photo/9.png ", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (10, "user10", "12345678", "test@gmail.com", "Bruno", "Mars", "1167 6th Avenue, New York", "", "Hello World!", "/users/photo/10.png ", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (11, "user11", "12345678", "test@gmail.com", "Scarlett", "Johansson", "1167 6th Avenue, New York",  "","Hello World!", "/users/photo/11.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (12, "user12", "12345678", "test@gmail.com", "Robert", "Downey", "1170 6th Avenue, New York",  "","Hello World!", "/users/photo/12.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in different hoods
@@ -33,22 +33,22 @@ INSERT INTO Blocks VALUES (4, "6th Avenue From 34th Street to 59th Street", 2, "
 
 
 -- For block 1, all users in this area have joined the block (3 accepts required)
-INSERT INTO UserBlock VALUES (1, "2019-01-01 12:00:01", 1);
-INSERT INTO UserBlock VALUES (2, "2019-01-01 12:00:01", 1);
-INSERT INTO UserBlock VALUES (3, "2019-01-01 12:00:01", 1);
+INSERT INTO UserBlock VALUES (1, "2019-01-01 12:00:01", 1, TRUE);
+INSERT INTO UserBlock VALUES (2, "2019-01-01 12:00:01", 1, TRUE);
+INSERT INTO UserBlock VALUES (3, "2019-01-01 12:00:01", 1, TRUE);
 
 -- For block 2, two out of three users have joined, and the third one is applying to join (all members accepts required)
-INSERT INTO UserBlock VALUES (4, "2019-01-01 12:00:01", 2);
-INSERT INTO UserBlock VALUES (5, "2019-01-01 12:00:01", 2);
+INSERT INTO UserBlock VALUES (4, "2019-01-01 12:00:01", 2, TRUE);
+INSERT INTO UserBlock VALUES (5, "2019-01-01 12:00:01", 2, TRUE);
 
 -- For block 3, someone is the first person to join the block (automatically join) (already joined now)
-INSERT INTO UserBlock VALUES (7, "2019-01-01 12:00:01", 3);
+INSERT INTO UserBlock VALUES (7, "2019-01-01 12:00:01", 3, TRUE);
 
 -- For block 4, four out of five users have joined, and the fifth one is applying to join (3 accepts required)
-INSERT INTO UserBlock VALUES (8, "2019-01-01 12:00:01", 4);
-INSERT INTO UserBlock VALUES (9, "2019-01-01 12:00:01", 4);
-INSERT INTO UserBlock VALUES (10, "2019-01-01 12:00:01", 4);
-INSERT INTO UserBlock VALUES (11, "2019-01-01 12:00:01", 4);
+INSERT INTO UserBlock VALUES (8, "2019-01-01 12:00:01", 4, TRUE);
+INSERT INTO UserBlock VALUES (9, "2019-01-01 12:00:01", 4, TRUE);
+INSERT INTO UserBlock VALUES (10, "2019-01-01 12:00:01", 4, TRUE);
+INSERT INTO UserBlock VALUES (11, "2019-01-01 12:00:01", 4, TRUE);
 
 -- For block 2, members < 3, all members agreement required
 INSERT INTO BlockApplication VALUES (6, "2019-01-01 12:00:02", 2, "I am your new neighbor", 0, 0);
@@ -72,12 +72,12 @@ INSERT INTO Friends VALUES (2, 11, "2019-02-01 12:00:03");
 
 
 -- Two people already in the same block group
-INSERT INTO FriendApplication VALUES (2, 3, "I wanna be your friend", "2019-01-01 12:00:03");
-INSERT INTO FriendApplication VALUES (8, 9, "I wanna be your friend", "2019-01-01 12:00:03");
+INSERT INTO FriendApplication VALUES (2, 3, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
+INSERT INTO FriendApplication VALUES (8, 9, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
 
 -- Two people live in the same hood, but not the same block
-INSERT INTO FriendApplication VALUES (1, 4, "I wanna be your friend", "2019-01-01 12:00:03");
-INSERT INTO FriendApplication VALUES (7, 11, "I wanna be your friend", "2019-01-01 12:00:03");
+INSERT INTO FriendApplication VALUES (1, 4, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
+INSERT INTO FriendApplication VALUES (7, 11, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
 
 
 -- Insert Neighbor according to neighbor range (here we assume all users add all their neighbors)
@@ -194,4 +194,3 @@ INSERT INTO Reply VALUES (4, 8, "2019-01-01 12:00:06", "Medium Rare", "");
 INSERT INTO Reply VALUES (4, 9, "2019-01-01 12:00:06", "Medium", "(40.7583, -73.9815)");
 INSERT INTO Reply VALUES (4, 10, "2019-01-01 12:00:06", "Medium Rare", "");
 INSERT INTO Reply VALUES (4, 11, "2019-01-01 12:00:06", "Medium", "(40.7630, -73.9781)");
-
