@@ -10,13 +10,15 @@ import java.util.List;
 public interface MailBoxDAO {
 
     /**
-     * notify new msg or reply by scanning MailBox and find msg from read becomes unread or new msg
-     * @param uid
-     * @return
+     * get whole mailbox by uid
+     * @param uid uid
+     * @return List<MailBox> mailbox models
      */
     List<MailBox> getMailBoxByUid(@Param("uid") int uid);
 
     boolean setMsgUnread(MailBox mailBox);
 
     boolean setMsgRead(MailBox mailBox);
+
+    List<MailBox> getNewMsgthreadByUid(@Param("uid") int uid);
 }

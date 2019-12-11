@@ -4,6 +4,8 @@ import com.hypertars.neighborChat.model.Hoods;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface HoodsDAO {
 
@@ -20,4 +22,10 @@ public interface HoodsDAO {
      * @return hoods hood model
      */
     Hoods getHoodByBid(@Param("bid") int bid);
+
+    /**
+     * get all hoods
+     * @return List<Hoods> hoods model
+     */
+    List<Hoods> getAllHoods();
 }

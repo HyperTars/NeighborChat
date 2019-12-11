@@ -33,22 +33,22 @@
         WHERE uid = #{uid};
     </update>
 
-    <select id="getSameBuilding">
+    <select id="getSameBuilding" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
         WHERE uid != #{uid} AND addr1 = (SELECT addr1 FROM <include refid="UsersTable" /> WHERE uid = #{uid});
     </select>
 
-    <select id="getSameBlock">
+    <select id="getSameBlock" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
         WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid});
     </select>
 
-    <select id="getSameHood">
+    <select id="getSameHood" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
         WHERE bid in (SELECT bid FROM Blocks WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
     </select>
 
-    <insert id="addUserBlock">
+    <insert id="addUserBlock" parameterType="com.hypertars.neighborChat.model.UserBlock">
         // SQL Function: New account: add || old account: update & add
     </insert>
 

@@ -28,5 +28,4 @@ public interface BlocksDAO {
      * @return List<Blocks> block models
      */
     List<Blocks> getBlocksByHid(@Param("hid") int hid);
-
 }

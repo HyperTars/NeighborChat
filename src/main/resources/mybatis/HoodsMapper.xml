@@ -10,11 +10,18 @@
         Hoods
     </sql>
 
-    <select id="getHoodByHid">
-
+    <select id="getHoodByHid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
+        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" />
+        WHERE hid = #{hid}
     </select>
 
-    <select id="getHoodByBid">
-
+    <select id="getHoodByBid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
+        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" /> NATURAL JOIN Blocks
+        WHERE bid = #{bid}
     </select>
+
+    <select id="getAllHoods" resultType="com.hypertars.neighborChat.model.Hoods">
+        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" />
+    </select>
+
 </mapper>
