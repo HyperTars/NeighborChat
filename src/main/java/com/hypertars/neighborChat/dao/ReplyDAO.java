@@ -20,7 +20,7 @@ public interface ReplyDAO {
 
     /**
      * get reply my msgid
-     * @param reply reply id
+     * @param msgid message thread id
      * @return Reply reply model
      */
     List<Reply> getReplyByMsgid(@Param("msgid") int msgid);

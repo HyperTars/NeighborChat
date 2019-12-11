@@ -53,7 +53,7 @@
         FROM
         <include refid="UsersTable" />
         WHERE
-        uid = #{uid}
+        uid = #{uid};
     </select>
 
     <update id="updateInfo" parameterType="com.hypertars.neighborChat.model.Users">

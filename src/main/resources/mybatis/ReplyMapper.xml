@@ -11,7 +11,7 @@
     </sql>
 
     <insert id="addNewReply">
-        // SQL Function: add new reply & update MailBox
+        <!-- SQL Function: add new reply & update MailBox -->
     </insert>
 
     <select id="getReplyByMsgid" resultType="com.hypertars.neighborChat.model.Reply" parameterType="java.lang.Integer">
@@ -19,6 +19,6 @@
         WHERE msgid = #{msgid};
     </select>
 
-    // + New Msg Notify SQL Funtion?
+    <!-- + New Msg Notify SQL Funtion? -->
 
 </mapper>

@@ -31,13 +31,6 @@ public interface FriendApplicationDAO {
     boolean updateFriendApplication(@Param("applicant") int applicant, @Param("recipient") int recipient);
 
     /**
-     * add new friend application (if not exists)
-     * @param friendApplication friend application
-     * @return 1 or 0
-     */
-    boolean addFriendApplication(FriendApplication friendApplication);
-
-    /**
      * accept friend application (mark decision as True)
      * @param applicant applicant uid
      * @param recipient recipient uid
@@ -66,6 +59,13 @@ public interface FriendApplicationDAO {
      * @return List<FriendApplication> friendapplication model
      */
     List<FriendApplication> notifyNewFriendApplication(@Param("recipient") int recipient);
+
+    /**
+     * add new friend application (if not exists)
+     * @param friendApplication friend application
+     * @return 1 or 0
+     */
+    boolean addFriendApplication(FriendApplication friendApplication);
 
     /**
      * If notified friend application decision, delete it

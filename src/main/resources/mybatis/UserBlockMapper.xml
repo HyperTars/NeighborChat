@@ -48,8 +48,13 @@
         WHERE bid in (SELECT bid FROM Blocks WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
     </select>
 
+    <select id="notifyNewBlockMember" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
+        SELECT <include refid="UserBlockCols" /> FROM <include refid="UserBlockTable" />
+        WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}) AND ubTime &gt; (SELECT lastLog FROM Users WHERE uid = #{uid});
+    </select>
+
     <insert id="addUserBlock" parameterType="com.hypertars.neighborChat.model.UserBlock">
-        // SQL Function: New account: add || old account: update & add
+        <!-- SQL Function: New account: add || old account: update & add -->
     </insert>
 
 

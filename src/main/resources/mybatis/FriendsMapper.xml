@@ -10,31 +10,52 @@
         Friends
     </sql>
 
-    <select id="getFriends">
-
+    <select id="getFriends" resultType="com.hypertars.neighborChat.model.Friends" parameterType="java.lang.Integer">
+        SELECT uidA, uidB, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidA = #{uid}
+        UNION
+        SELECT uidB, uidA, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidB = #{uid};
     </select>
 
     <select id="getFriendsFromBlock">
-
+        SELECT uidA, uidB, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidA = #{uid} AND uidB in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}))
+        UNION
+        SELECT uidB, uidA, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidB = #{uid} AND uidA in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}));
     </select>
 
     <select id="getFriendsFromHood">
-
+        SELECT uidA, uidB, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidA = #{uid} AND uidB in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}))
+        UNION
+        SELECT uidB, uidA, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidB = #{uid} AND uidA in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
     </select>
 
-    <select id="getFriendsFromOld">
-
+    <select id="getFriendsFromOld" resultType="com.hypertars.neighborChat.model.Friends" parameterType="java.lang.Integer">
+        SELECT uidA, uidB, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidA = #{uid} AND fTime &lt; (SELECT ubTime FROM UserBlock WHERE uid = #{uid} AND status = TRUE LIMIT 1)
+        UNION
+        SELECT uidB, uidA, fTime FROM <include refid="FriendsTable"/>
+        WHERE uidB = #{uid} AND fTime &lt; (SELECT ubTime FROM UserBlock WHERE uid = #{uid} AND status = TRUE LIMIT 1);
     </select>
 
-    <select id="checkFriends">
-
+    <select id="checkFriends" resultType="com.hypertars.neighborChat.model.Friends" parameterType="com.hypertars.neighborChat.model.Friends">
+        SELECT COUNT(*) FROM <include refid="FriendsTable"/>
+        WHERE (uidA = #{uidA} AND uidB = #{uidB}) OR (uidA = #{uidB} AND uidB = #{uidA});
     </select>
 
-    <insert id="addFriend">
-
+    <insert id="addFriend" parameterType="com.hypertars.neighborChat.model.Friends">
+        INSERT INTO <include refid="FriendsTable"/>
+        (uidA, uidB)
+        VALUES
+        (#{uidA}, #{uidB});
     </insert>
 
-    <delete id="deleteFriend">
-
+    <delete id="deleteFriend" parameterType="com.hypertars.neighborChat.model.Friends">
+        DELETE FROM <include refid="FriendsTable"/>
+        WHERE (uidA = #{uidA} AND uidB = #{uidB}) OR (uidA = #{uidB} AND uidB = #{uidA});
     </delete>
 </mapper>

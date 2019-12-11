@@ -11,17 +11,17 @@
     </sql>
 
     <select id = "getAllBlocks" resultType="com.hypertars.neighborChat.model.Blocks">
-        SELECT <include refid="BlocksCols" /> FROM <include refid="BlocksTable" />
+        SELECT <include refid="BlocksCols" /> FROM <include refid="BlocksTable" />;
     </select>
 
     <select id = "getBlockByBid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT <include refid="BlocksCols" /> FROM <include refid="BlocksTable" />
-        WHERE bid = #{bid}
+        WHERE bid = #{bid};
     </select>
 
     <select id = "getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT <include refid="BlocksCols" /> FROM <include refid="BlocksTable" />
-        WHERE hid = #{hid}
+        WHERE hid = #{hid};
     </select>
 
 </mapper>

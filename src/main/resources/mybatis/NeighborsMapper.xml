@@ -39,11 +39,11 @@
 
     <delete id="deleteNeighbor" parameterType="com.hypertars.neighborChat.model.Neighbors">
         DELETE FROM <include refid="NeighborsTable"/>
-        WHERE uidA = #{uidA} AND uidB = #{uidB}
+        WHERE uidA = #{uidA} AND uidB = #{uidB};
     </delete>
 
     <delete id="deleteAllNeighbors" parameterType="java.lang.Integer">
         DELETE FROM <include refid="NeighborsTable"/>
-        WHERE uidA = #{uidA}
+        WHERE uidA = #{uidA};
     </delete>
 </mapper>

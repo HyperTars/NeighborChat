@@ -3,11 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MailBoxDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/MessageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/FriendApplicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/ReplyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/ReplyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplicationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlockApplicationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/BlocksMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/BlocksMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/FriendApplicationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/FriendApplicationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/FriendsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/FriendsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/MailBoxMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/MailBoxMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/MessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/NeighborsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/NeighborsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ReplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UserBlockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/UsersMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +187,7 @@
       <workItem from="1575847219275" duration="350000" />
       <workItem from="1575847594231" duration="1045000" />
       <workItem from="1575896838096" duration="542000" />
-      <workItem from="1575997292942" duration="21796000" />
+      <workItem from="1575997292942" duration="27013000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -383,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576026122781</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="More DAO &amp; Mapper completed">
+      <created>1576027786558</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576027786558</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -492,10 +508,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575997761313" />
-    <state x="572" y="73" key="CommitChangelistDialog2" timestamp="1576026122589">
+    <state x="572" y="73" key="CommitChangelistDialog2" timestamp="1576038183996">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="572" y="73" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576026122589" />
+    <state x="572" y="73" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576038183996" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576011970173">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -564,10 +580,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="602" y="248" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575847654492" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576026125746">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576027789319">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576026125746" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576027789319" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -600,9 +616,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="464" y="391" key="git4idea.ui.GitUnstashDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575847648572" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576024689839">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576033432314">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576024689839" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576033432314" />
   </component>
 </project>

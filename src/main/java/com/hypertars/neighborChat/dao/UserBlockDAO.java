@@ -61,6 +61,13 @@ public interface UserBlockDAO {
     List<UserBlock> getSameHood(@Param("uid") int uid);
 
     /**
+     * notify new block member
+     * @param uid current user id
+     * @return List<UserBlock> UserBlock models
+     */
+    List<UserBlock> notifyNewBlockMember(@Param("uid") int uid);
+
+    /**
      * add user to new userblock
      * @param userBlock userBlock model
      * @return 1 or 0
