@@ -62,6 +62,42 @@ public interface UsersDAO {
      * @return 1 or 0
      */
     boolean updateLastLog();
+
+    /**
+     * Select users profiles from current user's friends
+     * @param uid current user id
+     * @return List<Users> Users models
+     */
+    List<Users> userFromFriends(@Param("uid") Integer uid);
+
+    /**
+     * Select users profiles from current user's neighbors
+     * @param uid current user id
+     * @return List<Users> Users models
+     */
+    List<Users> userFromNeighbors(@Param("uid") Integer uid);
+
+    /**
+     * Select users profiles from current user's same building
+     * @param uid current user id
+     * @return List<Users> Users models
+     */
+    List<Users> userFromSameBuilding(@Param("uid") Integer uid);
+
+    /**
+     * Select users profiles from current user's same block
+     * @param uid current user id
+     * @return List<Users> Users models
+     */
+    List<Users> userFromSameBlock(@Param("uid") Integer uid);
+
+    /**
+     * Select users profiles from current user's same hood
+     * @param uid current user id
+     * @return List<Users> Users models
+     */
+    List<Users> userFromSameHood(@Param("uid") Integer uid);
+
 }
 
 

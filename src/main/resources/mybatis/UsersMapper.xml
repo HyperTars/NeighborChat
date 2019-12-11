@@ -15,19 +15,14 @@
         FROM
         <include refid="UsersTable"/>
         WHERE
-        uname = #{uname}
+        uname = #{uname};
     </select>
 
-    <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
-            keyProperty="uid">
+    <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true" keyProperty="uid">
         INSERT INTO
         <include refid="UsersTable"/>
-        (
-        <include refid="UsersCols"/>
-        )
-        VALUES (
-        #{uname}, #{passwd}, #{email}
-        )
+        (uname, passwd, email)
+        VALUES (#{uname}, #{passwd}, #{email});
     </insert>
 
     <select id="userAuth" resultType="java.lang.String" parameterType="com.hypertars.neighborChat.model.Users">
@@ -38,7 +33,7 @@
         WHERE
         uname = #{uname}
         OR
-        email = #{email}
+        email = #{email};
     </select>
 
     <update id="restorePasswd" parameterType="com.hypertars.neighborChat.model.Users">
@@ -50,7 +45,7 @@
         WHERE
         uname = #{uname}
         AND
-        email = #{email}
+        email = #{email};
     </update>
 
     <select id="getUserInfoByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
@@ -88,30 +83,32 @@
         <set>
             lastLog = CURRENT_TIMESTAMP
         </set>
-        WHERE uid = #{uid}
+        WHERE uid = #{uid};
     </update>
 
     <select id="userFromFriends" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
-        WHERE uid in ((SELECT uidA FROM Friends WHERE uidB = #{uid}) UNION (SELECT uidB FROM Friends WHERE uidA = #{uid}))
+        WHERE uid in ((SELECT uidA FROM Friends WHERE uidB = #{uid}) UNION (SELECT uidB FROM Friends WHERE uidA = #{uid}));
     </select>
 
     <select id="userFromNeighbors" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
-        WHERE uid in (SELECT uidB FROM Neighbors WHERE uidB = #{uid})
+        WHERE uid in (SELECT uidB FROM Neighbors WHERE uidB = #{uid});
     </select>
 
-    <select id="userFromSameBuilding" resultType="com.hypertars.neighborChat.model.Users" parameterType="com.hypertars.neighborChat.model.Users">
+    <select id="userFromSameBuilding" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
-        WHERE addr1 = #{addr1} AND uid != #{uid}
+        WHERE uid != #{uid} AND addr1 = (SELECT addr1 FROM <include refid="UsersTable" /> WHERE uid = #{uid});
     </select>
 
-    <select id="userFromSameBlock">
-        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" />
+    <select id="userFromSameBlock" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" /> NATURAL JOIN UserBlock
+        WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid});
     </select>
 
-    <select id="userFromSameHood">
-
+    <select id="userFromSameHood" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT <include refid="UserCols" /> FROM <include refid="UsersTable" /> NATURAL JOIN UserBlock
+        WHERE bid in (SELECT bid FROM Blocks WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
     </select>
 
 </mapper>
