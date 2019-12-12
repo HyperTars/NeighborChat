@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<Users> getUsersByBid(int bid) {
-        List<UserBlock> userBlocks = userBlockDAO.getUserBlockByBid(bid);
+        List<UserBlock> userBlocks = userBlockDAO.getUserBlocksByBid(bid);
         List<Users> users = new ArrayList<>();
         for (UserBlock userBlock: userBlocks) {
             users.add(usersDAO.selectByUid(userBlock.getUid()));

@@ -89,4 +89,30 @@ public class BlockController extends NBCBaseController {
         return JSON.toJSONString(res);
     }
 
+    @GetMapping("agreeApplicant")
+    public String agreeApplicant(HttpServletRequest request) {
+        NBCResult<Object> res = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                int applicant = Integer.parseInt(request.getParameter("applicant"));
+                blockService.agreeApplicant(applicant);
+                return new NBCResult<Object>();
+            }
+        });
+        return JSON.toJSONString(res);
+    }
+
+    @GetMapping("rejectApplicant")
+    public String rejectApplicant(HttpServletRequest request) {
+        NBCResult<Object> res = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                int applicant = Integer.parseInt(request.getParameter("applicant"));
+                blockService.rejectApplicant(applicant);
+                return new NBCResult<Object>();
+            }
+        });
+        return JSON.toJSONString(res);
+    }
+
 }

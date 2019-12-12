@@ -47,4 +47,52 @@ public class BlockServiceImpl implements BlockService {
         blockApplication.setBid(bid);
         blockApplicationDAO.insert(blockApplication);
     }
+
+    @Override
+    public void agreeApplicant(int applicant) {
+        BlockApplication blockApplication = blockApplicationDAO.selectByUidStatus(applicant, true).get(0);
+        AssertUtils.assertNotNull(blockApplication);
+
+        blockApplication.setAccepts(blockApplication.getAccepts() + 1);
+        blockApplication.setDecisions(blockApplication.getDecisions() + 1);
+
+        int temp = applicantCallBack(blockApplication.getAccepts(), blockApplication.getDecisions(), userBlockDAO.getUserBlocksByBid(blockApplication.getBid()).size());
+        if (temp == 1) {
+            blockApplication.setStatus(false);
+            blockApplicationDAO.update(blockApplication);
+            UserBlock userBlock = new UserBlock();
+            userBlock.setBid(blockApplication.getBid());
+            userBlock.setUid(blockApplication.getApplicant());
+            userBlockDAO.insert(userBlock);
+        } else if (temp == -1) {
+            blockApplication.setStatus(false);
+            blockApplicationDAO.update(blockApplication);
+        }
+        // todo 通知结果
+    }
+
+    @Override
+    public void rejectApplicant(int applicant) {
+        BlockApplication blockApplication = blockApplicationDAO.selectByUidStatus(applicant, true).get(0);
+        AssertUtils.assertNotNull(blockApplication);
+
+        blockApplication.setDecisions(blockApplication.getDecisions() + 1);
+
+        int temp = applicantCallBack(blockApplication.getAccepts(), blockApplication.getDecisions(), userBlockDAO.getUserBlocksByBid(blockApplication.getBid()).size());
+        if (temp == -1) {
+            blockApplication.setStatus(false);
+            blockApplicationDAO.update(blockApplication);
+        }
+        // todo 通知结果
+    }
+
+    private int applicantCallBack(int accepts, int decisions, int sum) {
+        int line = sum < 3 ? sum : 3;
+        if (accepts >= line) {
+            return 1;
+        } else if (sum - decisions < line - accepts) {
+            return -1;
+        }
+        return 0;
+    }
 }

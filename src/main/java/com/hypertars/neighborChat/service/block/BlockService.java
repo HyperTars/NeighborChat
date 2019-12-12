@@ -8,4 +8,8 @@ public interface BlockService {
 
     void userJoinInBlock(int uid, int bid);
 
+    void agreeApplicant(int applicant);
+
+    void rejectApplicant(int applicant);
+
 }

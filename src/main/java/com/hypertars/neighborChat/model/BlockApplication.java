@@ -15,9 +15,6 @@ public class BlockApplication {
     /** batime */
     private Date baTime;
 
-    /** bid */
-    private int bid;
-
     /** txt */
     private String txt;
 
