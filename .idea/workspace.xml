@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Membership.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/PullData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Relationship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MembershipImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MessageImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/NotificationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/PullDataImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/RelationshipImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +174,8 @@
       <workItem from="1575847594231" duration="1045000" />
       <workItem from="1575896838096" duration="542000" />
       <workItem from="1575997292942" duration="27829000" />
+      <workItem from="1576089380874" duration="921000" />
+      <workItem from="1576096302446" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
