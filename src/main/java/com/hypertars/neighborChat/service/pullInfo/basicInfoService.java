@@ -22,7 +22,7 @@ public interface basicInfoService {
 
     /** Users */
     List<Users> getUsersByBid (int bid);
-    List<Users> getSameBuildingByUid (int uid);
+    List<Users> getUsersInSameBuildingByUid (int uid);
     List<Users> getUsersInSameBlockByUid (int uid);
     List<Users> getUsersInSameHoodByUid (int uid);
 

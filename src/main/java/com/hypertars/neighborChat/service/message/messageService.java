@@ -10,15 +10,19 @@ public interface messageService {
 
     /** message */
     List<Users> possibleRecipient (int uid);
-    int addNewMsg (Message msg);
+    boolean addNewMsg (Message msg);
     List<Message> getMessageByMsgid (int msgid);
     List<Message> getMessageByRecipient (int recipient);
     List<Message> getMessageByAuthor (int author);
-    List<Message> notifyNewMessage (int uid);
+    List<Message> getMessageThreadUnread (int uid);
 
     /** reply */
-    int addReply (Reply reply);
+    boolean addReply (Reply reply);
     List<Message> notifyNewReply (int uid);
     List<Reply> getReplyByMsgid (int msgid);
+
+    /** notification */
+    List<Message> notifyNewMessage (int uid);
+    List<Message> notifyNewReply (int uid);
 
 }

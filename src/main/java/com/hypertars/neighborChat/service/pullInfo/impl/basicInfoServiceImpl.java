@@ -1,10 +1,7 @@
 package com.hypertars.neighborChat.service.pullInfo.impl;
 
 import com.hypertars.neighborChat.dao.*;
-import com.hypertars.neighborChat.model.Blocks;
-import com.hypertars.neighborChat.model.Hoods;
-import com.hypertars.neighborChat.model.UserBlock;
-import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.model.*;
 import com.hypertars.neighborChat.service.pullInfo.basicInfoService;
 import org.springframework.stereotype.Service;
 
@@ -167,9 +164,14 @@ public class basicInfoServiceImpl implements basicInfoService {
         return usersList;
     }
 
+    /**
+     * users living in same building as uid
+     * @param uid uid
+     * @return list of users
+     */
     @Override
-    public List<Users> getSameBuildingByUid(int uid) {
-        return null;
+    public List<Users> getUsersInSameBuildingByUid(int uid) {
+        return usersDAO.userFromSameBuilding(uid);
     }
 
     /**
@@ -207,7 +209,11 @@ public class basicInfoServiceImpl implements basicInfoService {
 
     @Override
     public List<Users> getFriendsByUid(int uid) {
-        return null;
+        List<Friends> friendship = friendsDAO.getFriends(uid);
+        for (Friends f : friends) {
+
+        }
+        return friendsDAO.getFriends(uid);
     }
 
     @Override
