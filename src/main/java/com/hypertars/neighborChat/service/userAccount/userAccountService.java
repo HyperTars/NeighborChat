@@ -8,25 +8,13 @@ import java.util.Map;
 
 public interface userAccountService {
 
-    /**
-     * insert an user info to db
-     * @param user user model
-     * @return 1, if success;0 or -1, else
-     */
+
     void insert(Users user);
 
-    /**
-     * update an user info to db
-     * @param user user model
-     * @return 1, if success;0 or -1, else
-     */
+
     void update(Users user);
 
-    /**
-     * select by user id
-     * @param uid user id
-     * @return user
-     */
+
     Users selectByUid(int uid);
 
     /**
@@ -58,4 +46,7 @@ public interface userAccountService {
 
     /** update user info */
     int updateUserInfo (Users user);
+
+    /** load info */
+    Users getUserInfoByUid (int uid);
 }

@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update models">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/impl/userAccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/userAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/membership/impl/membershipServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/membership/membershipService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/relationship/impl/relationshipServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/relationship/relationshipService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neighborchat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/neighborchat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Membership.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/PullData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Relationship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MembershipImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MessageImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/NotificationImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/PullDataImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/RelationshipImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/userAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/userAccountService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +59,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>insert</find>
-      <find>upda</find>
-      <find>userbl</find>
-      <find>ref</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -183,7 +192,7 @@
       <workItem from="1575739171593" duration="5673000" />
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
-      <workItem from="1576681395120" duration="2960000" />
+      <workItem from="1576681395120" duration="23727000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -311,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576682136436</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update models">
+      <created>1576684444680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576684444680</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,10 +379,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="update models" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576683077895">
+    <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576699488364">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576683077895" />
+    <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576699488364" />
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576705451192">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576705451192" />
     <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576681986458">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -383,10 +403,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576682743743" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576684430124">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576684444310">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684430124" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684444310" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1575759560519">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -455,10 +475,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="143" y="213" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576683284621" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576682323524">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576684449332">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576682323524" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684449332" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -483,9 +503,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="391" y="452" width="710" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576683279940" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576684176047">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576707350330">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576684176047" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576707350330" />
   </component>
 </project>

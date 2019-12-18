@@ -24,6 +24,13 @@ public interface HoodsDAO {
     Hoods getHoodByBid(@Param("bid") int bid);
 
     /**
+     * get hood by uid
+     * @param uid user id
+     * @return hoods hood model
+     */
+    Hoods getHoodByUid(@Param("uid") int uid);
+
+    /**
      * get all hoods
      * @return List<Hoods> hoods model
      */

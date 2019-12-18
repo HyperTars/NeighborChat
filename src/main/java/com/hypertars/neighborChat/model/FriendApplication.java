@@ -21,7 +21,7 @@ public class FriendApplication {
     private Date faTime;
 
     /** decision */
-    private boolean decision;
+    private int decision;
 
     /** public get */
     public int getApplicant() {
@@ -40,7 +40,7 @@ public class FriendApplication {
         return faTime;
     }
 
-    public boolean getDecision() {
+    public int getDecision() {
         return decision;
     }
 
@@ -61,7 +61,7 @@ public class FriendApplication {
         this.faTime = faTime;
     }
 
-    public void setDecision(boolean decision) {
+    public void setDecision(int decision) {
         this.decision = decision;
     }
 
