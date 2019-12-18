@@ -6,7 +6,6 @@ import com.hypertars.neighborChat.dao.UsersDAO;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
 import com.hypertars.neighborChat.model.Blocks;
-import com.hypertars.neighborChat.model.Hoods;
 import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.user.UserService;
@@ -135,8 +134,8 @@ public class UserServiceImpl implements UserService {
     private void checkUserInfo(Users user) {
         if (user == null || !(StringUtils.isNotEmpty(user.getUname()) &&
                 StringUtils.isNotEmpty(user.getPasswd()) &&
-                StringUtils.isNotEmpty(user.getFName()) &&
-                StringUtils.isNotEmpty(user.getLName()) )) {
+                StringUtils.isNotEmpty(user.getfName()) &&
+                StringUtils.isNotEmpty(user.getlName()) )) {
             throw new NBCException("invalid user info", NBCResultCodeEnum.INVALID_DATA);
         }
     }
