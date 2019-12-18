@@ -6,7 +6,6 @@ import com.hypertars.neighborChat.service.user.UserService;
 import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,8 +43,8 @@ public class UserController extends NBCBaseController {
 //        return JSON.toJSONString(user);
     }
 
-    @GetMapping("getUserInfo")
-    public String getUserInfo(HttpServletRequest request) {
+    @RequestMapping(value = "getUserInfo", produces = "text/script;charset=UTF-8")
+    public String getUserInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
 
         result = protectController(request, null, new NBCLogicCallBack() {
@@ -56,8 +55,7 @@ public class UserController extends NBCBaseController {
                 return res;
             }
         });
-
-        return JSON.toJSONString(result);
+//        return JSON.toJSONString(result);
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
-
 }
