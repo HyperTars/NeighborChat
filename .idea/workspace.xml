@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/membership/impl/membershipServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/membership/membershipService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/relationship/impl/relationshipServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/relationship/relationshipService.java" afterDir="false" />
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlockApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/BlocksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/HoodsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UserBlockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/dao/UsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/BlockApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/model/FriendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Membership.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Notification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/PullData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/Relationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MembershipImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/MessageImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/NotificationImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/PullDataImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/RelationshipImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/userAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/userAccount/userAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/post.html" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +175,9 @@
       <workItem from="1575739171593" duration="5673000" />
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
+
       <workItem from="1576681395120" duration="23727000" />
+
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -411,44 +396,54 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575759560519" />
-    <state width="1388" height="96" key="GridCell.Tab.0.bottom" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+
+    <state width="1379" height="264" key="GridCell.Tab.0.bottom" timestamp="1576705970324">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
     <state width="1388" height="96" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.0.center" timestamp="1575861809984">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.0.center" timestamp="1576705970323">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970323" />
     <state width="1388" height="96" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
     <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972919" />
-    <state width="1388" height="96" key="GridCell.Tab.0.left" timestamp="1575861809984">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.0.left" timestamp="1576705970322">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970322" />
     <state width="1388" height="96" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
     <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972906" />
-    <state width="1388" height="96" key="GridCell.Tab.0.right" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.0.right" timestamp="1576705970323">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970323" />
     <state width="1388" height="96" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972919" />
-    <state width="1388" height="96" key="GridCell.Tab.1.bottom" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.1.bottom" timestamp="1576705970324">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
     <state width="1388" height="96" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972921" />
-    <state width="1388" height="96" key="GridCell.Tab.1.center" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.1.center" timestamp="1576705970324">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
     <state width="1388" height="96" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.1.left" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.1.left" timestamp="1576705970324">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
     <state width="1388" height="96" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.1.right" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="264" key="GridCell.Tab.1.right" timestamp="1576705970324">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="264" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
+
     <state width="1388" height="96" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
     <state width="1326" height="320" key="GridCell.Tab.2.bottom" timestamp="1575696250829">
@@ -506,6 +501,11 @@
     <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576707350330">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576707350330" />
+
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576684176047" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/neighborChat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576705970298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+
   </component>
 </project>
