@@ -23,9 +23,8 @@ public interface UserBlockDAO {
     /**
      * user exists block
      * @param uid user id
-     * @return 1 or 0
      */
-    boolean exitBlock(@Param("uid") int uid);
+    void exitBlock(@Param("uid") int uid);
 
     void setAllUserBlocksInactive(@Param("uid") int uid);
 

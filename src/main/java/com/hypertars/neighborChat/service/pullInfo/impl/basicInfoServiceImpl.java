@@ -207,57 +207,182 @@ public class basicInfoServiceImpl implements basicInfoService {
         return usersList;
     }
 
+    /**
+     * get friend info by uid
+     * @param uid uid
+     * @return user list
+     */
     @Override
     public List<Users> getFriendsByUid(int uid) {
+        List<Users> friends = new ArrayList<>();
         List<Friends> friendship = friendsDAO.getFriends(uid);
-        for (Friends f : friends) {
-
+        for (Friends f : friendship) {
+            int friendID;
+            if (f.getUidA() == uid)
+                friendID = f.getUidB();
+            else
+                friendID = f.getUidA();
+            friends.add(usersDAO.getUserInfoByUid(friendID));
         }
-        return friendsDAO.getFriends(uid);
+        return friends;
     }
 
+    /**
+     * Friends from same block
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getFriendsFromBlockByUid(int uid) {
-        return null;
+        List<Users> friends = new ArrayList<>();
+        List<Friends> friendship = friendsDAO.getFriendsFromBlock(uid);
+        for (Friends f : friendship) {
+            int friendID;
+            if (f.getUidA() == uid)
+                friendID = f.getUidB();
+            else
+                friendID = f.getUidA();
+            friends.add(usersDAO.getUserInfoByUid(friendID));
+        }
+        return friends;
     }
 
+    /**
+     * Friends from same hood
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getFriendsFromHoodByUid(int uid) {
-        return null;
+        List<Users> friends = new ArrayList<>();
+        List<Friends> friendship = friendsDAO.getFriendsFromHood(uid);
+        for (Friends f : friendship) {
+            int friendID;
+            if (f.getUidA() == uid)
+                friendID = f.getUidB();
+            else
+                friendID = f.getUidA();
+            friends.add(usersDAO.getUserInfoByUid(friendID));
+        }
+        return friends;
     }
 
+    /**
+     * Friends from old block
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getFriendsFromOldByUid(int uid) {
-        return null;
+        List<Users> friends = new ArrayList<>();
+        List<Friends> friendship = friendsDAO.getFriendsFromOld(uid);
+        for (Friends f : friendship) {
+            int friendID;
+            if (f.getUidA() == uid)
+                friendID = f.getUidB();
+            else
+                friendID = f.getUidA();
+            friends.add(usersDAO.getUserInfoByUid(friendID));
+        }
+        return friends;
     }
 
+    /**
+     * neighbors
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getNeighborsByUid(int uid) {
-        return null;
+        List<Users> neighbors = new ArrayList<>();
+        List<Neighbors> neighborShip = neighborsDAO.getNeighbors(uid);
+        for (Neighbors n : neighborShip) {
+            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+        }
+        return neighbors;
     }
 
+    /**
+     * neighbors from same block
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getNeighborsFromBlockByUid(int uid) {
-        return null;
+        List<Users> neighbors = new ArrayList<>();
+        List<Neighbors> neighborShip = neighborsDAO.getNeighborsFromBlock(uid);
+        for (Neighbors n : neighborShip) {
+            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+        }
+        return neighbors;
     }
 
+    /**
+     * neighbors from same hood
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getNeighborsFromHoodByUid(int uid) {
-        return null;
+        List<Users> neighbors = new ArrayList<>();
+        List<Neighbors> neighborShip = neighborsDAO.getNeighborsFromHood(uid);
+        for (Neighbors n : neighborShip) {
+            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+        }
+        return neighbors;
     }
 
+    /**
+     * strangers from same building
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getStrangersFromSameBuilding(int uid) {
-        return null;
+        List<Users> stranger = new ArrayList<>();
+        List<Users> sameBuilding = usersDAO.userFromSameBuilding(uid);
+        List<Users> friends = getFriendsByUid(uid);
+        List<Users> neighbors = getNeighborsByUid(uid);
+        for (Users user : sameBuilding) {
+            if (!friends.contains(user) && !neighbors.contains(user))
+                stranger.add(user);
+        }
+        return stranger;
     }
 
+    /**
+     * strangers from same block
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getStrangersFromSameBlock(int uid) {
-        return null;
+        List<Users> stranger = new ArrayList<>();
+        List<Users> sameBlock = usersDAO.userFromSameBlock(uid);
+        List<Users> friends = getFriendsByUid(uid);
+        List<Users> neighbors = getNeighborsByUid(uid);
+        for (Users user : sameBlock) {
+            if (!friends.contains(user) && !neighbors.contains(user))
+                stranger.add(user);
+        }
+        return stranger;
     }
 
+    /**
+     * strangers from same hood
+     * @param uid uid
+     * @return list of users
+     */
     @Override
     public List<Users> getStrangersFromSameHood(int uid) {
-        return null;
+        List<Users> stranger = new ArrayList<>();
+        List<Users> sameHood = usersDAO.userFromSameHood(uid);
+        List<Users> friends = getFriendsByUid(uid);
+        List<Users> neighbors = getNeighborsByUid(uid);
+        for (Users user : sameHood) {
+            if (!friends.contains(user) && !neighbors.contains(user))
+                stranger.add(user);
+        }
+        return stranger;
     }
 }

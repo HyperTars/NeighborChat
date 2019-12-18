@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/impl/messageServiceImpl.java" afterDir="false" />
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update services">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/pullInfo/basicInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/pullInfo/basicInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/pullInfo/impl/basicInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/pullInfo/impl/basicInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +173,7 @@
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
       <workItem from="1576681395120" duration="25053000" />
-      <workItem from="1576711531004" duration="426000" />
+      <workItem from="1576711531004" duration="1603000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -317,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576710199031</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update services">
+      <created>1576712056358</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576712056359</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,10 +388,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576705451192" />
-    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576681986458">
+    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576712180190">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576681986458" />
+    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712180190" />
     <state x="428" y="372" width="522" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575759218795">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -399,10 +404,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576682743743" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576711812987">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576712111142">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576711812987" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576712111142" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576711380157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -463,10 +468,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1326" height="320" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
-    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576710231649">
+    <state x="202" y="93" key="MergeDialog" timestamp="1576712089867">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576710231649" />
+    <state x="202" y="93" key="MergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712089867" />
+    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576712091267">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712091267" />
     <state x="393" y="291" key="RollbackChangesDialog" timestamp="1575727631995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -479,10 +488,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="237" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711422712" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576710977456">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576712158712">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576710977456" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576712158712" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -495,10 +504,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="593" y="401" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711531120" />
-    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576711539615">
+    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576712104823">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576711539615" />
+    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576712104823" />
     <state x="412" y="304" key="git4idea.merge.GitMergeDialog" timestamp="1576711271995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -519,9 +528,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="391" y="452" width="710" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576683279940" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576707350330">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576713138670">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576707350330" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576713138670" />
   </component>
 </project>
