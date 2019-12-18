@@ -35,4 +35,13 @@ public class NBCResult<T> implements Serializable {
      */
     private T resultObj;
 
+    public void setResultObj(T resultObj) {
+        this.resultObj = resultObj;
+    }
+
+    public T getResultObj() {
+        return resultObj;
+    }
+
+
 }
