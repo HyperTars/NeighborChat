@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/post.html" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +17,6 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="15" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,14 +43,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>insert</find>
-      <find>upda</find>
-      <find>userbl</find>
-      <find>ref</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
@@ -63,14 +53,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="git@github.com:HyperTars/neighborChat.git" />
-        <option value="git@github.com:MikeYan01/neighborChat.git" />
-      </set>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -193,8 +175,9 @@
       <workItem from="1575739171593" duration="5673000" />
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
-      <workItem from="1576681395120" duration="2960000" />
-      <workItem from="1576686096801" duration="15623000" />
+
+      <workItem from="1576681395120" duration="23727000" />
+
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -322,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576682136436</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update models">
+      <created>1576684444680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576684444680</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,18 +364,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="update models" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="128" key="#Project_Structure" timestamp="1576686219215">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="329" y="128" key="#Project_Structure/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576686219215" />
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576683077895">
+    <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576699488364">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576683077895" />
-    <state x="461" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576686367605">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576699488364" />
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576705451192">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="461" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576686367605" />
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576705451192" />
+    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576681986458">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
     <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576681986458" />
     <state x="428" y="372" width="522" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575759218795">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -399,14 +388,15 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576682743743" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576684430124">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576684444310">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684430124" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684444310" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1575759560519">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575759560519" />
+
     <state width="1379" height="264" key="GridCell.Tab.0.bottom" timestamp="1576705970324">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -453,27 +443,24 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1379" height="264" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576705970324" />
+
     <state width="1388" height="96" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1379" height="285" key="GridCell.Tab.2.bottom" timestamp="1576695123185">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1326" height="320" key="GridCell.Tab.2.bottom" timestamp="1575696250829">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1379" height="285" key="GridCell.Tab.2.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576695123185" />
     <state width="1326" height="320" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250829" />
-    <state width="1379" height="285" key="GridCell.Tab.2.center" timestamp="1576695123184">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1326" height="320" key="GridCell.Tab.2.center" timestamp="1575696250828">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1379" height="285" key="GridCell.Tab.2.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576695123184" />
     <state width="1326" height="320" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
-    <state width="1379" height="285" key="GridCell.Tab.2.left" timestamp="1576695123183">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1326" height="320" key="GridCell.Tab.2.left" timestamp="1575696250827">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1379" height="285" key="GridCell.Tab.2.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576695123183" />
     <state width="1326" height="320" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250827" />
-    <state width="1379" height="285" key="GridCell.Tab.2.right" timestamp="1576695123184">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1326" height="320" key="GridCell.Tab.2.right" timestamp="1575696250828">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1379" height="285" key="GridCell.Tab.2.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576695123184" />
     <state width="1326" height="320" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
     <state x="393" y="291" key="RollbackChangesDialog" timestamp="1575727631995">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -483,10 +470,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="143" y="213" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576683284621" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576682323524">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576684449332">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576682323524" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576684449332" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -511,12 +498,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="391" y="452" width="710" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576683279940" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576684176047">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576707350330">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
+
     <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576684176047" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/neighborChat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576705970298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+
   </component>
 </project>

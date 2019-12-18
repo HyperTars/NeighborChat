@@ -21,8 +21,6 @@ public class BlockApplication {
 
     private int decisions;
 
-    private boolean status;
-
     /** public get */
     public int getApplicant() {
         return applicant;
@@ -46,10 +44,6 @@ public class BlockApplication {
 
     public int getDecisions() {
         return decisions;
-    }
-
-    public boolean getStatus() {
-        return status;
     }
 
     /** public set */
@@ -77,9 +71,6 @@ public class BlockApplication {
         this.decisions = decisions;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
 
     @Override
     public String toString() {
@@ -90,7 +81,6 @@ public class BlockApplication {
                 ", txt='" + txt + '\'' +
                 ", accepts=" + accepts +
                 ", decisions=" + decisions +
-                ", status=" + status +
                 '}';
     }
 
@@ -103,13 +93,12 @@ public class BlockApplication {
                 getBid() == that.getBid() &&
                 getAccepts() == that.getAccepts() &&
                 getDecisions() == that.getDecisions() &&
-                getStatus() == that.getStatus() &&
                 Objects.equals(getBaTime(), that.getBaTime()) &&
                 Objects.equals(getTxt(), that.getTxt());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getApplicant(), getBid(), getBaTime(), getTxt(), getAccepts(), getDecisions(), getStatus());
+        return Objects.hash(getApplicant(), getBid(), getBaTime(), getTxt(), getAccepts(), getDecisions());
     }
 }
