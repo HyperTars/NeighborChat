@@ -34,24 +34,24 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form id = "form" class="user" method="post" action="dashboard.html">
+              <form class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="FirstName" placeholder="First Name, 1~20 characters">
+                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="LastName" placeholder="Last Name, 1~20 characters">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="InputEmail" placeholder="Email Address with alphabets, _ and @">
+                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="InputPassword" placeholder="Password, 8 characters or more">
+                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="RepeatPassword" placeholder="Repeat Password">
+                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
 
                 </div>
@@ -63,9 +63,15 @@
                   <input type="radio" name="nRange" value="Same Block" checked>Same Block
                   <input type="radio" name="nRange" value="Same Hood" checked>Same Hood
                 </div>
+                <a href="dashboard.html" class="btn btn-primary btn-user btn-block">
+                  Register Account
+                </a>
                 <hr>
-                <input type = "submit" value = "Register Account" class = "btn btn-primary btn-user btn-block" id = "submit">
               </form>
+              <hr>
+              <div class="text-center">
+                <a class="small" href="forgot-password.html">Forgot Password?</a>
+              </div>
               <div class="text-center">
                 <a class="small" href="login.html">Already have an account? Login!</a>
               </div>
@@ -86,8 +92,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="../static/js/sb-admin-2.min.js"></script>
-  
-  <script src="../static/js/signup.js"></script>
+
 </body>
 
 </html>
