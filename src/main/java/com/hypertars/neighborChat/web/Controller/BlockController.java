@@ -15,7 +15,7 @@ import com.hypertars.neighborChat.web.NBCResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.management.snmp.jvminstr.JvmOSImpl;
+// import sun.management.snmp.jvminstr.JvmOSImpl;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
