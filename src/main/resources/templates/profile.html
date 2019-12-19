@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/plugins/images/favicon.png">
     <title>Profile & Settings</title>
     <!-- Bootstrap Core CSS -->
     <link href="../static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +51,7 @@
                             href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img id = "avatar" src = "../static/plugins/images/users/varun.jpg" alt="user-img"
+                        <a class="profile-pic" href="#"> <img id = "avatar" src = "../static/plugins/images/users/default.png" alt="user-img"
                             width="36" class="img-circle"><b id = "upper_right_name" class="hidden-xs">Steave</b></a>
                     </li>
                     <li>
@@ -120,7 +119,7 @@
                             <div class="user-bg"> <img width="100%" alt="user" src="../static/plugins/images/large/img1.jpg">
                                 <div class="overlay-box">
                                     <div class="user-content">
-                                        <a href="#"><img id = "photo" src="../static/plugins/images/users/varun.jpg"
+                                        <a href="#"><img id = "photo" src="../static/plugins/images/users/default.png"
                                                 class="thumb-lg img-circle" alt="img"></a>
                                         <h4 id = "userName" class="text-white">User Name</h4>
                                         <h5 id = "blockName" class="text-white">Block Name</h5>
@@ -210,10 +209,8 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group" id = "update">
-                                    <div class="col-sm-12">
-                                        <button class="btn btn-success">Update Profile</button>
-                                    </div>
+                                <div class="form-group">
+                                    <input type = "submit" value = "Update Profile" class = "btn btn-success" id = "update">
                                 </div>
                             </form>
                         </div>

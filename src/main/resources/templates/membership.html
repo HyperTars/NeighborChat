@@ -54,7 +54,7 @@
                             href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img id = "photo" src = "../static/plugins/images/users/varun.jpg" alt="user-img"
+                        <a class="profile-pic" href="#"> <img id = "photo" src = "../static/plugins/images/users/default.png" alt="user-img"
                             width="36" class="img-circle"><b id = "upper_right_name" class="hidden-xs">Steave</b></a>
                     </li>
                     <li>
@@ -116,14 +116,14 @@
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /row -->
-                <div class="row">
+                <div id = "currentBlockInformation" class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Current Block Information</h3>
                             <div class="comment-body">
-                                <h5><b>Block ID: </b>1</h5>
-                                <h5><b>Block Name: </b>Jay Street</h5>
-                                <h5><b>Hood belongs to: </b>Downtown Brooklyn</h5>
+                                <h5 id = "currentBlockID">1</h5>
+                                <h5 id = "currentBlockName">Jay Street</h5>
+                                <h5 id = "currentHood">Downtown Brooklyn</h5>
                             </div>
                         </div>
                     </div>
@@ -134,10 +134,10 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- .col -->
-                    <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div id = "PendingBlockApplications" class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Pending Block Applications</h3>
-                            <div class="comment-center p-t-10">
+                            <div id = "allApplications" class="comment-center p-t-10">
                                 <div class="comment-body">
                                     <div class="user-img"> <a href="profile_display.html"><img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"></a>
                                     </div>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-12">
+                    <div id = "blockMembers" class="col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">
                                 Block Members
@@ -231,7 +231,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-12">
+                    <div id = "hoodMembers" class="col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">
                                 Hood Members
@@ -297,7 +297,7 @@
                     <div class="col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">
-                                Blocks Nearby
+                                Blocks Available
         
                                 <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
                                     <input type="text" placeholder="Search a block" class="form-control"> <a href=""><i
@@ -313,7 +313,7 @@
                                         <th>Send Application</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id = "blockAvailable">
                                     <tr>
                                         <td>1</td>
                                         <td>Jay Street</td>
@@ -365,7 +365,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div id = "leaveBlock" class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Leave Current Block</h3>
@@ -374,7 +374,7 @@
                                 <h5><b>WARNING: All your current neighbors will be deleted.</b></h5>
                             </div>
 
-                            <a href="dashboard.html"><button type = "submit" class="btn btn-danger">Leave Block</button></a>
+                            <a href="dashboard.html"><button id = "leaveBlock" type = "submit" class="btn btn-danger">Leave Block</button></a>
                         </div>
                     </div>
                 </div>

@@ -55,7 +55,8 @@ public class MembershipController extends NBCBaseController {
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(membershipService.getHoodByUid(user.getUid()));
+                int bid = membershipService.getCurrentMember(user.getUid()).getBid();
+                res.setResultObj(membershipService.getHoodByBid(bid));
                 return res;
             }
         });
