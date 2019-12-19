@@ -10,7 +10,7 @@
         Users
     </sql>
 
-    <select id="selectByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+    <select id="getUserByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT
         uid, <include refid="UserCols" />
         FROM
