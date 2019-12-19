@@ -111,6 +111,7 @@ public class RelationshipController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "decideFriendApplication", produces = "text/script;charset=UTF-8")
     public String decideFriendApplication(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
@@ -121,60 +122,106 @@ public class RelationshipController extends NBCBaseController {
                 int applicant = Integer.parseInt(request.getParameter("applicant"));
                 boolean decision = Boolean.parseBoolean(request.getParameter("decision"));
                 if (!decision) {
-                    relationshipService.rejectFriendApplication(applicant, user.getUid());
+                    if (relationshipService.rejectFriendApplication(applicant, user.getUid()))
+                        res.setResultObj("reject application succeeded");
                 } else if (decision) {
-                    relationshipService.acceptFriendApplication(applicant, user.getUid());
+                    if (relationshipService.acceptFriendApplication(applicant, user.getUid()))
+                        res.setResultObj("accept application succeeded");
+                } else {
+                    res.setResultObj("failure");
                 }
-
-                res.setResultObj(null);
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "addNeighbor", produces = "text/script;charset=UTF-8")
     public String addNeighbor(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
-        return JSON.toJSONString(result);
-
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int neighbor = Integer.parseInt(request.getParameter("neighborUid"));
+                if (relationshipService.checkNeighborExist(user.getUid(), neighbor)) {
+                    res.setResultObj("Neighbor already exists");
+                } else if (relationshipService.addNeighbor(user.getUid(), neighbor)) {
+                    res.setResultObj("success");
+                } else {
+                    res.setResultObj("failure");
+                }
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "deleteFriend", produces = "text/script;charset=UTF-8")
     public String deleteFriend(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
-
-                res.setResultObj(null);
+                Users user = loginUsers.get();
+                int friend = Integer.parseInt(request.getParameter("friendUid"));
+                if (!relationshipService.checkFriendship(user.getUid(), friend))
+                    res.setResultObj("You are not friend");
+                if (relationshipService.deleteFriend(user.getUid(), friend)) {
+                    res.setResultObj("success");
+                } else res.setResultObj("failure");
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "deleteNeighbor", produces = "text/script;charset=UTF-8")
     public String deleteNeighbor(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
-
-                res.setResultObj(null);
+                Users user = loginUsers.get();
+                int neighbor = Integer.parseInt(request.getParameter("neighborUid"));
+                if (!relationshipService.checkNeighborExist(user.getUid(), neighbor))
+                    res.setResultObj("Not your neighbor");
+                if (relationshipService.deleteNeighbor(user.getUid(), neighbor)) {
+                    res.setResultObj("success");
+                } else res.setResultObj("failure");
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "getAllFriendApplicationAsApplicant", produces = "text/script;charset=UTF-8")
+    public String getAllFriendApplicationAsApplicant(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                res.setResultObj(relationshipService.getFriendApplicationByApplicant(user.getUid()));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getAllFriendApplicationAsRecipient", produces = "text/script;charset=UTF-8")
     public String getAllFriendApplicationAsRecipient(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
-
-                res.setResultObj(null);
+                Users user = loginUsers.get();
+                res.setResultObj(relationshipService.getFriendApplicationByRecipient(user.getUid()));
                 return res;
             }
         });
