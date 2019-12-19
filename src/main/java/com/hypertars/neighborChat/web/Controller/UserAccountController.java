@@ -2,6 +2,7 @@ package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
@@ -20,10 +21,10 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("UserAccount")
 public class UserAccountController extends NBCBaseController {
     @Resource
-    private UserAccountService userService;
+    private UserAccountService userAccountService;
 
     @Resource
-    private com.hypertars.neighborChat.service.Message.MessageService MessageService;
+    private MessageService MessageService;
 
     @Resource
     private MembershipService blockService;
@@ -32,9 +33,7 @@ public class UserAccountController extends NBCBaseController {
     private RelationshipService relationshipService;
 
     @RequestMapping(value = "loginIn", produces = "text/script;charset=UTF-8")
-//    @RequestMapping()
-//    @PostMapping
-    /* @RequestMapping */
+
     public String loginIn(HttpServletRequest request, HttpServletResponse response, String callback) {
         String uname = request.getParameter("uname");
         String pass = request.getParameter("pass");
@@ -42,15 +41,13 @@ public class UserAccountController extends NBCBaseController {
         Users user = new Users();
         user.setUname(uname);
         user.setPasswd(pass);
-        String session = userService.loginIn(user);
+        String session = userAccountService.loginIn(user);
         Cookie cookie = new Cookie("userSession", session);
-//        cookie.setDomain("/");
         cookie.setPath("/");
         response.addCookie(cookie);
 
-        user = userService.getUserBySession(session);
+        user = userAccountService.getUserBySession(session);
         return callback + "(" + JSON.toJSONString(user) + ")";
-//        return JSON.toJSONString(user);
     }
 
     @RequestMapping(value = "getUserInfo", produces = "text/script;charset=UTF-8")

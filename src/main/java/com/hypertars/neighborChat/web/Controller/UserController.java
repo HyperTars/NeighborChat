@@ -1,3 +1,4 @@
+
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
@@ -24,7 +25,7 @@ public class UserController extends NBCBaseController {
     @RequestMapping(value = "loginIn", produces = "text/script;charset=UTF-8")
 //    @RequestMapping()
 //    @PostMapping
-    /* @RequestMapping */
+
     public String loginIn(HttpServletRequest request, HttpServletResponse response, String callback) {
         String uname = request.getParameter("uname");
         String pass = request.getParameter("pass");
@@ -32,15 +33,14 @@ public class UserController extends NBCBaseController {
         Users user = new Users();
         user.setUname(uname);
         user.setPasswd(pass);
+
         String session = userService.loginIn(user);
         Cookie cookie = new Cookie("userSession", session);
-//        cookie.setDomain("/");
         cookie.setPath("/");
         response.addCookie(cookie);
 
         user = userService.getUserBySession(session);
         return callback + "(" + JSON.toJSONString(user) + ")";
-//        return JSON.toJSONString(user);
     }
 
     @RequestMapping(value = "getUserInfo", produces = "text/script;charset=UTF-8")
@@ -55,7 +55,7 @@ public class UserController extends NBCBaseController {
                 return res;
             }
         });
-//        return JSON.toJSONString(result);
+
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 }
