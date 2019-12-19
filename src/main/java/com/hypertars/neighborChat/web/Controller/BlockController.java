@@ -56,7 +56,6 @@ public class BlockController extends NBCBaseController {
                 Users user = loginUsers.get();
                 UserBlock userBlock = blockService.getCurrentMember(user.getUid());
                 List<Users> usersList = relationshipService.getUsersInSameHoodByUid(user.getUid());
-//                Map<String, List<Users>> usersList = userService.getUsersByHid(blocksDAO.getBlockByBid(userBlock.getBid()).getHid());
                 NBCResult<Object> result = new NBCResult<>();
                 result.setResultObj(usersList);
                 return result;

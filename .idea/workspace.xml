@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/UserAccount/impl/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/UserAccount/impl/UserAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/PullDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/PullDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java" afterDir="false" />
     </list>
@@ -175,42 +176,7 @@
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
       <workItem from="1576681395120" duration="25053000" />
-      <workItem from="1576711531004" duration="33252000" />
-    </task>
-    <task id="LOCAL-00001" summary="update">
-      <created>1575725887937</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1575725887937</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1575727341580</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1575727341580</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1575728208314</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728208314</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update">
-      <created>1575728239315</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728239315</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1575728733120</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728733120</updated>
+      <workItem from="1576711531004" duration="43689000" />
     </task>
     <task id="LOCAL-00006" summary="update">
       <created>1575729197274</created>
@@ -485,7 +451,77 @@
       <option name="project" value="LOCAL" />
       <updated>1576779548247</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="new Controller">
+      <created>1576779787863</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1576779787863</updated>
+    </task>
+    <task id="LOCAL-00046" summary="new Controller">
+      <created>1576780484802</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1576780484802</updated>
+    </task>
+    <task id="LOCAL-00047" summary="new Controller">
+      <created>1576782534539</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1576782534539</updated>
+    </task>
+    <task id="LOCAL-00048" summary="controller">
+      <created>1576782554972</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1576782554972</updated>
+    </task>
+    <task id="LOCAL-00049" summary="controller">
+      <created>1576783182823</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1576783182823</updated>
+    </task>
+    <task id="LOCAL-00050" summary="controller">
+      <created>1576783325637</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1576783325642</updated>
+    </task>
+    <task id="LOCAL-00051" summary="controller">
+      <created>1576784482894</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1576784482895</updated>
+    </task>
+    <task id="LOCAL-00052" summary="controller">
+      <created>1576786271444</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1576786271444</updated>
+    </task>
+    <task id="LOCAL-00053" summary="controller - message">
+      <created>1576788657655</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1576788657656</updated>
+    </task>
+    <task id="LOCAL-00054" summary="controller - MembershipController">
+      <created>1576789335703</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1576789335703</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +581,10 @@
     <MESSAGE value="Update services" />
     <MESSAGE value="update mybatis - all SQL checked" />
     <MESSAGE value="new Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="new Controller" />
+    <MESSAGE value="controller" />
+    <MESSAGE value="controller - message" />
+    <MESSAGE value="controller - MembershipController" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller - MembershipController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="180" key="#Notifications" timestamp="1576711013207">
@@ -568,6 +607,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712180190" />
+    <state x="246" y="469" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1576784610416">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="246" y="469" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576784610416" />
     <state x="428" y="372" width="522" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575759218795">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -580,10 +623,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576770960268" />
-    <state x="674" y="134" key="CommitChangelistDialog2" timestamp="1576779547995">
+    <state x="674" y="134" key="CommitChangelistDialog2" timestamp="1576789335443">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="674" y="134" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576779547995" />
+    <state x="674" y="134" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576789335443" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576711380157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -648,10 +691,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="202" y="93" key="MergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712089867" />
-    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576772197616">
+    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576784534195">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576772197616" />
+    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576784534195" />
     <state x="393" y="291" key="RollbackChangesDialog" timestamp="1575727631995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -664,10 +707,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="237" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711422712" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576779570999">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576789338018">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576779570999" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576789338018" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -704,9 +747,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="391" y="452" width="710" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576683279940" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576778221533">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576786398463">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576778221533" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576786398463" />
   </component>
 </project>

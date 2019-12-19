@@ -3,10 +3,10 @@ $(document).ready(function(e) {
         type: 'get',
         dataType: "jsonp",
         jsonp: "callback", 
-        url: "http://localhost:8084/user/getUserInfo",
+        url: "http://localhost:8084/user/currentUserInfo",
         success: function(callback) {
             console.log(callback);
-            if (document.cookie == "" || callback.resultCode == "USER_NOT_LOGIN_IN") {
+            if (document.cookie == "") {
                 window.location.href ="login.html";
             }
             else {

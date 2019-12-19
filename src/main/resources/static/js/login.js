@@ -18,7 +18,7 @@ $("#form").submit(function (e) {
         dataType: "jsonp",
         jsonp: "callback", 
         data: jsonObj,
-        url: "http://localhost:8084/user/loginIn?uname=" + InputName + "&pass" + InputPassword,
+        url: "http://localhost:8084/user/loginIn?uname=" + InputName + "&pass=" + InputPassword,
         success: function(callback) {
             console.log(callback);
 

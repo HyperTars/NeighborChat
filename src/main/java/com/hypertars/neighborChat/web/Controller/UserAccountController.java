@@ -48,13 +48,28 @@ public class UserAccountController extends NBCBaseController {
         Cookie cookie = new Cookie("userSession", session);
         cookie.setPath("/");
         response.addCookie(cookie);
-
         user = userAccountService.getUserBySession(session);
         return callback + "(" + JSON.toJSONString(user) + ")";
     }
 
-    @RequestMapping(value = "getUserInfo", produces = "text/script;charset=UTF-8")
-    public String getUserInfo(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "userReg", produces = "text/script;charset=UTF-8")
+    public String userReg(HttpServletRequest request, String callback) {
+        String uname = request.getParameter("uname");
+        String passwd = request.getParameter("passwd");
+        String email = request.getParameter("email");
+        String fName = request.getParameter("fName");
+        String lName = request.getParameter("lName");
+        passwd = getSHA256(passwd);
+        if (!userAccountService.checkUName(uname)) {
+            return callback + "(" + JSON.toJSONString("User name already in use") + ")";
+        }
+        if (userAccountService.userReg(uname, passwd, email, fName, lName))
+            return callback + "(" + JSON.toJSONString("success") + ")";
+        else return callback + "(" + JSON.toJSONString("failure") + ")";
+    }
+
+    @RequestMapping(value = "currentUserInfo", produces = "text/script;charset=UTF-8")
+    public String currentUserInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
@@ -67,34 +82,13 @@ public class UserAccountController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "userReg", produces = "text/script;charset=UTF-8")
-    public String userReg(HttpServletRequest request, String callback) {
-        NBCResult<Object> result = new NBCResult<>();
-        result = protectController(request, null, new NBCLogicCallBack() {
-            @Override
-            public NBCResult<Object> execute() throws Exception {
-                String uname = request.getParameter("uname");
-                String passwd = request.getParameter("passwd");
-                passwd = getSHA256(passwd);
-                String email = request.getParameter("email");
-                String fName = request.getParameter("fName");
-                String lName = request.getParameter("lName");
-                NBCResult<Object> res = new NBCResult<>();
-                if (userAccountService.userReg(uname, passwd, email, fName, lName))
-                    res.setResultObj("success");
-                else res.setResultObj("failure");
-                return res;
-            }
-        });
-        return callback + "(" + JSON.toJSONString(result) + ")";
-    }
-
     @RequestMapping(value = "updateInfo", produces = "text/script;charset=UTF-8")
     public String updateUserInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
+                Users user = loginUsers.get();
                 NBCResult<Object> res = new NBCResult<>();
                 int uid = Integer.parseInt(request.getParameter("uid"));
                 String uname = request.getParameter("uname");
@@ -108,8 +102,8 @@ public class UserAccountController extends NBCBaseController {
                 String photo = request.getParameter("photo");
                 short nRange = Short.parseShort(request.getParameter("nRange"));
                 boolean notify = Boolean.parseBoolean(request.getParameter("notify"));
-                if (userAccountService.updateUserInfo(uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, notify))
-                    res.setResultObj("success");
+                if (userAccountService.updateUserInfo(user.getUid(), uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, notify))
+                    res.setResultObj("succeeded");
                 else res.setResultObj("failure");
                 return res;
             }
@@ -142,6 +136,7 @@ public class UserAccountController extends NBCBaseController {
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        System.out.println(encodeStr);
         return encodeStr;
     }
 }
