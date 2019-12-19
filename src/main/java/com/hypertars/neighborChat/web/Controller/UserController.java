@@ -2,7 +2,7 @@ package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.service.userAccount.userAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserController extends NBCBaseController {
 
     @Resource
-    private UserService userService;
+    private userAccountService userService;
 
     @RequestMapping(value = "loginIn", produces = "text/script;charset=UTF-8")
 //    @RequestMapping()
