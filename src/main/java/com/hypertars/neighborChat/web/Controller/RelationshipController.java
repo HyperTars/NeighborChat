@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("Relationship")
+@RequestMapping("relationship")
 public class RelationshipController extends NBCBaseController {
     @Resource
     private UserAccountService userService;

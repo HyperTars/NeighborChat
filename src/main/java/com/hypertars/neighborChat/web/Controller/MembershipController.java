@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("Membership")
+@RequestMapping("membership")
 public class MembershipController extends NBCBaseController {
 
     @Resource
@@ -33,15 +33,29 @@ public class MembershipController extends NBCBaseController {
     private RelationshipService relationshipService;
 
     @RequestMapping(value = "getCurrentBlockInfo", produces = "text/script;charset=UTF-8")
-    public String currentBlock(HttpServletRequest request, String callback) {
+    public String getCurrentBlockInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int bid = membershipService.getCurrentMember(user.getUid()).getBid();
-                res.setResultObj(membershipService.getBlockByBid(bid));
+                res.setResultObj(membershipService.getBlockByUid(user.getUid()));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getCurrentHoodInfo", produces = "text/script;charset=UTF-8")
+    public String getCurrentHoodInfo(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                res.setResultObj(membershipService.getHoodByUid(user.getUid()));
                 return res;
             }
         });

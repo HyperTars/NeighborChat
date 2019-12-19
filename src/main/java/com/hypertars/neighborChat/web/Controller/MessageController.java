@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("Message")
+@RequestMapping("message")
 public class MessageController extends NBCBaseController {
     @Resource
     private UserAccountService userService;

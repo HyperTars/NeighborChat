@@ -1,7 +1,9 @@
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
+import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
@@ -14,13 +16,13 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("PullData")
+@RequestMapping("pulldata")
 public class PullDataController extends NBCBaseController {
     @Resource
     private UserAccountService userService;
 
     @Resource
-    private com.hypertars.neighborChat.service.Message.MessageService MessageService;
+    private MessageService messageService;
 
     @Resource
     private MembershipService blockService;
@@ -28,14 +30,14 @@ public class PullDataController extends NBCBaseController {
     @Resource
     private RelationshipService relationshipService;
 
-    public String messageSinceLastLog(HttpServletRequest request, String callback) {
+    public String newMessageSinceLastLog(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
-
-                res.setResultObj(null);
+                Users user = loginUsers.get();
+                res.setResultObj(messageService.notifyNewMessage(user.getUid()));
                 return res;
             }
         });
