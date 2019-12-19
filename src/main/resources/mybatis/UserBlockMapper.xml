@@ -3,32 +3,34 @@
 <mapper namespace="com.hypertars.neighborChat.dao.UserBlockDAO">
 
     <select id="getUserBlocksByBid" resultType="com.hypertars.neighborChat.model.UserBlock" >
-        select * from UserBlock where bid = #{bid} and status = true
+        select uid, bid, ubTime, status from UserBlock where bid = #{bid} and status = true
     </select>
 
     <select id="getUserBlocksByUid" resultType="com.hypertars.neighborChat.model.UserBlock" >
-        select * from UserBlock where uid = #{uid} and status = true
+        select uid, bid, ubTime, status from UserBlock where uid = #{uid}
     </select>
 
-    <select id="getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" >
-        select * from Blocks where hid = #{hid}
-    </select>
-
-    <update id="update" parameterType="com.hypertars.neighborChat.model.UserBlock" >
-        update UserBlock
-        <set>
-            <if test="uid != null and uid != 0">uid = #{uid},</if>
-            <if test="bid != null and bid != 0">bid = #{bid},</if>
-            <if test="status != null">status = #{status},</if>
-            ubTime = now()
-        </set>
-        <where>
-            <if test="uid != null and uid != 0 or bid != null and bid != 0" >uid = #{uid} and bid = #{bid} and status = true</if>
-        </where>
+    <update id="setAllUserBlocksInactive" parameterType="java.lang.Integer">
+        UPDATE UserBlock
+        SET status = false
+        WHERE uid = #{uid};
     </update>
 
-    <insert id="insert" parameterType="com.hypertars.neighborChat.model.UserBlock" >
-        insert into UserBlock (uid, bid, ubTime, status) values (#{uid}, #{bid}, now(), true)
+    <insert id="addUserBlock" parameterType="com.hypertars.neighborChat.model.UserBlock" >
+        INSERT INTO UserBlock (uid, bid) values (#{uid}, #{bid});
     </insert>
+
+    <select id="notifyNewBlockMember" resultType="com.hypertars.neighborChat.model.UserBlock" parameterType="java.lang.Integer">
+        SELECT uid, bid, ubTime, status FROM UserBlock
+        WHERE status = TRUE
+        AND bid = (SELECT bid FROM UserBlock WHERE uid = #{uid})
+        AND uid != #{uid}
+        AND ubTime > (SELECT lastLog FROM Users WHERE uid = #{uid});
+    </select>
+
+    <select id="countUsersByBid" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        SELECT COUNT(DISTINCT uid) FROM UserBlock
+        WHERE bid = #{bid} AND status = true;
+    </select>
 
 </mapper>

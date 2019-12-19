@@ -21,6 +21,8 @@ $("#form").submit(function (e) {
         url: "http://localhost:8084/user/loginIn?uname=" + InputName + "&pass" + InputPassword,
         success: function(callback) {
             console.log(callback);
+
+            $.cookie('cookieName', 'userSession');
             window.location.href ="dashboard.html";
         },
         error: function() {

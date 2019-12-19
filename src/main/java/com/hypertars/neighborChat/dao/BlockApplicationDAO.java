@@ -9,16 +9,6 @@ import java.util.List;
 @Mapper
 public interface BlockApplicationDAO {
 
-    int insert(BlockApplication blockApplication);
-
-    void update(BlockApplication blockApplication);
-
-    List<BlockApplication> selectByUidStatus(@Param("applicant") int uid, @Param("status") boolean status);
-
-    List<BlockApplication> selectByBidStatus(@Param("bid") int bid, @Param("status") boolean status);
-
-
-
     /**
      * get all applications belong to the Applicant
      * @param applicant applicant uid
@@ -53,7 +43,17 @@ public interface BlockApplicationDAO {
      */
     void deleteBlockApplication(BlockApplication blockApplication);
 
+    /**
+     * check block application exists
+     * @param blockApplication - applicant & bid
+     * @return count
+     */
     int checkBlockApplicationExist(BlockApplication blockApplication);
 
+    /**
+     * get exact block application info
+     * @param blockApplication - applicant & bid
+     * @return block application
+     */
     BlockApplication getExactBlockApplication(BlockApplication blockApplication);
 }

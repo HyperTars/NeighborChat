@@ -63,5 +63,10 @@ public interface FriendApplicationDAO {
      */
     void deleteFriendApplication(FriendApplication friendApplication);
 
+    /**
+     * check whether friend application already exists
+     * @param friendApplication fa
+     * @return count
+     */
     int checkFriendApplication(FriendApplication friendApplication);
 }

@@ -3,10 +3,11 @@ package com.hypertars.neighborChat.web;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.service.userAccount.userAccountService;
 import com.hypertars.neighborChat.utils.AssertUtils;
 import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.ui.ModelMap;
+
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class NBCBaseController {
 
     @Resource
-    private UserService userService;
-
+    private userAccountService useraccountService;
     /** 登录用户 */
     protected ThreadLocal<Users> loginUsers = new ThreadLocal<>();
 
@@ -75,7 +75,7 @@ public class NBCBaseController {
             AssertUtils.stringNotEmpty(session);
 
             // 取出缓存中的user
-            Users user = userService.getUserBySession(session);
+            Users user = useraccountService.getUserBySession(session);
             AssertUtils.assertNotNull(user);
             loginUsers.set(user);
 

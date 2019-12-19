@@ -4,23 +4,23 @@ import com.alibaba.fastjson.JSON;
 import com.hypertars.neighborChat.dao.BlockApplicationDAO;
 import com.hypertars.neighborChat.dao.BlocksDAO;
 import com.hypertars.neighborChat.dao.UserBlockDAO;
-import com.hypertars.neighborChat.model.BlockApplication;
 import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.block.BlockService;
-import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.service.membership.membershipService;
+import com.hypertars.neighborChat.service.relationship.relationshipService;
+import com.hypertars.neighborChat.service.userAccount.userAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-// import sun.management.snmp.jvminstr.JvmOSImpl;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
+
+// import sun.management.snmp.jvminstr.JvmOSImpl;
 
 /**
  * @author Visionary
@@ -31,10 +31,13 @@ import java.util.Map;
 public class BlockController extends NBCBaseController {
 
     @Resource
-    private UserService userService;
+    private userAccountService userService;
 
     @Resource
-    private BlockService blockService;
+    private membershipService blockService;
+
+    @Resource
+    private relationshipService relationshipService;
 
     @Resource
     private BlocksDAO blocksDAO;
@@ -51,8 +54,9 @@ public class BlockController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 Users user = loginUsers.get();
-                UserBlock userBlock = userService.getUserBlockByUid(user.getUid());
-                Map<String, List<Users>> usersList = userService.getUsersByHid(blocksDAO.selectByBid(userBlock.getBid()).getHid());
+                UserBlock userBlock = blockService.getCurrentMember(user.getUid());
+                List<Users> usersList = relationshipService.getUsersInSameHoodByUid(user.getUid());
+//                Map<String, List<Users>> usersList = userService.getUsersByHid(blocksDAO.getBlockByBid(userBlock.getBid()).getHid());
                 NBCResult<Object> result = new NBCResult<>();
                 result.setResultObj(usersList);
                 return result;
@@ -67,7 +71,7 @@ public class BlockController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 String bid = request.getParameter("bid");
-                blockService.userJoinInBlock(loginUsers.get().getUid(), Integer.parseInt(bid));
+                blockService.joinBlock(loginUsers.get().getUid(), Integer.parseInt(bid));
                 return new NBCResult<Object>();
             }
         });
@@ -79,10 +83,10 @@ public class BlockController extends NBCBaseController {
         NBCResult<Object> res = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
-                int bid = userBlockDAO.getUserBlocksByUid(loginUsers.get().getUid()).getBid();
-                List<BlockApplication> blockApplications = blockApplicationDAO.selectByBidStatus(bid, true);
+                //int bid = userBlockDAO.getUserBlocksByUid(loginUsers.get().getUid()).getBid();
+                //List<BlockApplication> blockApplications = blockApplicationDAO.selectByBidStatus(bid, true);
                 NBCResult<Object> result = new NBCResult<>();
-                result.setResultObj(blockApplications);
+                result.setResultObj(blockApplicationDAO);
                 return result;
             }
         });
@@ -95,7 +99,8 @@ public class BlockController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 int applicant = Integer.parseInt(request.getParameter("applicant"));
-                blockService.agreeApplicant(applicant);
+                Users user = loginUsers.get();
+                blockService.acceptBlockApplication(applicant, user.getUid());
                 return new NBCResult<Object>();
             }
         });
@@ -108,7 +113,8 @@ public class BlockController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 int applicant = Integer.parseInt(request.getParameter("applicant"));
-                blockService.rejectApplicant(applicant);
+                Users user = loginUsers.get();
+                blockService.rejectBlockApplication(applicant, user.getUid());
                 return new NBCResult<Object>();
             }
         });

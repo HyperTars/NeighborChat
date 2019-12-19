@@ -1,22 +1,22 @@
 -- Live in the same building, different nRange
-INSERT INTO Users VALUES (1, "user01", "12345678", "test@gmail.com", "Justin", "Bieber", "343 Gold Street, Brooklyn", "Apt 4001", "Hello World!", "/users/photo/1.png", 0, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (2, "user02", "12345678", "test@gmail.com", "Donald", "Trump", "343 Gold Street, Brooklyn", "Apt 4002", "Hello World!", "/users/photo/2.png ", 1, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (3, "user03", "12345678", "test@gmail.com", "Chris", "Martin", "343 Gold Street, Brooklyn", "Apt 4201", "Hello World!", "/users/photo/3.png ", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (1, "user01", "12345678", "test@gmail.com", "Justin", "Bieber", "343 Gold Street, Brooklyn", "Apt 4001", "Hello World!", "../static/plugins/images/users/1.png", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (2, "user02", "12345678", "test@gmail.com", "Donald", "Trump", "343 Gold Street, Brooklyn", "Apt 4002", "Hello World!", "../static/plugins/images/users/2.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (3, "user03", "12345678", "test@gmail.com", "Chris", "Martin", "343 Gold Street, Brooklyn", "Apt 4201", "Hello World!", "../static/plugins/images/users/3.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in the same block, different nRange
-INSERT INTO Users VALUES (4, "user04", "12345678", "test@gmail.com", "Lady", "Gaga", "270 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/4.png ", 0, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (5, "user05", "12345678", "test@gmail.com", "Anne", "Hathaway", "320 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/5.png ", 1, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (6, "user06", "12345678", "test@gmail.com", "Leonardo", "Dicaprio", "370 Jay Street, Brooklyn", "", "Hello World!", "/users/photo/6.png ", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (4, "user04", "12345678", "test@gmail.com", "Lady", "Gaga", "270 Jay Street, Brooklyn", "", "Hello World!", "../static/plugins/images/users/4.png ", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (5, "user05", "12345678", "test@gmail.com", "Anne", "Hathaway", "320 Jay Street, Brooklyn", "", "Hello World!", "../static/plugins/images/users/5.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (6, "user06", "12345678", "test@gmail.com", "Leonardo", "Dicaprio", "370 Jay Street, Brooklyn", "", "Hello World!", "../static/plugins/images/users/6.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in the same hood, different nRange
-INSERT INTO Users VALUES (7, "user07", "12345678", "test@gmail.com", "Billie", "Ellish", "500 5th Avenue, New York", "", "Hello World!", "/users/photo/7.png", 2, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (8, "user08", "12345678", "test@gmail.com", "James", "Bond", "1100 6th Avenue, New York", "", "Hello World!", "/users/photo/8.png ", 1, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (9, "user09", "12345678", "test@gmail.com", "Adam", "Levine", "1166 6th Avenue, New York", "", "Hello World!", "/users/photo/9.png ", 2, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (10, "user10", "12345678", "test@gmail.com", "Bruno", "Mars", "1167 6th Avenue, New York", "", "Hello World!", "/users/photo/10.png ", 0, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (11, "user11", "12345678", "test@gmail.com", "Scarlett", "Johansson", "1167 6th Avenue, New York",  "","Hello World!", "/users/photo/11.png ", 1, "2019-01-01 12:00:00", TRUE);
-INSERT INTO Users VALUES (12, "user12", "12345678", "test@gmail.com", "Robert", "Downey", "1170 6th Avenue, New York",  "","Hello World!", "/users/photo/12.png ", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (7, "user07", "12345678", "test@gmail.com", "Billie", "Ellish", "500 5th Avenue, New York", "", "Hello World!", "../static/plugins/images/users/7.png", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (8, "user08", "12345678", "test@gmail.com", "James", "Bond", "1100 6th Avenue, New York", "", "Hello World!", "../static/plugins/images/users/8.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (9, "user09", "12345678", "test@gmail.com", "Adam", "Levine", "1166 6th Avenue, New York", "", "Hello World!", "../static/plugins/images/users/9.png ", 2, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (10, "user10", "12345678", "test@gmail.com", "Bruno", "Mars", "1167 6th Avenue, New York", "", "Hello World!", "../static/plugins/images/users/10.png ", 0, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (11, "user11", "12345678", "test@gmail.com", "Scarlett", "Johansson", "1167 6th Avenue, New York",  "","Hello World!", "../static/plugins/images/users/11.png ", 1, "2019-01-01 12:00:00", TRUE);
+INSERT INTO Users VALUES (12, "user12", "12345678", "test@gmail.com", "Robert", "Downey", "1170 6th Avenue, New York",  "","Hello World!", "../static/plugins/images/users/12.png ", 2, "2019-01-01 12:00:00", TRUE);
 
 
 -- Live in different hoods
@@ -72,12 +72,12 @@ INSERT INTO Friends VALUES (2, 11, "2019-02-01 12:00:03");
 
 
 -- Two people already in the same block group
-INSERT INTO FriendApplication VALUES (2, 3, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
-INSERT INTO FriendApplication VALUES (8, 9, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
+INSERT INTO FriendApplication VALUES (2, 3, "I wanna be your friend", "2019-01-01 12:00:03", -1);
+INSERT INTO FriendApplication VALUES (8, 9, "I wanna be your friend", "2019-01-01 12:00:03", -1);
 
 -- Two people live in the same hood, but not the same block
-INSERT INTO FriendApplication VALUES (1, 4, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
-INSERT INTO FriendApplication VALUES (7, 11, "I wanna be your friend", "2019-01-01 12:00:03", NULL);
+INSERT INTO FriendApplication VALUES (1, 4, "I wanna be your friend", "2019-01-01 12:00:03", -1);
+INSERT INTO FriendApplication VALUES (7, 11, "I wanna be your friend", "2019-01-01 12:00:03", -1);
 
 
 -- Insert Neighbor according to neighbor range (here we assume all users add all their neighbors)

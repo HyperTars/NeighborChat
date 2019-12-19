@@ -2,6 +2,8 @@ package com.hypertars.neighborChat.service.membership.impl;
 
 import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.model.BlockApplication;
+import com.hypertars.neighborChat.model.Blocks;
+import com.hypertars.neighborChat.model.Hoods;
 import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.service.membership.membershipService;
 import org.springframework.stereotype.Service;
@@ -97,7 +99,7 @@ public class membershipServiceImpl implements membershipService {
      */
     @Override
     public boolean quitBlock(int uid) {
-        userBlockDAO.exitBlock(uid);
+        userBlockDAO.setAllUserBlocksInactive(uid);
         return true;
     }
 
@@ -280,5 +282,114 @@ public class membershipServiceImpl implements membershipService {
     @Override
     public List<UserBlock> notifyNewBlockMember(int uid) {
         return userBlockDAO.notifyNewBlockMember(uid);
+    }
+
+    /**
+     * get block by bid
+     * @param bid block id
+     * @return block
+     */
+    @Override
+    public Blocks getBlockByBid(int bid) {
+        return blocksDAO.getBlockByBid(bid);
+    }
+
+    /**
+     * get block by hid
+     * @param hid hood id
+     * @return list of blocks
+     */
+    @Override
+    public List<Blocks> getBlockByHid(int hid) {
+        return blocksDAO.getBlocksByHid(hid);
+    }
+
+    /**
+     * get block info by uid
+     * @param uid user id
+     * @return blocks
+     */
+    @Override
+    public Blocks getBlockByUid(int uid) {
+        int bid = 0;
+        List<UserBlock>ubs = userBlockDAO.getUserBlocksByUid(uid);
+        for (UserBlock ub : ubs)
+            if (ub.getStatus())
+                bid = ub.getBid();
+        if (bid == 0) return null;
+        return blocksDAO.getBlockByBid(bid);
+    }
+
+    /**
+     * get all blocks information in database
+     * @return List of blocks
+     */
+    @Override
+    public List<Blocks> getAllBlocks() {
+        return blocksDAO.getAllBlocks();
+    }
+
+    /**
+     * get hood by uid
+     * @param uid uid
+     * @return hood
+     */
+    @Override
+    public Hoods getHoodByUid(int uid) {
+        return hoodsDAO.getHoodByUid(uid);
+    }
+
+    /**
+     * get hood by bid
+     * @param bid block id
+     * @return hood
+     */
+    @Override
+    public Hoods getHoodByBid(int bid) {
+        return hoodsDAO.getHoodByBid(bid);
+    }
+
+    /**
+     * get hood by hid
+     * @param hid hood id
+     * @return hood
+     */
+    @Override
+    public Hoods getHoodByHid(int hid) {
+        return hoodsDAO.getHoodByHid(hid);
+    }
+
+    /**
+     * get all hoods in database
+     * @return list of hoods
+     */
+    @Override
+    public List<Hoods> getAllHoods() {
+        return hoodsDAO.getAllHoods();
+    }
+
+    /**
+     * get blocks in same hood by uid
+     * @param uid user id
+     * @return list of blocks
+     */
+    @Override
+    public List<Blocks> getBlocksInSameHoodByUid(int uid) {
+        Hoods hood = getHoodByUid(uid);
+        return blocksDAO.getBlocksByHid(hood.getHid());
+    }
+
+    /**
+     * current user block
+     * @param uid user id
+     * @return user block
+     */
+    @Override
+    public UserBlock getCurrentMember(int uid) {
+        List<UserBlock> ubs = userBlockDAO.getUserBlocksByUid(uid);
+        for (UserBlock ub : ubs)
+            if (ub.getStatus())
+                return ub;
+        return null;
     }
 }

@@ -12,9 +12,8 @@ public interface MessageDAO {
     /**
      * add new message
      * @param message message model
-     * @return 1 or 0
      */
-    boolean addNewMsg(Message message);
+    void addNewMsg(Message message);
 
     /**
      * get message my msgid
@@ -36,4 +35,10 @@ public interface MessageDAO {
      * @return List<Message> messages models
      */
     List<Message> getMsgByAuthor(@Param("author") int author);
+
+    int getLastMsgid();
+
+    List<Message> notifyNewMessage(@Param("author") int author);
+
+    List<Message> notifyNewReply(@Param("author") int author);
 }

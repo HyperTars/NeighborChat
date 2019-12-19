@@ -17,25 +17,18 @@ public interface MailBoxDAO {
     List<MailBox> getAllMsgthreadByUid(@Param("uid") int uid);
 
     /**
-     * get new message thread based on timestamp comparison
-     * @param uid
-     * @return
-     */
-    List<MailBox> notifyNewMsgthreadByUid(@Param("uid") int uid);
-
-    /**
      * set messages unread
      * @param mailBox mailbox models
-     * @return 1 or 0
      */
-    boolean setMsgthreadUnread(MailBox mailBox);
+    void setMsgthreadUnread(MailBox mailBox);
 
     /**
      * set messages read
      * @param mailBox mailbox models
-     * @return 1 or 0
      */
-    boolean setMsgthreadRead(MailBox mailBox);
+    void setMsgthreadRead(MailBox mailBox);
 
+    void addToMailBox(MailBox mailBox);
 
+    List<MailBox> getMailBoxByMsgid(@Param("msgid") int msgid);
 }
