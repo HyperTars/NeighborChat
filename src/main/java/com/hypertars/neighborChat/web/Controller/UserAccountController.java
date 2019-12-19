@@ -60,6 +60,9 @@ public class UserAccountController extends NBCBaseController {
         String fName = request.getParameter("fName");
         String lName = request.getParameter("lName");
         passwd = getSHA256(passwd);
+        if (!userAccountService.checkUName(uname)) {
+            return callback + "(" + JSON.toJSONString("User name already in use") + ")";
+        }
         if (userAccountService.userReg(uname, passwd, email, fName, lName))
             return callback + "(" + JSON.toJSONString("success") + ")";
         else return callback + "(" + JSON.toJSONString("failure") + ")";
