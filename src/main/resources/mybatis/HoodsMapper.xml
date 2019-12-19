@@ -8,13 +8,13 @@
     </select>
 
     <select id="getHoodByBid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
-        SELECT hid, hname, SW, NE FROM Hoods NATURAL JOIN Blocks
+        SELECT h.hid, h.hname, h.SW, h.NE FROM Hoods h JOIN Blocks USING (hid)
         WHERE bid = #{bid};
     </select>
 
     <select id="getHoodByUid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
-        SELECT hid, hname, SW, NE FROM Hoods NATURAL JOIN Blocks JOIN UserBlock USING (bid)
-        WHERE uid = #{uid};
+        SELECT h.hid, h.hname, h.SW, h.NE FROM Hoods h JOIN Blocks USING (hid) JOIN UserBlock USING (bid)
+        WHERE uid = 9;
     </select>
 
     <select id="getAllHoods" resultType="com.hypertars.neighborChat.model.Hoods">

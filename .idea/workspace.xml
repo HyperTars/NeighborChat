@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hypertars/neighborChat/NeighborChatApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/HoodsMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,8 +172,7 @@
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
       <workItem from="1576681395120" duration="25053000" />
-      <workItem from="1576711531004" duration="18835000" />
-      <workItem from="1576733758616" duration="795000" />
+      <workItem from="1576711531004" duration="21081000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -409,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576731280666</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="mybatis complete">
+      <created>1576733278070</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1576733278070</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update mybatis">
+      <created>1576762785598</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1576762785598</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +473,8 @@
     <MESSAGE value="complete service" />
     <MESSAGE value="NBCBaseController" />
     <MESSAGE value="mybatis complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="mybatis complete" />
+    <MESSAGE value="update mybatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="update mybatis" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="180" key="#Notifications" timestamp="1576711013207">
@@ -482,10 +493,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576728095071" />
-    <state x="461" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576733765959">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576712180190">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="461" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576733765959" />
     <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712180190" />
     <state x="428" y="372" width="522" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575759218795">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -499,10 +509,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576682743743" />
-    <state x="674" y="134" key="CommitChangelistDialog2" timestamp="1576731280480">
+    <state x="674" y="134" key="CommitChangelistDialog2" timestamp="1576762785405">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="674" y="134" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576731280480" />
+    <state x="674" y="134" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576762785405" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576711380157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -567,10 +577,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="202" y="93" key="MergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712089867" />
-    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576729370502">
+    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576762798407">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576729370502" />
+    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576762798407" />
     <state x="393" y="291" key="RollbackChangesDialog" timestamp="1575727631995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -583,10 +593,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="237" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711422712" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576731283475">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576762787929">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576731283475" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576762787929" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -627,8 +637,5 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576713138670" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/neighborChat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576734559484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
