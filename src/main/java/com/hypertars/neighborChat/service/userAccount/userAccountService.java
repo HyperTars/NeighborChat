@@ -31,7 +31,7 @@ public interface userAccountService {
                             String addr2, String intro, String photo, short nRange, boolean notify);
 
     /** load info */
-    Users getUserInfoByUid (int uid);
+    Users getUserByUid (int uid);
 
     void updateLastLog ();
 }

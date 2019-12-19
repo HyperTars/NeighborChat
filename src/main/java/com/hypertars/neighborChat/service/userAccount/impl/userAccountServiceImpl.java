@@ -171,7 +171,7 @@ public class userAccountServiceImpl implements userAccountService {
      * @return user
      */
     @Override
-    public Users getUserInfoByUid(int uid) {
+    public Users getUserByUid(int uid) {
         return usersDAO.getUserByUid(uid);
     }
 
