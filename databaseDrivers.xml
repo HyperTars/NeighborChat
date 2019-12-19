@@ -37,7 +37,8 @@
       <artifact name="MariaDB Connector J" use="true" />
       <option name="auto-sync" value="true" />
     </driver>
-    <driver id="mysql.8">
+    <driver id="mysql.8" driver-class="com.mysql.jdbc.Driver">
+      <url-template name="default" template="jdbc:mysql://{host::localhost}?[:{port::3306}][/{database}?][\?&lt;&amp;,user=root,password=Lwz123456,{:identifier}={:identifier}&gt;]" />
       <artifact name="MySQL Connector/J 8" use="true" version="8.0.15" />
       <option name="auto-sync" value="true" />
       <option name="auto-commit" value="true" />
