@@ -147,9 +147,10 @@ public class UserAccountServiceImpl implements UserAccountService {
     }
 
     @Override
-    public boolean updateUserInfo(String uname, String passwd, String email, String fName, String lName, String addr1,
+    public boolean updateUserInfo(int uid, String uname, String passwd, String email, String fName, String lName, String addr1,
                                   String addr2, String intro, String photo, short nRange, boolean notify) {
         Users user = new Users();
+        user.setUid = uids;
         user.setUname(uname);
         user.setPasswd(passwd);
         user.setEmail(email);

@@ -31,10 +31,7 @@ class NeighborChatApplicationTests {
 
     @Test
     void contextLoads() {
-
         System.out.println(blocksDAO.getBlockByBid(1));
-
-
     }
 
 }

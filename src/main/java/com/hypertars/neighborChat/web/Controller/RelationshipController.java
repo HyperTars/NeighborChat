@@ -74,5 +74,9 @@ public class RelationshipController extends NBCBaseController {
         return JSON.toJSONString(result);
 
     }
+
+    public String getAllFriendApplicationAsRecipient(HttpServletRequest request) {
+
+    }
 }
 

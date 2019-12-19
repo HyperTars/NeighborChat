@@ -27,6 +27,23 @@ public class PullDataController extends NBCBaseController {
     @Resource
     private RelationshipService relationshipService;
 
+    public String messageSinceLastLog(HttpServletRequest request, String callback) {
+
+    }
+
+    public String messageUnread(HttpServletRequest request, String callback) {
+
+    }
+
+    public String userSameBlock(HttpServletRequest request, String callback) {
+
+    }
+
+    public String userSameHood(HttpServletRequest request, String callback) {
+
+    }
+
+
     public String pullBasicData(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         return JSON.toJSONString(result);
