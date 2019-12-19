@@ -14,7 +14,7 @@ public interface UsersDAO {
      * @param uname user name
      * @return user
      */
-    Users selectByUName(@Param("uname") String uname);
+    Users getUserByUName(@Param("uname") String uname);
 
     /**
      * check whether uname is already exists
@@ -52,7 +52,7 @@ public interface UsersDAO {
      * @param uid user id
      * @return user
      */
-    Users getUserInfoByUid(@Param("uid") Integer uid);
+    Users getUserByUid(@Param("uid") Integer uid);
 
     /**
      * update an user info into db

@@ -97,7 +97,7 @@ public class userAccountServiceImpl implements userAccountService {
     public String loginIn(Users user) {
         // 1. check pass
         AssertUtils.assertNotNull(user);
-        Users userSelected = usersDAO.selectByUName(user.getUname());
+        Users userSelected = usersDAO.getUserByUName(user.getUname());
         AssertUtils.assertNotNull(userSelected);
         String session = getRandomString(30);
 
@@ -172,7 +172,7 @@ public class userAccountServiceImpl implements userAccountService {
      */
     @Override
     public Users getUserInfoByUid(int uid) {
-        return usersDAO.getUserInfoByUid(uid);
+        return usersDAO.getUserByUid(uid);
     }
 
     @Override

@@ -323,7 +323,7 @@ public class relationshipServiceImpl implements relationshipService {
         List<UserBlock> ubs = userBlockDAO.getUserBlocksByBid(bid);
         for (UserBlock ub : ubs) {
             int tempUid = ub.getUid();
-            Users user = usersDAO.getUserInfoByUid(tempUid);
+            Users user = usersDAO.getUserByUid(tempUid);
             usersList.add(user);
         }
         return usersList;
@@ -387,7 +387,7 @@ public class relationshipServiceImpl implements relationshipService {
                 friendID = f.getUidB();
             else
                 friendID = f.getUidA();
-            friends.add(usersDAO.getUserInfoByUid(friendID));
+            friends.add(usersDAO.getUserByUid(friendID));
         }
         return friends;
     }
@@ -407,7 +407,7 @@ public class relationshipServiceImpl implements relationshipService {
                 friendID = f.getUidB();
             else
                 friendID = f.getUidA();
-            friends.add(usersDAO.getUserInfoByUid(friendID));
+            friends.add(usersDAO.getUserByUid(friendID));
         }
         return friends;
     }
@@ -427,7 +427,7 @@ public class relationshipServiceImpl implements relationshipService {
                 friendID = f.getUidB();
             else
                 friendID = f.getUidA();
-            friends.add(usersDAO.getUserInfoByUid(friendID));
+            friends.add(usersDAO.getUserByUid(friendID));
         }
         return friends;
     }
@@ -447,7 +447,7 @@ public class relationshipServiceImpl implements relationshipService {
                 friendID = f.getUidB();
             else
                 friendID = f.getUidA();
-            friends.add(usersDAO.getUserInfoByUid(friendID));
+            friends.add(usersDAO.getUserByUid(friendID));
         }
         return friends;
     }
@@ -462,7 +462,7 @@ public class relationshipServiceImpl implements relationshipService {
         List<Users> neighbors = new ArrayList<>();
         List<Neighbors> neighborShip = neighborsDAO.getNeighbors(uid);
         for (Neighbors n : neighborShip) {
-            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+            neighbors.add(usersDAO.getUserByUid(n.getUidB()));
         }
         return neighbors;
     }
@@ -477,7 +477,7 @@ public class relationshipServiceImpl implements relationshipService {
         List<Users> neighbors = new ArrayList<>();
         List<Neighbors> neighborShip = neighborsDAO.getNeighborsFromBlock(uid);
         for (Neighbors n : neighborShip) {
-            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+            neighbors.add(usersDAO.getUserByUid(n.getUidB()));
         }
         return neighbors;
     }
@@ -492,7 +492,7 @@ public class relationshipServiceImpl implements relationshipService {
         List<Users> neighbors = new ArrayList<>();
         List<Neighbors> neighborShip = neighborsDAO.getNeighborsFromHood(uid);
         for (Neighbors n : neighborShip) {
-            neighbors.add(usersDAO.getUserInfoByUid(n.getUidB()));
+            neighbors.add(usersDAO.getUserByUid(n.getUidB()));
         }
         return neighbors;
     }

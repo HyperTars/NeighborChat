@@ -52,7 +52,7 @@
         WHERE uid = #{uid};
     </update>
 
-    <select id="selectByUName" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.String">
+    <select id="getUserByUName" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.String">
         SELECT
         uid, <include refid="UserCols" />
         FROM
