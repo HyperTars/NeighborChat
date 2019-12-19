@@ -1,22 +1,14 @@
 package com.hypertars.neighborChat.service.userAccount;
 
-import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
-
-import java.util.List;
-import java.util.Map;
 
 public interface userAccountService {
 
+    /** register */
+    boolean checkUName (String UName);
+    boolean userReg (String uname, String passwd, String email, String fName, String lName);
 
-    void insert(Users user);
-
-
-    void update(Users user);
-
-
-    Users selectByUid(int uid);
-
+    /** login */
     /**
      * login in
      * @param user attr: uid, pass needed
@@ -30,23 +22,16 @@ public interface userAccountService {
      */
     Users getUserBySession(String session);
 
-    List<Users> getUsersByBid(int bid);
-
-    UserBlock getUserBlockByUid(int uid);
-
-    Map<String, List<Users>> getUsersByHid(int hid);
-
-    /** register */
-    int checkUName (int uid);
-    int userReg (Users user);
-
     /** forget password */
-    int checkUserInfo (String uname, String email);
-    int resetPassword (int uid, String passwd);
+    Users userAuth (String uname, String email);
+    boolean resetPassword (int uid, String passwd);
 
     /** update user info */
-    int updateUserInfo (Users user);
+    boolean updateUserInfo (String uname, String passwd, String email, String fName, String lName, String addr1,
+                            String addr2, String intro, String photo, short nRange, boolean notify);
 
     /** load info */
     Users getUserInfoByUid (int uid);
+
+    void updateLastLog ();
 }

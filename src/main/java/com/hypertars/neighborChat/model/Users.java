@@ -1,6 +1,8 @@
 package com.hypertars.neighborChat.model;
+
 import lombok.Data;
 
+import java.util.Date;
 import java.util.Objects;
 
 @Data
@@ -27,11 +29,11 @@ public class Users {
 
     private String photo;
 
-    private String nRange;
+    private short nRange;
 
-    private String lastLog;
+    private Date lastLog;
 
-    private short notify;
+    private boolean notify;
 
     /** public get */
     public int getUid() {
@@ -74,15 +76,15 @@ public class Users {
         return photo;
     }
 
-    public String getnRange() {
+    public short getnRange() {
         return nRange;
     }
 
-    public String getLastLog() {
+    public Date getLastLog() {
         return lastLog;
     }
 
-    public short getNotify() {
+    public boolean getNotify() {
         return notify;
     }
 
@@ -127,15 +129,15 @@ public class Users {
         this.photo = photo;
     }
 
-    public void setnRange(String nRange) {
+    public void setnRange(short nRange) {
         this.nRange = nRange;
     }
 
-    public void setLastLog(String lastLog) {
+    public void setLastLog(Date lastLog) {
         this.lastLog = lastLog;
     }
 
-    public void setNotify(short notify) {
+    public void setNotify(boolean notify) {
         this.notify = notify;
     }
 

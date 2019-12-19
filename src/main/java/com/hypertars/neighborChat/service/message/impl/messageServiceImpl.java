@@ -261,7 +261,13 @@ public class messageServiceImpl implements messageService {
      */
     @Override
     public List<Message> notifyNewMessage(int uid) {
-        return messageDAO.notifyNewMessage(uid);
+        List<Message> returns = new ArrayList<>();
+        List<Message> messages = messageDAO.notifyNewMessage(uid);
+        for (Message msg: messages) {
+            if (msg.getAuthor() != uid)
+                returns.add(msg);
+        }
+        return returns;
     }
 
     /**

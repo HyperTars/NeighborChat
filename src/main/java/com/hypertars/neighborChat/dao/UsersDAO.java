@@ -46,9 +46,8 @@ public interface UsersDAO {
      * restore password with uname and email
      *
      * @param user user model
-     * @return 1 or 0
      */
-    boolean restorePasswd(Users user);
+    void resetPasswd(Users user);
 
     /**
      * select by user id
@@ -71,20 +70,6 @@ public interface UsersDAO {
      * @return 1 or 0
      */
     boolean updateLastLog();
-
-    /**
-     * Select users profiles from current user's friends
-     * @param uid current user id
-     * @return List<Users> Users models
-     */
-    List<Users> userFromFriends(@Param("uid") Integer uid);
-
-    /**
-     * Select users profiles from current user's neighbors
-     * @param uid current user id
-     * @return List<Users> Users models
-     */
-    List<Users> userFromNeighbors(@Param("uid") Integer uid);
 
     /**
      * Select users profiles from current user's same building

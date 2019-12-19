@@ -1,6 +1,8 @@
 package com.hypertars.neighborChat.service.membership;
 
 import com.hypertars.neighborChat.model.BlockApplication;
+import com.hypertars.neighborChat.model.Blocks;
+import com.hypertars.neighborChat.model.Hoods;
 import com.hypertars.neighborChat.model.UserBlock;
 
 import java.util.List;
@@ -32,6 +34,14 @@ public interface membershipService {
     List<BlockApplication> notifyNewBlockApplicationToRecipient (int recipient);
     List<UserBlock> notifyNewBlockMember (int uid);
 
-
-
+    /** basic loads */
+    Blocks getBlockByBid (int bid);
+    Blocks getBlockByUid (int uid);
+    List<Blocks> getAllBlocks ();
+    Hoods getHoodByUid (int uid);
+    Hoods getHoodByBid (int bid);
+    Hoods getHoodByHid (int hid);
+    List<Hoods> getAllHoods();
+    List<Blocks> getBlocksInSameHoodByUid (int uid);
+    UserBlock getCurrentMember (int uid);
 }

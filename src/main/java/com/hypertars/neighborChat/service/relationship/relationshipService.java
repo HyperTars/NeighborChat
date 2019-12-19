@@ -1,6 +1,7 @@
 package com.hypertars.neighborChat.service.relationship;
 
 import com.hypertars.neighborChat.model.FriendApplication;
+import com.hypertars.neighborChat.model.Users;
 
 import java.util.List;
 
@@ -32,4 +33,23 @@ public interface relationshipService {
     List<FriendApplication> notifyNewFriendApplicationMadeToApplicant (int applicant);
     List<FriendApplication> notifyPassedFriendApplicationFromApplicant (int applicant);
     List<FriendApplication> notifyFailedFriendApplicationFromApplicant (int applicant);
+
+    /** basic loads */
+    List<Users> getUsersByBid (int bid);
+    List<Users> getUsersInSameBuildingByUid (int uid);
+    List<Users> getUsersInSameBlockByUid (int uid);
+    List<Users> getUsersInSameHoodByUid (int uid);
+
+    List<Users> getFriendsByUid (int uid);
+    List<Users> getFriendsFromBlockByUid (int uid);
+    List<Users> getFriendsFromHoodByUid (int uid);
+    List<Users> getFriendsFromOldByUid (int uid);
+
+    List<Users> getNeighborsByUid (int uid);
+    List<Users> getNeighborsFromBlockByUid (int uid);
+    List<Users> getNeighborsFromHoodByUid (int uid);
+
+    List<Users> getStrangersFromSameBuilding (int uid);
+    List<Users> getStrangersFromSameBlock (int uid);
+    List<Users> getStrangersFromSameHood (int uid);
 }
