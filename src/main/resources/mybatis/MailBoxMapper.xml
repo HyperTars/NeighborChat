@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
+
+    <sql id = "MailBoxCols">
+        uid, msgid, rd
+    </sql>
+
+    <sql id = "MailBoxTable">
+        MailBox
+    </sql>
+
+    <select id="getAllMsgthreadByUid" resultType="com.hypertars.neighborChat.model.MailBox" parameterType="java.lang.Integer">
+        SELECT <include refid="MailBoxCols"/> FROM <include refid="MailBoxTable"/>
+        WHERE uid = #{uid};
+    </select>
+
+    <select id="notifyNewMsgthreadByUid" resultType="com.hypertars.neighborChat.model.MailBox" parameterType="java.lang.Integer">
+        <!-- Maybe SQL Funciton? -->
+        SELECT <include refid="MailBoxCols"/> FROM <include refid="MailBoxTable"/> NATURAL JOIN Message LEFT OUTER Reply ON Message.msgid = Reply.msgid
+        WHERE uid = #{uid} AND
+        (mtime &gt; (SELECT lastLog FROM Users)
+        OR rTime &gt; (SELECT lastLog FROM Users))
+        GROUP BY msgid
+        ORDER BY rTime DESC
+        LIMIT 1;
+    </select>
+
+    <update id="setMsgthreadUnread" parameterType="com.hypertars.neighborChat.model.MailBox">
+        UPDATE <include refid="MailBoxTable"/>
+        SET rd = False
+        WHERE msgid = #{msgid} AND uid = #{uid};
+    </update>
+
+    <update id="setMsgthreadRead" parameterType="com.hypertars.neighborChat.model.MailBox">
+        UPDATE <include refid="MailBoxTable"/>
+        SET rd = True
+        WHERE msgid = #{msgid} AND uid = #{uid};
+    </update>
+</mapper>

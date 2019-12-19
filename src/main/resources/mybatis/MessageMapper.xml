@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
+
+    <sql id = "MessageCols">
+        msgid, author, rRange, mtime, title, sub, txt, corrd
+    </sql>
+
+    <sql id = "MessageTable">
+        Message
+    </sql>
+
+    <insert id="addNewMsg">
+        <!-- SQL Function: add new Message & MailBox -->
+    </insert>
+
+    <select id="getMsgByMsgid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/>
+        WHERE msgid = #{msgid};
+    </select>
+
+    <select id="getAllMsgByUid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/> NATURAL JOIN MailBox
+        WHERE uid = #{uid};
+    </select>
+
+    <select id="getMsgByAuthor"resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/>
+        WHERE author = #{author};
+    </select>
+
+    <!-- + New Msg Notify SQL Funtion? -->
+</mapper>
