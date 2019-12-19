@@ -6,9 +6,9 @@ import com.hypertars.neighborChat.dao.BlocksDAO;
 import com.hypertars.neighborChat.dao.UserBlockDAO;
 import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.membership.membershipService;
-import com.hypertars.neighborChat.service.relationship.relationshipService;
-import com.hypertars.neighborChat.service.userAccount.userAccountService;
+import com.hypertars.neighborChat.service.Membership.MembershipService;
+import com.hypertars.neighborChat.service.Relationship.RelationshipService;
+import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
@@ -31,13 +31,13 @@ import java.util.List;
 public class BlockController extends NBCBaseController {
 
     @Resource
-    private userAccountService userService;
+    private UserAccountService userService;
 
     @Resource
-    private membershipService blockService;
+    private MembershipService blockService;
 
     @Resource
-    private relationshipService relationshipService;
+    private RelationshipService relationshipService;
 
     @Resource
     private BlocksDAO blocksDAO;
