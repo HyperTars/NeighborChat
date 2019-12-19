@@ -58,7 +58,23 @@
         WHERE uid = #{uid}
     </update>
 
+    <select id="userFromSameBuilding" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE addr1 = (SELECT addr1 FROM Users WHERE uid = #{uid})
+        AND uid != #{uid};
+    </select>
 
+    <select id="userFromSameBlock" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE uid in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}))
+        AND uid != #{uid};
+    </select>
+
+    <select id="userFromSameHood" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE uid in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}))
+        AND uid != #{uid};
+    </select>
 
 
 </mapper>
