@@ -2,31 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
 
-    <sql id = "MessageCols">
-        msgid, author, rRange, mtime, title, sub, txt, corrd
-    </sql>
-
-    <sql id = "MessageTable">
-        Message
-    </sql>
-
     <insert id="addNewMsg">
         INSERT INTO Message (msgid, author, rRange, sub, title, txt, coord)
         VALUES (#{msgid}, #{author}, #{rRange}, #{sub}, #{title}, #{txt}, #{coord});
     </insert>
 
     <select id="getMsgByMsgid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message
-        WHERE msgid = #{msgid};
+        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message
+        WHERE msgid = #{uid};
     </select>
 
     <select id="getAllMsgByUid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message NATURAL JOIN MailBox
+        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message NATURAL JOIN MailBox
         WHERE uid = #{uid};
     </select>
 
     <select id="getMsgByAuthor" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message
+        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message
         WHERE author = #{author};
     </select>
 
@@ -36,14 +28,14 @@
     </select>
     
     <select id="notifyNewMessage" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message
-        WHERE mTime > (SELECT lastLog FROM Users WHERE uid = #{uid});
+        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message NATURAL JOIN MailBox mb
+        WHERE mb.uid = #{uid} AND mTime > (SELECT lastLog FROM Users WHERE uid = mb.uid);
     </select>
     
     <select id="notifyNewReply" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT m.msgid, m.author, m.rRange, m.mtime, m.title, m.sub, m.txt, m.coord
-        FROM Message m LEFT OUTER JOIN Reply ON (m.msgid = Reply.msgid)
-        WHERE rTime > (SELECT lastLog FROM Users WHERE uid = #{uid});
+        SELECT DISTINCT(m.msgid), m.author, m.rRange, m.mtime, m.title, m.sub, m.txt, m.coord
+        FROM Message m NATURAL JOIN MailBOX mb LEFT OUTER JOIN Reply r ON (m.msgid = r.msgid)
+        WHERE mb.uid = #{uid} AND rTime > (SELECT lastLog FROM Users WHERE uid = mb.uid);
     </select>
 
 </mapper>
