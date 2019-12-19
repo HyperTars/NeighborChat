@@ -3,8 +3,7 @@ package com.hypertars.neighborChat;
 import com.hypertars.neighborChat.dao.BlocksDAO;
 import com.hypertars.neighborChat.dao.UserBlockDAO;
 import com.hypertars.neighborChat.dao.UsersDAO;
-import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.user.UserService;
+import com.hypertars.neighborChat.service.userAccount.userAccountService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import javax.annotation.Resources;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -29,7 +27,7 @@ class NeighborChatApplicationTests {
     private UserBlockDAO userBlockDAO;
 
     @Resource
-    private UserService userService;
+    private userAccountService userService;
 
     @Test
     void contextLoads() {
