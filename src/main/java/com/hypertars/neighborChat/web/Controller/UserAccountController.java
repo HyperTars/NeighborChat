@@ -103,7 +103,7 @@ public class UserAccountController extends NBCBaseController {
                 short nRange = Short.parseShort(request.getParameter("nRange"));
                 boolean notify = Boolean.parseBoolean(request.getParameter("notify"));
                 if (userAccountService.updateUserInfo(user.getUid(), uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, notify))
-                    res.setResultObj("success");
+                    res.setResultObj("succeeded");
                 else res.setResultObj("failure");
                 return res;
             }
@@ -136,6 +136,7 @@ public class UserAccountController extends NBCBaseController {
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        System.out.println(encodeStr);
         return encodeStr;
     }
 }

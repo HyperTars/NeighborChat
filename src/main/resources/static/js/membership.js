@@ -3,7 +3,7 @@ $(document).ready(function(e) {
         type: 'get',
         dataType: "jsonp",
         jsonp: "callback", 
-        url: "http://localhost:8084/user/getUserInfo",
+        url: "http://localhost:8084/user/currentUserInfo",
         success: function(callback) {
             console.log(callback);
             if (document.cookie == "" || callback.resultCode == "USER_NOT_LOGIN_IN") {
@@ -14,7 +14,8 @@ $(document).ready(function(e) {
                 $("#photo").attr("src", callback.resultObj.photo);
             }
         },
-        error: function() {
+        error: function(e) {
+            console.log(e);
             alert("No such user, or wrong password!");
         }
     });
