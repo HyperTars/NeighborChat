@@ -11,23 +11,39 @@
     </sql>
 
     <insert id="addNewMsg">
-        <!-- SQL Function: add new Message & MailBox -->
+        INSERT INTO Message (msgid, author, rRange, sub, title, txt, coord)
+        VALUES (#{msgid}, #{author}, #{rRange}, #{sub}, #{title}, #{txt}, #{coord});
     </insert>
 
     <select id="getMsgByMsgid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/>
+        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message
         WHERE msgid = #{msgid};
     </select>
 
     <select id="getAllMsgByUid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/> NATURAL JOIN MailBox
+        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message NATURAL JOIN MailBox
         WHERE uid = #{uid};
     </select>
 
-    <select id="getMsgByAuthor"resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
-        SELECT <include refid="MessageCols"/> FROM <include refid="MessageTable"/>
+    <select id="getMsgByAuthor" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT msgid, author, rRange, mtime, title, sub, txt, corrd FROM Message
         WHERE author = #{author};
     </select>
 
-    <!-- + New Msg Notify SQL Funtion? -->
+    <select id="getLastMsgid" resultType="java.lang.Integer">
+        SELECT msgid FROM Message
+        ORDER BY mTime DESC LIMIT 1;
+    </select>
+    
+    <select id="notifyNewMessage" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message
+        WHERE mTime > (SELECT lastLog FROM Users WHERE uid = #{uid});
+    </select>
+    
+    <select id="notifyNewReply" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
+        SELECT m.msgid, m.author, m.rRange, m.mtime, m.title, m.sub, m.txt, m.coord
+        FROM Message m LEFT OUTER JOIN Reply ON (m.msgid = Reply.msgid)
+        WHERE rTime > (SELECT lastLog FROM Users WHERE uid = #{uid});
+    </select>
+
 </mapper>

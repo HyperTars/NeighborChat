@@ -14,5 +14,9 @@ public interface RecipientDAO {
      */
     Recipient getRecipientByMsgid(@Param("msgid") int msgid);
 
+    /**
+     * add recipient (particular)
+     * @param recipient uid
+     */
     void addRecipient(Recipient recipient);
 }

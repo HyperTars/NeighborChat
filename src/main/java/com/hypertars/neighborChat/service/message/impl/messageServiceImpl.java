@@ -111,6 +111,7 @@ public class messageServiceImpl implements messageService {
             MailBox mailBox = new MailBox();
             mailBox.setMsgid(msgid);
             mailBox.setUid(recip);
+            mailBox.setRd(false);
             mailBoxDAO.addToMailBox(mailBox);
         }
         MailBox mailBox = new MailBox();

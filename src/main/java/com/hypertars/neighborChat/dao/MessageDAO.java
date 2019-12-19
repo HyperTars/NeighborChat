@@ -12,9 +12,8 @@ public interface MessageDAO {
     /**
      * add new message
      * @param message message model
-     * @return 1 or 0
      */
-    boolean addNewMsg(Message message);
+    void addNewMsg(Message message);
 
     /**
      * get message my msgid

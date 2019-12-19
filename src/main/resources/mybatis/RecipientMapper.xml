@@ -2,16 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
 
-    <sql id = "RecipientCols">
-        msgid, uid
-    </sql>
-
-    <sql id = "RecipientTable">
-        Recipient
-    </sql>
-
     <select id="getRecipientyMsgid" resultType="java.lang.Integer" parameterType="java.lang.Integer">
-        SELECT Recipient FROM <include refid="RecipientTable" />
+        SELECT Recipient FROM Recipient
         WHERE msgid = #{msgid};
     </select>
+
+    <insert id="addRecipient" parameterType="com.hypertars.neighborChat.model.Recipient">
+        INSERT INTO Recipient (msgid, uid)
+        VALUES (#{msgid}, #{uid});
+    </insert>
+
 </mapper>
