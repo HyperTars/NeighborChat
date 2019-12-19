@@ -13,8 +13,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("Message")
-public class MessageController extends NBCBaseController {
+@RequestMapping("PullData")
+public class PullDataController extends NBCBaseController {
     @Resource
     private UserAccountService userService;
 
@@ -27,27 +27,13 @@ public class MessageController extends NBCBaseController {
     @Resource
     private RelationshipService relationshipService;
 
-    public String getAllMessageThreads(HttpServletRequest request) {
+    public String pullBasicData(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         return JSON.toJSONString(result);
-
     }
 
-    public String getMessageAndReplyByThread(HttpServletRequest request) {
+    public String pullNotification(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         return JSON.toJSONString(result);
-
-    }
-
-    public String addMessage(HttpServletRequest request) {
-        NBCResult<Object> result = new NBCResult<>();
-        return JSON.toJSONString(result);
-
-    }
-
-    public String addReply(HttpServletRequest request) {
-        NBCResult<Object> result = new NBCResult<>();
-        return JSON.toJSONString(result);
-
     }
 }
