@@ -1,4 +1,4 @@
-package com.hypertars.neighborChat.service.membership;
+package com.hypertars.neighborChat.service.Membership;
 
 import com.hypertars.neighborChat.model.BlockApplication;
 import com.hypertars.neighborChat.model.Blocks;
@@ -7,7 +7,7 @@ import com.hypertars.neighborChat.model.UserBlock;
 
 import java.util.List;
 
-public interface membershipService {
+public interface MembershipService {
 
     /** apply for block */
     List<UserBlock> getUserBlocksByUid (int uid);

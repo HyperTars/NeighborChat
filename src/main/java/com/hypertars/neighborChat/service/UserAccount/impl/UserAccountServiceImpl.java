@@ -1,10 +1,10 @@
-package com.hypertars.neighborChat.service.userAccount.impl;
+package com.hypertars.neighborChat.service.UserAccount.impl;
 
 import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.userAccount.userAccountService;
+import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.utils.AssertUtils;
 import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
-public class userAccountServiceImpl implements userAccountService {
+public class UserAccountServiceImpl implements UserAccountService {
     @Resource
     private BlockApplicationDAO blockApplicationDAO;
 
@@ -147,9 +147,10 @@ public class userAccountServiceImpl implements userAccountService {
     }
 
     @Override
-    public boolean updateUserInfo(String uname, String passwd, String email, String fName, String lName, String addr1,
+    public boolean updateUserInfo(int uid, String uname, String passwd, String email, String fName, String lName, String addr1,
                                   String addr2, String intro, String photo, short nRange, boolean notify) {
         Users user = new Users();
+        user.setUid(uid);
         user.setUname(uname);
         user.setPasswd(passwd);
         user.setEmail(email);

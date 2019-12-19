@@ -1,8 +1,8 @@
-package com.hypertars.neighborChat.service.userAccount;
+package com.hypertars.neighborChat.service.UserAccount;
 
 import com.hypertars.neighborChat.model.Users;
 
-public interface userAccountService {
+public interface UserAccountService {
 
     /** register */
     boolean checkUName (String UName);
@@ -27,7 +27,7 @@ public interface userAccountService {
     boolean resetPassword (int uid, String passwd);
 
     /** update user info */
-    boolean updateUserInfo (String uname, String passwd, String email, String fName, String lName, String addr1,
+    boolean updateUserInfo (int uid, String uname, String passwd, String email, String fName, String lName, String addr1,
                             String addr2, String intro, String photo, short nRange, boolean notify);
 
     /** load info */

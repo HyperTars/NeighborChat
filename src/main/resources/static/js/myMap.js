@@ -26,8 +26,31 @@ function initMap() {
 
         marker.setMap(map);
 
-        console.info(event.latLng.lat());  // print lat of click pos
-        console.info(event.latLng.lng());  // print lng of click pos
+    });
+
+    map2 = new google.maps.Map(document.getElementById('map2'), {
+        center: myLatLng,
+        zoom: 14
+    });
+
+    marker = new google.maps.Marker({
+　　　　　position: myLatLng,
+　　　　　map: map2,
+　　　　　title: 'Hello World!'
+　　});
+
+    google.maps.event.addListener(map2,'click',function(event) {
+        if (marker != null) marker.setMap(null);
+        
+        currentLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
+        marker = new google.maps.Marker({
+    　　    position: currentLatLng,
+    　　    map: map2,
+    　　    title: 'Hello World!'
+    　　});
+
+        marker.setMap(map2);
+
     });
 
 }

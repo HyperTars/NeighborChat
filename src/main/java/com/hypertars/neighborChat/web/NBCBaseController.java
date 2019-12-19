@@ -3,7 +3,7 @@ package com.hypertars.neighborChat.web;
 import com.hypertars.neighborChat.enums.NBCResultCodeEnum;
 import com.hypertars.neighborChat.exception.NBCException;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.userAccount.userAccountService;
+import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.utils.AssertUtils;
 import com.hypertars.neighborChat.utils.StringUtils;
 import org.springframework.ui.ModelMap;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class NBCBaseController {
 
     @Resource
-    private userAccountService useraccountService;
+    private UserAccountService useraccountService;
     /** 登录用户 */
     protected ThreadLocal<Users> loginUsers = new ThreadLocal<>();
 
