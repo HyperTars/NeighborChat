@@ -5,6 +5,7 @@ import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
+import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,29 +29,87 @@ public class PullDataController extends NBCBaseController {
     private RelationshipService relationshipService;
 
     public String messageSinceLastLog(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
 
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
     public String messageUnread(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
 
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
     public String userSameBlock(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
 
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
     public String userSameHood(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
 
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
 
     public String pullBasicData(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
-        return JSON.toJSONString(result);
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
     public String pullNotification(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
-        return JSON.toJSONString(result);
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+
+                res.setResultObj(null);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
     }
 }

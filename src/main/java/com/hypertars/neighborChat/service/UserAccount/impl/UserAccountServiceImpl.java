@@ -150,7 +150,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     public boolean updateUserInfo(int uid, String uname, String passwd, String email, String fName, String lName, String addr1,
                                   String addr2, String intro, String photo, short nRange, boolean notify) {
         Users user = new Users();
-        user.setUid = uids;
+        user.setUid(uid);
         user.setUname(uname);
         user.setPasswd(passwd);
         user.setEmail(email);
