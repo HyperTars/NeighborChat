@@ -11,6 +11,7 @@ $(document).ready(function(e) {
             }
             else {
                 $("#upper_right_name").html(callback.resultObj.uname);
+                $("#avatar").attr("src", callback.resultObj.photo);
                 $("#photo").attr("src", callback.resultObj.photo);
             }
         },

@@ -67,7 +67,7 @@ CREATE TABLE FriendApplication (
     recipient INT(8) NOT NULL,
     txt VARCHAR (100) DEFAULT NULL,
 	faTime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	decision BOOL DEFAULT NULL,
+	decision int DEFAULT -1,
     PRIMARY KEY (applicant, recipient),
     FOREIGN KEY (applicant) REFERENCES Users (uid) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (recipient) REFERENCES Users (uid) ON DELETE CASCADE ON UPDATE CASCADE);
