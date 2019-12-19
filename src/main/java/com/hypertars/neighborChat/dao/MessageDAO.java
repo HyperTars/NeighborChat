@@ -36,4 +36,10 @@ public interface MessageDAO {
      * @return List<Message> messages models
      */
     List<Message> getMsgByAuthor(@Param("author") int author);
+
+    int getLastMsgid();
+
+    List<Message> notifyNewMessage(@Param("author") int author);
+
+    List<Message> notifyNewReply(@Param("author") int author);
 }

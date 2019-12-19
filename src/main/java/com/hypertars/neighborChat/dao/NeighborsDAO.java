@@ -51,7 +51,7 @@ public interface NeighborsDAO {
 
     /**
      * delete all neighbors (when joining new block)
-     * @param neighbors neighbor
+     * @param uidA uid A
      */
     void deleteAllNeighbors(@Param("uidA") int uidA);
 }

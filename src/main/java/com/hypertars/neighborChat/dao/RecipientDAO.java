@@ -13,4 +13,6 @@ public interface RecipientDAO {
      * @return Recipient recipient model
      */
     Recipient getRecipientByMsgid(@Param("msgid") int msgid);
+
+    void addRecipient(Recipient recipient);
 }
