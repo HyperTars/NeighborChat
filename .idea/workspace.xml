@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="">
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update services">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_mac/laf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codestyles/Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/colors.scheme.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/block/impl/BlockServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/impl/messageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/impl/messageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/message/messageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +23,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="15" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -174,7 +186,8 @@
       <workItem from="1575758828238" duration="6406000" />
       <workItem from="1575825094428" duration="1570000" />
       <workItem from="1576681395120" duration="25053000" />
-      <workItem from="1576711531004" duration="8998000" />
+      <workItem from="1576711531004" duration="1603000" />
+      <workItem from="1576714880223" duration="5308000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1575725887937</created>
@@ -323,28 +336,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576712056359</updated>
     </task>
-    <task id="LOCAL-00022" summary="update services">
-      <created>1576713338114</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1576713338114</updated>
-    </task>
-    <task id="LOCAL-00023" summary="update services">
-      <created>1576717172384</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1576717172384</updated>
-    </task>
-    <task id="LOCAL-00024" summary="complete service">
-      <created>1576721298514</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1576721298514</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,22 +387,25 @@
     <MESSAGE value="update" />
     <MESSAGE value="update models" />
     <MESSAGE value="update services" />
-    <MESSAGE value="complete service" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete service" />
+    <option name="LAST_COMMIT_MESSAGE" value="update services" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="180" key="#Notifications" timestamp="1576711013207">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="499" y="180" key="#Notifications/0.23.1680.1027@0.23.1680.1027" timestamp="1576711013207" />
+    <state x="310" y="128" key="#Project_Structure" timestamp="1576714895167">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="310" y="128" key="#Project_Structure/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576714895167" />
     <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576699488364">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576699488364" />
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576721259707">
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576705451192">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576721259707" />
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576705451192" />
     <state x="538" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576712180190">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -427,52 +422,60 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576682743743" />
-    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576721298157">
+    <state x="275" y="109" key="CommitChangelistDialog2" timestamp="1576712111142">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576721298157" />
+    <state x="275" y="109" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576712111142" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576711380157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711380157" />
-    <state width="1388" height="96" key="GridCell.Tab.0.bottom" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.0.bottom" timestamp="1576722059807">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059807" />
     <state width="1388" height="96" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.0.center" timestamp="1575861809984">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.0.center" timestamp="1576722059807">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059807" />
     <state width="1388" height="96" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
     <state width="1638" height="251" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972919" />
-    <state width="1388" height="96" key="GridCell.Tab.0.left" timestamp="1575861809984">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.0.left" timestamp="1576722059806">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059806" />
     <state width="1388" height="96" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
     <state width="1638" height="251" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972906" />
-    <state width="1388" height="96" key="GridCell.Tab.0.right" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.0.right" timestamp="1576722059807">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059807" />
     <state width="1388" height="96" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972919" />
-    <state width="1388" height="96" key="GridCell.Tab.1.bottom" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.1.bottom" timestamp="1576722059809">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059809" />
     <state width="1388" height="96" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972921" />
-    <state width="1388" height="96" key="GridCell.Tab.1.center" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.1.center" timestamp="1576722059808">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059808" />
     <state width="1388" height="96" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.1.left" timestamp="1575861809985">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.1.left" timestamp="1576722059808">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059808" />
     <state width="1388" height="96" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
     <state width="1638" height="251" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
-    <state width="1388" height="96" key="GridCell.Tab.1.right" timestamp="1575861809986">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state width="1379" height="115" key="GridCell.Tab.1.right" timestamp="1576722059808">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1379" height="115" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576722059808" />
     <state width="1388" height="96" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
     <state width="1638" height="251" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575784972920" />
     <state width="1326" height="320" key="GridCell.Tab.2.bottom" timestamp="1575696250829">
@@ -511,10 +514,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="237" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711422712" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576721302150">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576712158712">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576721302150" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576712158712" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -555,5 +558,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576713138670" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/BlockController.java</url>
+          <line>77</line>
+          <properties class="com.hypertars.neighborChat.web.Controller.BlockController" method="allApplicants">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/neighborChat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576720758249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

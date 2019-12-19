@@ -6,10 +6,10 @@ $(document).ready(function(e) {
         url: "http://localhost:8084/user/getUserInfo",
         success: function(callback) {
             console.log(callback);
-            if (callback.resultCode == "USER_NOT_LOGIN_IN") {
+            if (document.cookie == "") {
                 window.location.href ="login.html";
             }
-            else if (callback.resultCode == "SUCCESS") {
+            else {
                 $("#upper_right_name").html(callback.resultObj.uname);
             }
         },
@@ -18,10 +18,15 @@ $(document).ready(function(e) {
         }
     });
 
-    // console.log($.cookie('userSession'));
+    $("#logout").on("click", function() {
+        function clearAllCookie() {
+            var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+            if (keys) {
+                for (var i = keys.length; i--;)
+                    document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+            }
+        }
+        clearAllCookie();
+    })
 });
 
-// $('#upper_right_2').on("click", function() {
-//     $.cookie("userSession", "", {expires: -1});
-//     window.location.href ="dashboard.html";
-// })

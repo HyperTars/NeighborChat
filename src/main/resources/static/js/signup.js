@@ -1,7 +1,20 @@
 $(function() {
-    var firstValid = false, lastValid = false, emailValid = false, passwordValid = false, repeatValid = false;
+    var userValid = false, firstValid = false, lastValid = false, emailValid = false, passwordValid = false, repeatValid = false;
     var tempPassword;
     
+    // check first name format
+	$('#UserName').on("input", function() {
+		function checkUser(name) {
+            if (name == "") return "Invalid";
+			for (var i = 0; i < name.length; i++)
+				if (!name[i].match(/[a-zA-Z0-9_]/)) return "Invalid";
+			if (name.length < 1 || name.length > 20) return "Invalid";
+			return "";
+        }
+        var text = checkUser($(this).val());
+		return (text != "") ? userValid = false : userValid = true;
+    })
+
     // check first name format
 	$('#FirstName').on("input", function() {
 		function checkFirst(name) {
@@ -62,10 +75,11 @@ $(function() {
     
     // submit
 	$("#form").submit(function (e) {
-        if (!firstValid || !lastValid) alert("Wrong firstname or lastname format");
+        if (!userValid) alert("Wrong username format");
+        else if (!firstValid || !lastValid) alert("Wrong firstname or lastname format");
         else if (!emailValid) alert("Wrong email format");
         else if (!passwordValid) alert("Wrong password format");
         else if (!repeatValid) alert("Repeat password inconsistent");
-		if (!firstValid || !lastValid || !emailValid || !passwordValid || !repeatValid) e.preventDefault();
+		if (!userValid || !firstValid || !lastValid || !emailValid || !passwordValid || !repeatValid) e.preventDefault();
     })
 });
