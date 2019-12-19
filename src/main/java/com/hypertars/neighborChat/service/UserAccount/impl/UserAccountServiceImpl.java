@@ -177,8 +177,9 @@ public class UserAccountServiceImpl implements UserAccountService {
     }
 
     @Override
-    public void updateLastLog(int uid) {
+    public boolean updateLastLog(int uid) {
         usersDAO.updateLastLog(uid);
+        return true;
     }
 
     /**

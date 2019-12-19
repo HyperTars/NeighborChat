@@ -24,14 +24,15 @@ import java.security.NoSuchAlgorithmException;
 @RestController
 @RequestMapping("user")
 public class UserAccountController extends NBCBaseController {
+
     @Resource
     private UserAccountService userAccountService;
 
     @Resource
-    private MessageService MessageService;
+    private MessageService messageService;
 
     @Resource
-    private MembershipService blockService;
+    private MembershipService membershipService;
 
     @Resource
     private RelationshipService relationshipService;

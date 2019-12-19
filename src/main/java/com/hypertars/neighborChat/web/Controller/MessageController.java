@@ -18,14 +18,15 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("message")
 public class MessageController extends NBCBaseController {
+
     @Resource
-    private UserAccountService userService;
+    private UserAccountService userAccountService;
 
     @Resource
     private MessageService messageService;
 
     @Resource
-    private MembershipService blockService;
+    private MembershipService membershipService;
 
     @Resource
     private RelationshipService relationshipService;

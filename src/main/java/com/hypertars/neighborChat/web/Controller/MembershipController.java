@@ -21,10 +21,10 @@ import javax.servlet.http.HttpServletRequest;
 public class MembershipController extends NBCBaseController {
 
     @Resource
-    private UserAccountService userService;
+    private UserAccountService userAccountService;
 
     @Resource
-    private MessageService MessageService;
+    private MessageService messageService;
 
     @Resource
     private MembershipService membershipService;

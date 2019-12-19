@@ -21,14 +21,15 @@ import java.util.List;
 @RestController
 @RequestMapping("loadData")
 public class LoadDataController extends NBCBaseController {
+
     @Resource
-    private UserAccountService userService;
+    private UserAccountService userAccountService;
 
     @Resource
     private MessageService messageService;
 
     @Resource
-    private MembershipService blockService;
+    private MembershipService membershipService;
 
     @Resource
     private RelationshipService relationshipService;
@@ -41,7 +42,7 @@ public class LoadDataController extends NBCBaseController {
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(userService.getUserByUid(user.getUid()));
+                res.setResultObj(userAccountService.getUserByUid(user.getUid()));
                 return res;
             }
         });

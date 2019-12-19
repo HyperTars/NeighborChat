@@ -1,9 +1,11 @@
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.hypertars.neighborChat.model.BlockApplication;
+import com.hypertars.neighborChat.model.FriendApplication;
 import com.hypertars.neighborChat.model.Users;
-import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
+import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
@@ -14,10 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RestController
-@RequestMapping("relationship")
-public class RelationshipController extends NBCBaseController {
+@RequestMapping("notify")
+public class NotifyController extends NBCBaseController {
 
     @Resource
     private UserAccountService userAccountService;
@@ -31,203 +34,187 @@ public class RelationshipController extends NBCBaseController {
     @Resource
     private RelationshipService relationshipService;
 
-    @RequestMapping(value = "getAllFriends", produces = "text/script;charset=UTF-8")
-    public String getAllFriends(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewBlockApplicationAsRecipient", produces = "text/script;charset=UTF-8")
+    public String notifyNewBlockApplicationAsRecipient (HttpServletRequest request, String callback){
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getFriendsByUid(user.getUid()));
+                List<BlockApplication> newBA = membershipService.notifyNewBlockApplicationToRecipient(user.getUid());
+                res.setResultObj(newBA);
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "getAllNeighbors", produces = "text/script;charset=UTF-8")
-    public String getAllNeighbors(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyAcceptedBlockApplicationAsApplicant", produces = "text/script;charset=UTF-8")
+    public String notifyAcceptedBlockApplicationAsApplicant (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getNeighborsByUid(user.getUid()));
+                List<BlockApplication> newBA = membershipService.notifyPassedBlockApplicationFromApplicant(user.getUid());
+                res.setResultObj(newBA);
+                for (BlockApplication ba : newBA)
+                    membershipService.deleteBlockApplication(ba.getApplicant(), ba.getBid());
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "getAllStrangersFromBlock", produces = "text/script;charset=UTF-8")
-    public String getAllStrangersFromBlock(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyRejectedBlockApplicationAsApplicant", produces = "text/script;charset=UTF-8")
+    public String notifyRejectedBlockApplicationAsApplicant (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getStrangersFromSameBlock(user.getUid()));
+                List<BlockApplication> newBA = membershipService.notifyFailedBlockApplicationFromApplicant(user.getUid());
+                res.setResultObj(newBA);
+                for (BlockApplication ba : newBA)
+                    membershipService.deleteBlockApplication(ba.getApplicant(), ba.getBid());
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "getAllStrangersFromHood", produces = "text/script;charset=UTF-8")
-    public String getAllStrangersFromHood(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewFriendApplicationAsRecipient", produces = "text/script;charset=UTF-8")
+    public String notifyNewFriendApplicationAsRecipient (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getStrangersFromSameHood(user.getUid()));
+                List<FriendApplication> newFA = (relationshipService.notifyNewFriendApplicationToRecipient(user.getUid()));
+                res.setResultObj(newFA);
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "applyFriend", produces = "text/script;charset=UTF-8")
-    public String applyFriend(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewFriendApplicationMadeAsApplicant", produces = "text/script;charset=UTF-8")
+    public String notifyNewFriendApplicationMadeAsApplicant (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int recipient = Integer.parseInt(request.getParameter("recipient"));
-                String txt = request.getParameter("txt");
-                if (relationshipService.checkFriendApplicationExist(user.getUid(), recipient)) {
-                    res.setResultObj("friend application already exists");
-                    return res;
-                } else if (relationshipService.addFriendApplication(user.getUid(), recipient, txt)) {
-                    res.setResultObj("success");
-                } else res.setResultObj("failure");
+                List<FriendApplication> newFA = (relationshipService.notifyNewFriendApplicationMadeToApplicant(user.getUid()));
+                res.setResultObj(newFA);
+                for (FriendApplication fa: newFA)
+                    relationshipService.deleteFriendApplication(fa.getApplicant(), fa.getRecipient());
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "decideFriendApplication", produces = "text/script;charset=UTF-8")
-    public String decideFriendApplication(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyAcceptedFriendApplicationAsApplicant", produces = "text/script;charset=UTF-8")
+    public String notifyAcceptedFriendApplicationAsApplicant (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int applicant = Integer.parseInt(request.getParameter("applicant"));
-                boolean decision = Boolean.parseBoolean(request.getParameter("decision"));
-                if (!decision) {
-                    if (relationshipService.rejectFriendApplication(applicant, user.getUid()))
-                        res.setResultObj("reject application succeeded");
-                } else if (decision) {
-                    if (relationshipService.acceptFriendApplication(applicant, user.getUid()))
-                        res.setResultObj("accept application succeeded");
-                } else {
-                    res.setResultObj("failure");
-                }
+                List<FriendApplication> newFA = (relationshipService.notifyPassedFriendApplicationFromApplicant(user.getUid()));
+                res.setResultObj(newFA);
+                for (FriendApplication fa: newFA)
+                    relationshipService.deleteFriendApplication(fa.getApplicant(), fa.getRecipient());
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "addNeighbor", produces = "text/script;charset=UTF-8")
-    public String addNeighbor(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyRejectedFriendApplicationAsApplicant", produces = "text/script;charset=UTF-8")
+    public String notifyRejectedFriendApplicationAsApplicant (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int neighbor = Integer.parseInt(request.getParameter("neighborUid"));
-                if (relationshipService.checkNeighborExist(user.getUid(), neighbor)) {
-                    res.setResultObj("Neighbor already exists");
-                } else if (relationshipService.addNeighbor(user.getUid(), neighbor)) {
-                    res.setResultObj("success");
-                } else {
-                    res.setResultObj("failure");
-                }
+                List<FriendApplication> newFA = (relationshipService.notifyFailedFriendApplicationFromApplicant(user.getUid()));
+                res.setResultObj(newFA);
+                for (FriendApplication fa: newFA)
+                    relationshipService.deleteFriendApplication(fa.getApplicant(), fa.getRecipient());
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "deleteFriend", produces = "text/script;charset=UTF-8")
-    public String deleteFriend(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewMessage", produces = "text/script;charset=UTF-8")
+    public String notifyNewMessage (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int friend = Integer.parseInt(request.getParameter("friendUid"));
-                if (!relationshipService.checkFriendship(user.getUid(), friend))
-                    res.setResultObj("You are not friend");
-                if (relationshipService.deleteFriend(user.getUid(), friend)) {
-                    res.setResultObj("success");
-                } else res.setResultObj("failure");
+                res.setResultObj(messageService.notifyNewMessage(user.getUid()));
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "deleteNeighbor", produces = "text/script;charset=UTF-8")
-    public String deleteNeighbor(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewReply", produces = "text/script;charset=UTF-8")
+    public String notifyNewReply (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int neighbor = Integer.parseInt(request.getParameter("neighborUid"));
-                if (!relationshipService.checkNeighborExist(user.getUid(), neighbor))
-                    res.setResultObj("Not your neighbor");
-                if (relationshipService.deleteNeighbor(user.getUid(), neighbor)) {
-                    res.setResultObj("success");
-                } else res.setResultObj("failure");
+                res.setResultObj(messageService.notifyNewReply(user.getUid()));
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "getAllFriendApplicationAsApplicant", produces = "text/script;charset=UTF-8")
-    public String getAllFriendApplicationAsApplicant(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "notifyNewMsgOrReplyAsThread", produces = "text/script;charset=UTF-8")
+    public String notifyNewMsgOrReplyAsThread (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getFriendApplicationByApplicant(user.getUid()));
+                res.setResultObj(messageService.notifyNewMsgthread(user.getUid()));
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
-    @RequestMapping(value = "getAllFriendApplicationAsRecipient", produces = "text/script;charset=UTF-8")
-    public String getAllFriendApplicationAsRecipient(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "updateLastLog", produces = "text/script;charset=UTF-8")
+    public String updateLastLog (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getFriendApplicationByRecipient(user.getUid()));
+                if (!userAccountService.updateLastLog(user.getUid()))
+                    res.setResultObj("update last log failed");
+                else res.setResultObj("update last log succeeded");
                 return res;
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 }
-
