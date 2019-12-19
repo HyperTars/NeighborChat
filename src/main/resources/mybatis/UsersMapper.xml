@@ -13,7 +13,7 @@
     </select>
 
     <select id="checkUName" resultType="java.lang.Integer" parameterType="java.lang.String">
-        SELECT COUNT (uname) FROM Users
+        SELECT COUNT(uname) FROM Users
         WHERE uname = #{uname};
     </select>
 
@@ -72,7 +72,9 @@
 
     <select id="userFromSameHood" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
         SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
-        FROM Users WHERE uid in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}))
+        FROM Users WHERE uid in
+        (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hid =
+        (SELECT hid FROM UserBlock NATURAL JOIN Blocks WHERE uid = #{uid}))
         AND uid != #{uid};
     </select>
 

@@ -3,7 +3,7 @@
 <mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
 
     <select id="getRecipientyMsgid" resultType="java.lang.Integer" parameterType="java.lang.Integer">
-        SELECT Recipient FROM Recipient
+        SELECT msgid, uid FROM Recipient
         WHERE msgid = #{msgid};
     </select>
 

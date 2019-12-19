@@ -9,12 +9,16 @@
 
     <select id="getNeighborsFromBlock" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="java.lang.Integer">
         SELECT uidA, uidB, nTime FROM Neighbors
-        WHERE uidA = {#uid} AND uidB in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}));
-    </select>
+        WHERE uidA = #{uid} AND uidB in
+        (SELECT uid FROM UserBlock WHERE bid =
+        (SELECT bid FROM UserBlock WHERE uid = #{uid}));
+     </select>
 
     <select id="getNeighborsFromHood" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="java.lang.Integer">
         SELECT uidA, uidB, nTime FROM Neighbors
-        WHERE uidA = {#uid} AND uidB in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
+        WHERE uidA = #{uid} AND uidB in
+        (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hid =
+        (SELECT hid FROM UserBlock NATURAL JOIN Blocks WHERE uid = #{uid}));
     </select>
 
     <select id="checkNeighbors" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="com.hypertars.neighborChat.model.Neighbors">
