@@ -1,4 +1,4 @@
-package com.hypertars.neighborChat.service.message;
+package com.hypertars.neighborChat.service.Message;
 
 import com.hypertars.neighborChat.model.MailBox;
 import com.hypertars.neighborChat.model.Message;
@@ -7,7 +7,7 @@ import com.hypertars.neighborChat.model.Reply;
 
 import java.util.List;
 
-public interface messageService {
+public interface MessageService {
 
     /** message */
     boolean addNewMsg(int recipient, int author, int rRange, String title, String sub, String txt, String coord);

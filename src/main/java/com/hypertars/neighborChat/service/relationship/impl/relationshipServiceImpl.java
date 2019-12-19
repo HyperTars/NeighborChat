@@ -1,8 +1,8 @@
-package com.hypertars.neighborChat.service.relationship.impl;
+package com.hypertars.neighborChat.service.Relationship.impl;
 
 import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.model.*;
-import com.hypertars.neighborChat.service.relationship.relationshipService;
+import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class relationshipServiceImpl implements relationshipService {
+public class RelationshipServiceImpl implements RelationshipService {
 
     @Resource
     private BlockApplicationDAO blockApplicationDAO;

@@ -1,8 +1,8 @@
-package com.hypertars.neighborChat.service.message.impl;
+package com.hypertars.neighborChat.service.Message.impl;
 
 import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.model.*;
-import com.hypertars.neighborChat.service.message.messageService;
+import com.hypertars.neighborChat.service.Message.MessageService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class messageServiceImpl implements messageService {
+public class MessageServiceImpl implements MessageService {
     @Resource
     private BlockApplicationDAO blockApplicationDAO;
 

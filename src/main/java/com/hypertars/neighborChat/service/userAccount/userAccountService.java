@@ -1,8 +1,8 @@
-package com.hypertars.neighborChat.service.userAccount;
+package com.hypertars.neighborChat.service.UserAccount;
 
 import com.hypertars.neighborChat.model.Users;
 
-public interface userAccountService {
+public interface UserAccountService {
 
     /** register */
     boolean checkUName (String UName);

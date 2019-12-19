@@ -1,11 +1,11 @@
-package com.hypertars.neighborChat.service.membership.impl;
+package com.hypertars.neighborChat.service.Membership.impl;
 
 import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.model.BlockApplication;
 import com.hypertars.neighborChat.model.Blocks;
 import com.hypertars.neighborChat.model.Hoods;
 import com.hypertars.neighborChat.model.UserBlock;
-import com.hypertars.neighborChat.service.membership.membershipService;
+import com.hypertars.neighborChat.service.Membership.MembershipService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class membershipServiceImpl implements membershipService {
+public class MembershipServiceImpl implements MembershipService {
 
     @Resource
     private BlockApplicationDAO blockApplicationDAO;

@@ -1,11 +1,11 @@
-package com.hypertars.neighborChat.service.relationship;
+package com.hypertars.neighborChat.service.Relationship;
 
 import com.hypertars.neighborChat.model.FriendApplication;
 import com.hypertars.neighborChat.model.Users;
 
 import java.util.List;
 
-public interface relationshipService {
+public interface RelationshipService {
 
     /** friend application*/
     boolean checkFriendApplicationExist (int applicant, int recipient);
