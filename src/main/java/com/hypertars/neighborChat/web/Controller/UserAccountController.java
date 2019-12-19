@@ -52,6 +52,19 @@ public class UserAccountController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(user) + ")";
     }
 
+    @RequestMapping(value = "userReg", produces = "text/script;charset=UTF-8")
+    public String userReg(HttpServletRequest request, String callback) {
+        String uname = request.getParameter("uname");
+        String passwd = request.getParameter("passwd");
+        String email = request.getParameter("email");
+        String fName = request.getParameter("fName");
+        String lName = request.getParameter("lName");
+        passwd = getSHA256(passwd);
+        if (userAccountService.userReg(uname, passwd, email, fName, lName))
+            return callback + "(" + JSON.toJSONString("success") + ")";
+        else return callback + "(" + JSON.toJSONString("failure") + ")";
+    }
+
     @RequestMapping(value = "currentUserInfo", produces = "text/script;charset=UTF-8")
     public String currentUserInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
@@ -64,21 +77,6 @@ public class UserAccountController extends NBCBaseController {
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
-    }
-
-    @RequestMapping(value = "userReg", produces = "text/script;charset=UTF-8")
-    public String userReg(HttpServletRequest request, String callback) {
-        NBCResult<Object> res = new NBCResult<>();
-        String uname = request.getParameter("uname");
-        String passwd = request.getParameter("passwd");
-        String email = request.getParameter("email");
-        String fName = request.getParameter("fName");
-        String lName = request.getParameter("lName");
-        passwd = getSHA256(passwd);
-        if (userAccountService.userReg(uname, passwd, email, fName, lName))
-            res.setResultObj("success");
-        else res.setResultObj("failure");
-        return callback + "(" + JSON.toJSONString(res) + ")";
     }
 
     @RequestMapping(value = "updateInfo", produces = "text/script;charset=UTF-8")
