@@ -34,7 +34,7 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form id = "form" class="user" method="post" action="dashboard.html">
+              <form id = "form" class="user" method="post">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="UserName" placeholder="Username, 1~20 characters">
                 </div>
@@ -58,14 +58,14 @@
                   </div>
 
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <p>Notice: only people in the range you specify can see your profile!</p>
                   
                   <span>Neighbor Range: </span>
-                  <input type="radio" name="nRange" value="Same Building" checked>Same Building
-                  <input type="radio" name="nRange" value="Same Block" checked>Same Block
-                  <input type="radio" name="nRange" value="Same Hood" checked>Same Hood
-                </div>
+                  <input id = "sameBuilding" type="radio" name="nRange" value="Same Building" checked>Same Building
+                  <input id = "sameBlock" type="radio" name="nRange" value="Same Block" checked>Same Block
+                  <input id = "sameHood" type="radio" name="nRange" value="Same Hood" checked>Same Hood
+                </div> -->
                 <hr>
                 <input type = "submit" value = "Register Account" class = "btn btn-primary btn-user btn-block" id = "submit">
               </form>
@@ -91,6 +91,7 @@
   <script src="../static/js/sb-admin-2.min.js"></script>
   
   <script src="../static/js/signup.js"></script>
+  <script src="../static/js/jquery.cookie.js"></script>
 </body>
 
 </html>
