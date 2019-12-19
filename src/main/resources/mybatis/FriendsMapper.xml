@@ -20,10 +20,14 @@
 
     <select id="getFriendsFromHood">
         SELECT uidA, uidB, fTime FROM Friends
-        WHERE uidA = #{uid} AND uidB in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}))
+        WHERE uidA = #{uid} AND uidB in
+        (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hid =
+        (SELECT hid FROM UserBlock NATURAL JOIN Blocks WHERE uid = #{uid}))
         UNION
         SELECT uidB, uidA, fTime FROM Friends
-        WHERE uidB = #{uid} AND uidA in (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hood = (SELECT hood FROM UserBlock NATURAL JOIN Blocks JOIN WHERE uid = #{uid}));
+        WHERE uidB = #{uid} AND uidA in
+        (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hid =
+        (SELECT hid FROM UserBlock NATURAL JOIN Blocks WHERE uid = #{uid}));
     </select>
 
     <select id="getFriendsFromOld" resultType="com.hypertars.neighborChat.model.Friends" parameterType="java.lang.Integer">
