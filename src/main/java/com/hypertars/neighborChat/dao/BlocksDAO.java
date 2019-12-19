@@ -9,8 +9,6 @@ import java.util.List;
 @Mapper
 public interface BlocksDAO {
 
-    Blocks selectByBid(@Param("bid") int bid);
-
     /**
      * Display all blocks
      * @return Blocks blocks model

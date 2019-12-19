@@ -52,7 +52,7 @@ public class BlockController extends NBCBaseController {
             public NBCResult<Object> execute() throws Exception {
                 Users user = loginUsers.get();
                 UserBlock userBlock = userService.getUserBlockByUid(user.getUid());
-                Map<String, List<Users>> usersList = userService.getUsersByHid(blocksDAO.selectByBid(userBlock.getBid()).getHid());
+                Map<String, List<Users>> usersList = userService.getUsersByHid(blocksDAO.getBlockByBid(userBlock.getBid()).getHid());
                 NBCResult<Object> result = new NBCResult<>();
                 result.setResultObj(usersList);
                 return result;
@@ -80,7 +80,7 @@ public class BlockController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 int bid = userBlockDAO.getUserBlocksByUid(loginUsers.get().getUid()).getBid();
-                List<BlockApplication> blockApplications = blockApplicationDAO.selectByBidStatus(bid, true);
+                //List<BlockApplication> blockApplications = blockApplicationDAO.selectByBidStatus(bid, true);
                 NBCResult<Object> result = new NBCResult<>();
                 result.setResultObj(blockApplications);
                 return result;

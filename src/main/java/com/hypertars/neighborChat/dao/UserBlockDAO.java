@@ -1,6 +1,5 @@
 package com.hypertars.neighborChat.dao;
 
-import com.hypertars.neighborChat.model.Blocks;
 import com.hypertars.neighborChat.model.UserBlock;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -14,18 +13,10 @@ public interface UserBlockDAO {
 
     List<UserBlock> getUserBlocksByUid(@Param("uid") int uid);
 
-    List<Blocks> getBlocksByHid(@Param("hid") int hid);
-
-    void update(UserBlock userBlock);
-
-    void insert(UserBlock userBlock);
-
     /**
-     * user exists block
+     * set all userBlock inactive (exit all blocks)
      * @param uid user id
      */
-    void exitBlock(@Param("uid") int uid);
-
     void setAllUserBlocksInactive(@Param("uid") int uid);
 
     /**

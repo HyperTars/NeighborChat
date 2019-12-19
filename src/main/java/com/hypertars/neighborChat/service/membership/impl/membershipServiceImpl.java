@@ -99,7 +99,7 @@ public class membershipServiceImpl implements membershipService {
      */
     @Override
     public boolean quitBlock(int uid) {
-        userBlockDAO.exitBlock(uid);
+        userBlockDAO.setAllUserBlocksInactive(uid);
         return true;
     }
 
@@ -292,6 +292,16 @@ public class membershipServiceImpl implements membershipService {
     @Override
     public Blocks getBlockByBid(int bid) {
         return blocksDAO.getBlockByBid(bid);
+    }
+
+    /**
+     * get block by hid
+     * @param hid hood id
+     * @return list of blocks
+     */
+    @Override
+    public List<Blocks> getBlockByHid(int hid) {
+        return blocksDAO.getBlocksByHid(hid);
     }
 
     /**

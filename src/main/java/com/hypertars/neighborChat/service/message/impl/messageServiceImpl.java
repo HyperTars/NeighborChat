@@ -153,6 +153,11 @@ public class messageServiceImpl implements messageService {
     }
 
     @Override
+    public Recipient getRecipientByMsgid(int msgid) {
+        return recipientDAO.getRecipientByMsgid(msgid);
+    }
+
+    @Override
     public List<MailBox> getMailBoxByUid(int uid) {
         return mailBoxDAO.getAllMsgthreadByUid(uid);
     }

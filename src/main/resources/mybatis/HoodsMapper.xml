@@ -2,26 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.BlockApplicationDAO">
 
-    <sql id = "HoodsCols">
-        hid, hname, SW, NE
-    </sql>
-
-    <sql id = "HoodsTable">
-        Hoods
-    </sql>
-
     <select id="getHoodByHid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
-        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" />
+        SELECT hid, hname, SW, NE FROM Hoods
         WHERE hid = #{hid};
     </select>
 
     <select id="getHoodByBid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
-        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" /> NATURAL JOIN Blocks
+        SELECT hid, hname, SW, NE FROM Hoods NATURAL JOIN Blocks
         WHERE bid = #{bid};
     </select>
 
+    <select id="getHoodByUid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
+        SELECT hid, hname, SW, NE FROM Hoods NATURAL JOIN Blocks JOIN UserBlock USING (bid)
+        WHERE uid = #{uid};
+    </select>
+
     <select id="getAllHoods" resultType="com.hypertars.neighborChat.model.Hoods">
-        SELECT <include refid="HoodsCols" /> FROM <include refid="HoodsTable" />;
+        SELECT hid, hname, SW, NE FROM Hoods;
     </select>
 
 </mapper>

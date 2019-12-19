@@ -9,14 +9,12 @@ import java.util.List;
 @Mapper
 public interface UsersDAO {
 
-    Users selectByUid(@Param("uid") int uid);
-
-    void insert(Users users);
-
-    void update(Users users);
-
+    /**
+     * select user by uname to check if uname is available
+     * @param uname user name
+     * @return user
+     */
     Users selectByUName(@Param("uname") String uname);
-
 
     /**
      * check whether uname is already exists
@@ -30,9 +28,8 @@ public interface UsersDAO {
      * register user
      *
      * @param user user model
-     * @return 1 or 0
      */
-    boolean userReg(Users user);
+    void userReg(Users user);
 
     /**
      * user auth with uname or email
@@ -61,15 +58,13 @@ public interface UsersDAO {
      * update an user info into db
      *
      * @param user user model
-     * @return 1 or 0
      */
-    boolean updateInfo(Users user);
+    void updateInfo(Users user);
 
     /**
      * update lastLog
-     * @return 1 or 0
      */
-    boolean updateLastLog();
+    void updateLastLog();
 
     /**
      * Select users profiles from current user's same building

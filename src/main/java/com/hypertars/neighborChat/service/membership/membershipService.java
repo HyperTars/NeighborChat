@@ -35,8 +35,9 @@ public interface membershipService {
     List<UserBlock> notifyNewBlockMember (int uid);
 
     /** basic loads */
-    Blocks getBlockByBid (int bid);
     Blocks getBlockByUid (int uid);
+    Blocks getBlockByBid (int bid);
+    List<Blocks> getBlockByHid (int uid);
     List<Blocks> getAllBlocks ();
     Hoods getHoodByUid (int uid);
     Hoods getHoodByBid (int bid);

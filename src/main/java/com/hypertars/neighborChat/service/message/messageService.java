@@ -2,6 +2,7 @@ package com.hypertars.neighborChat.service.message;
 
 import com.hypertars.neighborChat.model.MailBox;
 import com.hypertars.neighborChat.model.Message;
+import com.hypertars.neighborChat.model.Recipient;
 import com.hypertars.neighborChat.model.Reply;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface messageService {
     Message getMessageByMsgid (int msgid);
     List<Message> getMessageByRecipient (int recipient);
     List<Message> getMessageByAuthor (int author);
+    Recipient getRecipientByMsgid (int msgid);
 
     /** mailbox */
     List<MailBox> getMailBoxByUid (int uid);
