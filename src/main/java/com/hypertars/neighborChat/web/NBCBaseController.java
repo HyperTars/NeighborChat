@@ -80,7 +80,7 @@ public class NBCBaseController {
             loginUsers.set(user);
 
         } catch (Exception e) {
-            throw new NBCException("用户未登录，请求无session信息", NBCResultCodeEnum.USER_NOT_LOGIN_IN);
+            throw new NBCException("User not logged in，redirect to log in page...", NBCResultCodeEnum.USER_NOT_LOGIN_IN);
         }
     }
 
