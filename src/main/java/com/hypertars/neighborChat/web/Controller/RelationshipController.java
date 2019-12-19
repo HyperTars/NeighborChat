@@ -98,7 +98,7 @@ public class RelationshipController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 int recipient = Integer.parseInt(request.getParameter("recipient"));
-                String txt = equest.getParameter("txt");
+                String txt = request.getParameter("txt");
                 if (relationshipService.checkFriendApplicationExist(user.getUid(), recipient)) {
                     res.setResultObj("friend application already exists");
                     return res;
