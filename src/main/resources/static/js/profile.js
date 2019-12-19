@@ -11,11 +11,23 @@ $(document).ready(function(e) {
             }
             else {
                 $("#upper_right_name").html(callback.resultObj.uname);
+                $("#userName").html(callback.resultObj.uname);
+                $("#avatar").attr("src", callback.resultObj.photo);
                 $("#photo").attr("src", callback.resultObj.photo);
+                $("#password").val(callback.resultObj.passwd);
+                $("#email").val(callback.resultObj.email);
+                $("#fName").val(callback.resultObj.fName);
+                $("#lName").val(callback.resultObj.lName);
+                $("#addr1").val(callback.resultObj.addr1);
+                $("#addr2").val(callback.resultObj.addr2);
+                $("#intro").html(callback.resultObj.intro);
+
+                if (callback.resultObj.notify == 1) $("#email_receive").attr("checked", "true");
+                $("#nRange").get(0).selectedIndex = callback.resultObj.nRange; 
             }
         },
         error: function() {
-            alert("No such user, or wrong password!");
+            alert("Error!");
         }
     });
 
@@ -29,5 +41,7 @@ $(document).ready(function(e) {
         }
         clearAllCookie();
     })
+
+
 });
 

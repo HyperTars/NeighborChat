@@ -52,11 +52,11 @@
                             href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="../static/plugins/images/users/varun.jpg" alt="user-img"
-                                width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
+                        <a class="profile-pic" href="#"> <img id = "avatar" src = "../static/plugins/images/users/varun.jpg" alt="user-img"
+                            width="36" class="img-circle"><b id = "upper_right_name" class="hidden-xs">Steave</b></a>
                     </li>
                     <li>
-                        <a href="dashboard.html"><b class="hidden-xs">Log Out</b></a>
+                        <a href="login.html"><b id = "logout" class="hidden-xs">Log Out</b></a>
                     </li>
                 </ul>
             </div>
@@ -120,10 +120,10 @@
                             <div class="user-bg"> <img width="100%" alt="user" src="../static/plugins/images/large/img1.jpg">
                                 <div class="overlay-box">
                                     <div class="user-content">
-                                        <a href="javascript:void(0)"><img src="../static/plugins/images/users/genu.jpg"
+                                        <a href="#"><img id = "photo" src="../static/plugins/images/users/varun.jpg"
                                                 class="thumb-lg img-circle" alt="img"></a>
-                                        <h4 class="text-white">User Name</h4>
-                                        <h5 class="text-white">Block Name</h5>
+                                        <h4 id = "userName" class="text-white">User Name</h4>
+                                        <h5 id = "blockName" class="text-white">Block Name</h5>
                                     </div>
                                 </div>
                             </div>
@@ -149,43 +149,43 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Password</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line">
+                                        <input id = "password" value = "hhh" type="password" value="password" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Email</label>
                                     <div class="col-md-12">
-                                        <input type="email" placeholder="Email Address" class="form-control form-control-line">
+                                        <input id = "email" value = "hhh" type="email" placeholder="Email Address" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">First Name</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="First Name" class="form-control form-control-line">
+                                        <input id = "fName" value = "hhh" type="text" placeholder="First Name" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Last Name</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Last Name" class="form-control form-control-line">
+                                        <input id = "lName" value = "hhh" type="text" placeholder="Last Name" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Address Line 1</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="street and number, P.O. box, c/o." class="form-control form-control-line" name="addr1" id="addr1">
+                                        <input type="text" value = "hhh" placeholder="street and number, P.O. box, c/o." class="form-control form-control-line" name="addr1" id="addr1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Address Line 2</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="apartment, suite, unit, building, floor, etc." class="form-control form-control-line" name="addr2" id="addr2">
+                                        <input type="text" value = "hhh" placeholder="apartment, suite, unit, building, floor, etc." class="form-control form-control-line" name="addr2" id="addr2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Introduction</label>
                                     <div class="col-md-12">
-                                        <textarea rows="3" class="form-control form-control-line" placeholder="Introduce yourself here"></textarea>
+                                        <textarea id = "intro" rows="3" class="form-control form-control-line" placeholder="Introduce yourself here">hhh</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -197,20 +197,20 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Notification</label>
                                     <div class="col-md-12">
-                                        Notify new messages by Email &nbsp;  <input type="checkbox" class="form-control-line" id = "email_receive">
+                                        Notify new messages by Email &nbsp;  <input type="checkbox" value = 1 class="form-control-line" id = "email_receive">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-12">Re-choose neighbor range(Notice: only people in the range you specify can see your profile!)</label>
                                     <div class="col-sm-12">
-                                        <select class="form-control form-control-line">
+                                        <select class="form-control form-control-line" id = "nRange">
                                             <option>Same Building</option>
                                             <option>Same Block</option>
                                             <option>Same Hood</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id = "update">
                                     <div class="col-sm-12">
                                         <button class="btn btn-success">Update Profile</button>
                                     </div>
@@ -237,6 +237,9 @@
     <script src="../static/js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../static/js/custom.min.js"></script>
+
+    <script src="../static/js/profile.js"></script>
+    <script src="../static/js/jquery.cookie.js"></script>
 </body>
 
 </html>
