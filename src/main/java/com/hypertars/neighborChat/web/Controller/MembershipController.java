@@ -32,6 +32,22 @@ public class MembershipController extends NBCBaseController {
     @Resource
     private RelationshipService relationshipService;
 
+    @RequestMapping(value = "getCurrentBlockInfo", produces = "text/script;charset=UTF-8")
+    public String currentBlock(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int bid = membershipService.getCurrentMember(user.getUid()).getBid();
+                res.setResultObj(membershipService.getBlockByBid(bid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
     @RequestMapping(value = "getAllUserBlocksForCurrentUser", produces = "text/script;charset=UTF-8")
     public String getAllUserBlocksForCurrentUser(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
