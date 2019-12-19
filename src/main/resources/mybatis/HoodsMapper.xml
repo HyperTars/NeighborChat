@@ -14,7 +14,7 @@
 
     <select id="getHoodByUid" resultType="com.hypertars.neighborChat.model.Hoods" parameterType="java.lang.Integer">
         SELECT h.hid, h.hname, h.SW, h.NE FROM Hoods h JOIN Blocks USING (hid) JOIN UserBlock USING (bid)
-        WHERE uid = 9;
+        WHERE uid = #{uid};
     </select>
 
     <select id="getAllHoods" resultType="com.hypertars.neighborChat.model.Hoods">

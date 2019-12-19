@@ -77,6 +77,53 @@ public class MembershipController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "getBlockByUid", produces = "text/script;charset=UTF-8")
+    public String getBlockByUid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                int uid = Integer.parseInt(request.getParameter("uid"));
+                res.setResultObj(membershipService.getBlockByUid(uid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getBlockByBid", produces = "text/script;charset=UTF-8")
+    public String getBlockByBid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int bid = Integer.parseInt(request.getParameter("bid"));
+                res.setResultObj(membershipService.getBlockByBid(bid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getBlocksByHid", produces = "text/script;charset=UTF-8")
+    public String getBlocksByHid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int hid = Integer.parseInt(request.getParameter("hid"));
+                res.setResultObj(membershipService.getBlockByHid(hid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
     @RequestMapping(value = "blocksAvailable", produces = "text/script;charset=UTF-8")
     public String blocksAvailable(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
@@ -158,6 +205,85 @@ public class MembershipController extends NBCBaseController {
                 } else {
                     res.setResultObj("failure");
                 }
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+
+    @RequestMapping(value = "getHoodByUid", produces = "text/script;charset=UTF-8")
+    public String getHoodByUid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int uid = Integer.parseInt(request.getParameter("uid"));
+                res.setResultObj(membershipService.getHoodByUid(uid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getHoodByBid", produces = "text/script;charset=UTF-8")
+    public String getHoodByBid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int bid = Integer.parseInt(request.getParameter("bid"));
+                res.setResultObj(membershipService.getHoodByBid(bid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getHoodByHid", produces = "text/script;charset=UTF-8")
+    public String getHoodByHid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int hid = Integer.parseInt(request.getParameter("hid"));
+                res.setResultObj(membershipService.getHoodByHid(hid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getAllHoods", produces = "text/script;charset=UTF-8")
+    public String getAllHoods(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                res.setResultObj(membershipService.getAllHoods());
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getBlocksInSameHoodByUid", produces = "text/script;charset=UTF-8")
+    public String getBlocksInSameHoodByUid(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int uid = Integer.parseInt(request.getParameter("uid"));
+                res.setResultObj(membershipService.getBlocksInSameHoodByUid(uid));
                 return res;
             }
         });

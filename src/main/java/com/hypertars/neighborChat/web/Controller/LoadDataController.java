@@ -1,8 +1,7 @@
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
-import com.hypertars.neighborChat.model.Message;
-import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.model.*;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
@@ -287,6 +286,21 @@ public class LoadDataController extends NBCBaseController {
                 for (Integer msg : msgidUnread)
                     msgUnread.add(messageService.getMessageByMsgid(msg));
                 res.setResultObj(msgUnread);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "loadBlockApplicationByApplicant", produces = "text/script;charset=UTF-8")
+    public String loadBlockApplicationByApplicant (HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                res.setResultObj(membershipService.getBlockApplicationByApplicant(user.getUid()));
                 return res;
             }
         });

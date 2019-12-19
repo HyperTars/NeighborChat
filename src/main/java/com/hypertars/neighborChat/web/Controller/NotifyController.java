@@ -60,8 +60,11 @@ public class NotifyController extends NBCBaseController {
                 Users user = loginUsers.get();
                 List<BlockApplication> newBA = membershipService.notifyPassedBlockApplicationFromApplicant(user.getUid());
                 res.setResultObj(newBA);
-                for (BlockApplication ba : newBA)
+                for (BlockApplication ba : newBA) {
+                    if (!addUserBlock(ba))
+                        System.out.println("add user block failed");
                     membershipService.deleteBlockApplication(ba.getApplicant(), ba.getBid());
+                }
                 return res;
             }
         });
@@ -112,8 +115,12 @@ public class NotifyController extends NBCBaseController {
                 Users user = loginUsers.get();
                 List<FriendApplication> newFA = (relationshipService.notifyNewFriendApplicationMadeToApplicant(user.getUid()));
                 res.setResultObj(newFA);
-                for (FriendApplication fa: newFA)
+                for (FriendApplication fa: newFA) {
+                    if (fa.getDecision() == 1)
+                        if (!addFriend(fa))
+                            System.out.println("add friends to table failed");
                     relationshipService.deleteFriendApplication(fa.getApplicant(), fa.getRecipient());
+                }
                 return res;
             }
         });
@@ -130,8 +137,11 @@ public class NotifyController extends NBCBaseController {
                 Users user = loginUsers.get();
                 List<FriendApplication> newFA = (relationshipService.notifyPassedFriendApplicationFromApplicant(user.getUid()));
                 res.setResultObj(newFA);
-                for (FriendApplication fa: newFA)
+                for (FriendApplication fa: newFA) {
+                    if (!addFriend(fa))
+                        System.out.println("add friends to table failed");
                     relationshipService.deleteFriendApplication(fa.getApplicant(), fa.getRecipient());
+                }
                 return res;
             }
         });
@@ -201,6 +211,21 @@ public class NotifyController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "notifyNewBlockMember", produces = "text/script;charset=UTF-8")
+    public String notifyNewBlockMember (HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                res.setResultObj(membershipService.notifyNewBlockMember(user.getUid()));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
     @RequestMapping(value = "updateLastLog", produces = "text/script;charset=UTF-8")
     public String updateLastLog (HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
@@ -216,5 +241,14 @@ public class NotifyController extends NBCBaseController {
             }
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    private boolean addUserBlock (BlockApplication ba) {
+        relationshipService.deleteAllNeighbors(ba.getApplicant());
+        return membershipService.joinBlock(ba.getApplicant(), ba.getBid());
+    }
+
+    private boolean addFriend (FriendApplication fa) {
+        return relationshipService.addFriends(fa.getApplicant(), fa.getRecipient());
     }
 }
