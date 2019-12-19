@@ -48,13 +48,12 @@ public class UserAccountController extends NBCBaseController {
         Cookie cookie = new Cookie("userSession", session);
         cookie.setPath("/");
         response.addCookie(cookie);
-
         user = userAccountService.getUserBySession(session);
         return callback + "(" + JSON.toJSONString(user) + ")";
     }
 
-    @RequestMapping(value = "getUserInfo", produces = "text/script;charset=UTF-8")
-    public String getUserInfo(HttpServletRequest request, String callback) {
+    @RequestMapping(value = "currentUserInfo", produces = "text/script;charset=UTF-8")
+    public String currentUserInfo(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
         result = protectController(request, null, new NBCLogicCallBack() {
             @Override
