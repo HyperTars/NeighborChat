@@ -176,8 +176,8 @@ public class userAccountServiceImpl implements userAccountService {
     }
 
     @Override
-    public void updateLastLog() {
-        usersDAO.updateLastLog();
+    public void updateLastLog(int uid) {
+        usersDAO.updateLastLog(uid);
     }
 
     /**

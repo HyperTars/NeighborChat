@@ -2,38 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hypertars.neighborChat.dao.UsersDAO">
 
-    <sql id="UserCols">
-        uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
-     </sql>
-
-    <sql id="UserTable">
-        Users
-    </sql>
-
     <select id="getUserByUid" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.Integer">
-        SELECT
-        uid, <include refid="UserCols" />
-        FROM
-        <include refid="UserTable" />
-        WHERE
-        uid = #{uid}
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE uid = #{uid}
     </select>
 
-    <insert id="insert" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true"
-            keyProperty="uid">
-        INSERT INTO
-        <include refid="UserTable"/>
-        (
-        <include refid="UserCols"/>
-        )
-        VALUES (
-        #{uname}, #{passwd}, #{email}, #{fName}, #{lName}, #{addr1}, #{addr2}, #{intro}, #{photo}, #{nRange}, #{lastLog}, #{notify}
-        )
+    <select id="getUserByUName" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.String">
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE uname = #{uname}
+    </select>
+
+    <select id="checkUName" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT COUNT (uname) FROM Users
+        WHERE uname = #{uname};
+    </select>
+
+    <select id="userAuth" resultType="com.hypertars.neighborChat.model.Users" parameterType="com.hypertars.neighborChat.model.Users">
+        SELECT uid, uname, passwd, email, fName, lName, addr1, addr2, intro, photo, nRange, lastLog, notify
+        FROM Users WHERE uname = #{uname} AND email = #{email};
+    </select>
+
+    <insert id="userReg" parameterType="com.hypertars.neighborChat.model.Users" useGeneratedKeys="true" keyProperty="uid">
+        INSERT INTO Users (uname, passwd, email, fName, lName)
+        VALUES (#{uname}, #{passwd}, #{email}, #{fName}, #{lName})
     </insert>
 
-    <update id="update" parameterType="com.hypertars.neighborChat.model.Users">
-        UPDATE
-        <include refid="UserTable"/>
+    <update id="resetPasswd" parameterType="com.hypertars.neighborChat.model.Users">
+        UPDATE Users
+        SET passwd = #{passwd}
+        WHERE uid = #{uid};
+    </update>
+
+    <update id="updateInfo" parameterType="com.hypertars.neighborChat.model.Users">
+        UPDATE Users
         <set>
             <if test="uname != null">uname = #{uname},</if>
             <if test="passwd != null">passwd = #{passwd},</if>
@@ -45,21 +46,18 @@
             <if test="intro!=null">intro=#{intro},</if>
             <if test="photo != null">photo = #{photo},</if>
             <if test="nRange != null">nRange = #{nRange},</if>
-            <if test="lastLog != null">lastLog = #{lastLog},</if>
             <if test="notify != null">notify = #{notify},</if>
             uid = #{uid}
         </set>
         WHERE uid = #{uid};
     </update>
 
-    <select id="getUserByUName" resultType="com.hypertars.neighborChat.model.Users" parameterType="java.lang.String">
-        SELECT
-        uid, <include refid="UserCols" />
-        FROM
-        <include refid="UserTable" />
-        WHERE
-        uname = #{uname}
-    </select>
+    <update id="updateLastLog" parameterType="java.lang.Integer">
+        UPDATE Users
+        SET lastLog = CURRENT_TIMESTAMP
+        WHERE uid = #{uid}
+    </update>
+
 
 
 

@@ -10,6 +10,14 @@ import java.util.List;
 public interface UsersDAO {
 
     /**
+     * check whether uname is already exists
+     *
+     * @param uname user name
+     * @return Integer (count uname)
+     */
+    int checkUName(@Param("uname") String uname);
+
+    /**
      * select user by uname to check if uname is available
      * @param uname user name
      * @return user
@@ -17,12 +25,12 @@ public interface UsersDAO {
     Users getUserByUName(@Param("uname") String uname);
 
     /**
-     * check whether uname is already exists
+     * select by user id
      *
-     * @param uname user name
-     * @return Integer (count uname)
+     * @param uid user id
+     * @return user
      */
-    int checkUName(@Param("uname") String uname);
+    Users getUserByUid(@Param("uid") Integer uid);
 
     /**
      * register user
@@ -47,14 +55,6 @@ public interface UsersDAO {
     void resetPasswd(Users user);
 
     /**
-     * select by user id
-     *
-     * @param uid user id
-     * @return user
-     */
-    Users getUserByUid(@Param("uid") Integer uid);
-
-    /**
      * update an user info into db
      *
      * @param user user model
@@ -64,7 +64,7 @@ public interface UsersDAO {
     /**
      * update lastLog
      */
-    void updateLastLog();
+    void updateLastLog(@Param("uid") Integer uid);
 
     /**
      * Select users profiles from current user's same building
