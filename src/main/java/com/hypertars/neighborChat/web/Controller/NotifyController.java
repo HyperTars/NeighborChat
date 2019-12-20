@@ -244,7 +244,6 @@ public class NotifyController extends NBCBaseController {
     }
 
     private boolean addUserBlock (BlockApplication ba) {
-        relationshipService.deleteAllNeighbors(ba.getApplicant());
         return membershipService.joinBlock(ba.getApplicant(), ba.getBid());
     }
 

@@ -35,7 +35,7 @@
     <select id="notifyFriendApplicationMade" resultType="com.hypertars.neighborChat.model.FriendApplication" parameterType="java.lang.Integer">
         SELECT applicant, recipient, txt, faTime, decision
         FROM FriendApplication
-        WHERE applicant = #{uid} AND decision != -1;
+        WHERE applicant = #{applicant} AND decision != -1;
     </select>
 
     <select id="notifyNewFriendApplication" resultType="com.hypertars.neighborChat.model.FriendApplication" parameterType="java.lang.Integer">

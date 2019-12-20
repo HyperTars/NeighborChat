@@ -254,7 +254,7 @@ public class MembershipServiceImpl implements MembershipService {
         BlockApplication ba = new BlockApplication();
         ba.setApplicant(uid);
         ba.setBid(bid);
-        if (blockApplicationDAO.checkBlockApplicationExist(ba) > 0)
+        if (blockApplicationDAO.checkBlockApplicationExist(ba) == 0)
             return false;
 
         // update old info

@@ -38,7 +38,7 @@ public interface MessageDAO {
 
     int getLastMsgid();
 
-    List<Message> notifyNewMessage(@Param("author") int author);
+    List<Message> notifyNewMessage(@Param("uid") int uid);
 
-    List<Message> notifyNewReply(@Param("author") int author);
+    List<Message> notifyNewReply(@Param("uid") int uid);
 }
