@@ -153,7 +153,9 @@ public class MembershipController extends NBCBaseController {
                 BlockApplication ba = new BlockApplication();
                 ba.setBid(bid);
                 ba.setApplicant(user.getUid());
-                if (membershipService.checkBlockApplicationExist(ba)) {
+                if (bid == membershipService.getCurrentMember(user.getUid()).getBid()){
+                    res.setResultObj("You already in this block");
+                } else if (membershipService.checkBlockApplicationExist(ba)) {
                     res.setResultObj("Application Already Exists");
                 } else {
                     membershipService.addBlockApplication(user.getUid(), bid, txt);

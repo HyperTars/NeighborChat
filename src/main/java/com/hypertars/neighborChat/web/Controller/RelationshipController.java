@@ -101,9 +101,10 @@ public class RelationshipController extends NBCBaseController {
                 Users user = loginUsers.get();
                 int recipient = Integer.parseInt(request.getParameter("recipient"));
                 String txt = request.getParameter("txt");
-                if (relationshipService.checkFriendApplicationExist(user.getUid(), recipient)) {
+                if (relationshipService.checkFriendship(user.getUid(), recipient)) {
+                    res.setResultObj("Friend already exists");
+                } else if (relationshipService.checkFriendApplicationExist(user.getUid(), recipient)) {
                     res.setResultObj("friend application already exists");
-                    return res;
                 } else if (relationshipService.addFriendApplication(user.getUid(), recipient, txt)) {
                     res.setResultObj("success");
                 } else res.setResultObj("failure");
@@ -180,7 +181,7 @@ public class RelationshipController extends NBCBaseController {
                 Users user = loginUsers.get();
                 int friend = Integer.parseInt(request.getParameter("friendUid"));
                 if (!relationshipService.checkFriendship(user.getUid(), friend)) {
-                    res.setResultObj("You are not friend");
+                    res.setResultObj("Not your friend");
                 } else if (relationshipService.deleteFriend(user.getUid(), friend)) {
                     res.setResultObj("success");
                 } else res.setResultObj("failure");
