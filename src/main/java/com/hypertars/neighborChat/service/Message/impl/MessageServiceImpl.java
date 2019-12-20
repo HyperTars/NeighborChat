@@ -114,6 +114,7 @@ public class MessageServiceImpl implements MessageService {
             mailBox.setRd(false);
             mailBoxDAO.addToMailBox(mailBox);
         }
+        // including author self
         MailBox mailBox = new MailBox();
         mailBox.setMsgid(msgid);
         mailBox.setUid(author);

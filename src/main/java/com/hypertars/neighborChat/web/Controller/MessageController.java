@@ -18,14 +18,15 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("message")
 public class MessageController extends NBCBaseController {
+
     @Resource
-    private UserAccountService userService;
+    private UserAccountService userAccountService;
 
     @Resource
     private MessageService messageService;
 
     @Resource
-    private MembershipService blockService;
+    private MembershipService membershipService;
 
     @Resource
     private RelationshipService relationshipService;
@@ -60,6 +61,37 @@ public class MessageController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "getMsgidRead", produces = "text/script;charset=UTF-8")
+    public String getMsgidRead(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                res.setResultObj(messageService.getMsgidRead(user.getUid()));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "getMessageByAuthor", produces = "text/script;charset=UTF-8")
+    public String getMessageByAuthor(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int author = Integer.parseInt(request.getParameter("author"));
+                res.setResultObj(messageService.getMessageByAuthor(author));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
     @RequestMapping(value = "getReplyByThread", produces = "text/script;charset=UTF-8")
     public String getReplyByThread(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
@@ -69,7 +101,7 @@ public class MessageController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 int msgid = Integer.parseInt(request.getParameter("msgid"));
-                res.setResultObj(messageService.getRecipientByMsgid(msgid));
+                res.setResultObj(messageService.getReplyByMsgid(msgid));
                 return res;
             }
         });
@@ -113,6 +145,42 @@ public class MessageController extends NBCBaseController {
                 String coord = request.getParameter("coord");
                 if(!messageService.addReply(msgid, user.getUid(), txt, coord)) {
                     res.setResultObj("insert new reply error");
+                } else res.setResultObj("success");
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "setMessageRead", produces = "text/script;charset=UTF-8")
+    public String setMessageRead(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                int msgid = Integer.parseInt(request.getParameter("msgid"));
+                Users user = loginUsers.get();
+                if(!messageService.setMsgidRead(user.getUid(), msgid)) {
+                    res.setResultObj("set msg read error");
+                } else res.setResultObj("success");
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "setMessageUnread", produces = "text/script;charset=UTF-8")
+    public String setMessageUnread(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                int msgid = Integer.parseInt(request.getParameter("msgid"));
+                Users user = loginUsers.get();
+                if(!messageService.setMsgidUnread(user.getUid(), msgid)) {
+                    res.setResultObj("set msg unread error");
                 } else res.setResultObj("success");
                 return res;
             }

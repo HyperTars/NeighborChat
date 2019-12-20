@@ -33,5 +33,5 @@ public interface UserAccountService {
     /** load info */
     Users getUserByUid (int uid);
 
-    void updateLastLog (int uid);
+    boolean updateLastLog (int uid);
 }

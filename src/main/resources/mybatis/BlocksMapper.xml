@@ -13,7 +13,7 @@
         WHERE bid = #{bid};
     </select>
 
-    <select id="getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">-->
+    <select id="getBlocksByHid" resultType="com.hypertars.neighborChat.model.Blocks" parameterType="java.lang.Integer">
         SELECT bid, bname, hid, SW, NE FROM Blocks
         WHERE hid = #{hid};
     </select>

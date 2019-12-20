@@ -2,6 +2,7 @@ package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.hypertars.neighborChat.model.Users;
+import com.hypertars.neighborChat.service.Message.MessageService;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Relationship.RelationshipService;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
@@ -17,14 +18,15 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("relationship")
 public class RelationshipController extends NBCBaseController {
-    @Resource
-    private UserAccountService userService;
 
     @Resource
-    private com.hypertars.neighborChat.service.Message.MessageService MessageService;
+    private UserAccountService userAccountService;
 
     @Resource
-    private MembershipService blockService;
+    private MessageService messageService;
+
+    @Resource
+    private MembershipService membershipService;
 
     @Resource
     private RelationshipService relationshipService;
