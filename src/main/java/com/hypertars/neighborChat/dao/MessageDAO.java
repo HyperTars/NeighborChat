@@ -41,4 +41,6 @@ public interface MessageDAO {
     List<Message> notifyNewMessage(@Param("uid") int uid);
 
     List<Message> notifyNewReply(@Param("uid") int uid);
+
+    List<Message> searchMsgByKeyword(Message message);
 }

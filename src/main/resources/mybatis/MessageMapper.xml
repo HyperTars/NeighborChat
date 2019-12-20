@@ -38,4 +38,9 @@
         WHERE mb.uid = #{uid} AND rTime > (SELECT lastLog FROM Users WHERE uid = mb.uid);
     </select>
 
+    <select id="searchMsgByKeyword" resultType="com.hypertars.neighborChat.model.Message" parameterType="com.hypertars.neighborChat.model.Message">
+        SELECT * FROM Mailbox NATURAL JOIN Message
+        WHERE uid = #{author} AND (title LIKE #{txt} OR sub LIKE #{txt} OR txt LIKE #{txt});
+    </select>
+
 </mapper>

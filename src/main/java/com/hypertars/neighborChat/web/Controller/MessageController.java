@@ -1,6 +1,7 @@
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.hypertars.neighborChat.dao.MessageDAO;
 import com.hypertars.neighborChat.model.Message;
 import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
@@ -32,6 +33,9 @@ public class MessageController extends NBCBaseController {
 
     @Resource
     private RelationshipService relationshipService;
+
+    @Resource
+    private MessageDAO messageDAO;
 
     @RequestMapping(value = "getAllMessageThreads", produces = "text/script;charset=UTF-8")
     public String getAllMessageThreads(HttpServletRequest request, String callback) {
@@ -251,6 +255,29 @@ public class MessageController extends NBCBaseController {
                     }
                 }
                 res.setResultObj(msgSameBlock);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "searchMsgByKeyword", produces = "text/script;charset=UTF-8")
+    public String searchMsgByKeyword(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                String keyword = request.getParameter("keyword");
+                if (keyword.isEmpty()) {
+                    res.setResultObj("keyword empty!");
+                    return res;
+                }
+                Message message = new Message();
+                message.setAuthor(user.getUid());
+                message.setTxt(keyword);
+                res.setResultObj(messageDAO.searchMsgByKeyword(message));
                 return res;
             }
         });
