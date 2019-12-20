@@ -109,7 +109,7 @@ $(document).ready(function(e) {
 
                         var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname_list[i] + "</h5><span class='time'>" + mTime_list[i] + "</span><br/><span class='mail-desc'><a href = 'message_detail.html?msgid=" + msgid_list[i] + "&photo=" + uphoto_list[i] + "&uname=" + uname_list[i] + "'><h5>" + title_list[i] + "</h5>" + txt_list[i] + "</div></div>";
 
-                        if (unread_list.indexOf(msgid_list[i])) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
+                        if (unread_list.indexOf(msgid_list[i]) != -1) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
                         else $("#allMessages").append(tempRowHTML1 + tempRowHTML2);
                     }
                 });
@@ -190,7 +190,7 @@ $(document).ready(function(e) {
 
                             var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname_list[i] + "</h5><span class='time'>" + mTime_list[i] + "</span><br/><span class='mail-desc'><a href = 'message_detail.html?msgid=" + msgid_list[i] + "&photo=" + uphoto_list[i] + "&uname=" + uname_list[i] + "'><h5>" + title_list[i] + "</h5>" + txt_list[i] + "</div></div>";
 
-                            if (unread_list.indexOf(msgid_list[i])) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
+                            if (unread_list.indexOf(msgid_list[i]) == -1) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
                             else $("#allMessages").append(tempRowHTML1 + tempRowHTML2);
                         }
                     });

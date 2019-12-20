@@ -29,7 +29,7 @@ $(document).ready(function(e) {
     // friend list
     $.ajax({
         type: 'get',
-        dataType: "jsonp",
+        dataType: "jsonp",  
         jsonp: "callback", 
         url: "http://localhost:8084/loadData/loadFriendCompleteList",
         success: function(callback) {
@@ -39,7 +39,7 @@ $(document).ready(function(e) {
             for (var i = 0; i < callback.resultObj.length; i++) {
                 var uid = callback.resultObj[i].uid;
 
-                var tempRowHTML = "<li><div class='call-chat'><button class='btn btn-info btn-circle btn-lg' type='button'><a href = 'post.html?recipient=" + uid + "'><i class='fa fa-comments-o'></i></a></button><button class='btn btn-danger btn-circle btn-lg' type='button'><i class='fa fa-times'></i></button></div><a href='profile_display.html?uid=" + uid + "'><img src='" + callback.resultObj[i].photo + "' alt='user-img' class='img-circle'> <span>" + callback.resultObj[i].uname + "</span></a></li>";
+                var tempRowHTML = "<li><div class='call-chat'><button class='btn btn-info btn-circle btn-lg' type='button'><a href = 'post.html?recipient=" + uid + "'><i class='fa fa-comments-o'></i></a></button><button class='btn btn-danger btn-circle btn-lg' type='button'><a id = 'deleteFriend' href = '#'><i class='fa fa-times deleteFriend'></i></a></button></div><a href='profile_display.html?uid=" + uid + "'><img src='" + callback.resultObj[i].photo + "' alt='user-img' class='img-circle'> <span>" + callback.resultObj[i].uname + "</span></a></li>";
 
                 $("#friendList").append(tempRowHTML);
             }
@@ -49,6 +49,9 @@ $(document).ready(function(e) {
         }
     });
 
+    $(".deleteFriend").on("click", function(e) {
+        console.log("ddd");
+    });
     // block
     $.ajax({
         type: 'get',

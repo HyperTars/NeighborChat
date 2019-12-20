@@ -89,6 +89,20 @@ $(document).ready(function(e) {
         url: "http://localhost:8084/message/getMessageByThread?msgid=" + msg_id,
         success: function(callback) {
             console.log(callback);
+
+            $.ajax({
+                type: 'get',
+                dataType: "jsonp",
+                jsonp: "callback", 
+                url: "http://localhost:8084/message/setMessageRead?msgid=" + msg_id,
+                success: function(callback) {
+                    console.log(callback);
+                },
+                error: function() {
+                    alert("Error!");
+                }
+            });
+
             author = callback.resultObj.author;
             $("#profileLink").attr("href", "profile_display.html?uid=" + author);
             $("#avatar").attr("src", photo);
