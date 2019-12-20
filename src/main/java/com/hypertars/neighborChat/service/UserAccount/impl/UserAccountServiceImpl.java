@@ -117,6 +117,11 @@ public class UserAccountServiceImpl implements UserAccountService {
         return userMap.get(session);
     }
 
+    @Override
+    public void cleanUserSession() {
+        userMap.clear();
+    }
+
     /**
      * return whole user information based on uname and email, further processing
      * @param uname uname

@@ -274,6 +274,7 @@ public class MessageController extends NBCBaseController {
                     res.setResultObj("keyword empty!");
                     return res;
                 }
+                keyword = "%" + keyword + "%";
                 Message message = new Message();
                 message.setAuthor(user.getUid());
                 message.setTxt(keyword);

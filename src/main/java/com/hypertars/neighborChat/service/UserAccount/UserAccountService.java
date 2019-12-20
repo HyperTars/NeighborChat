@@ -21,6 +21,7 @@ public interface UserAccountService {
      * @return user
      */
     Users getUserBySession(String session);
+    void cleanUserSession();
 
     /** forget password */
     Users userAuth (String uname, String email);

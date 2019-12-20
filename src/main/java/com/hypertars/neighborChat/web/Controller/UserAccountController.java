@@ -71,6 +71,12 @@ public class UserAccountController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(user) + ")";
     }
 
+    @RequestMapping(value = "logOut", produces = "text/script;charset=UTF-8")
+    public String logOut(HttpServletRequest request, HttpServletResponse response, String callback) {
+        userAccountService.cleanUserSession();
+        return callback + "(" + JSON.toJSONString("clean cookie succeeded") + ")";
+    }
+
     @RequestMapping(value = "userReg", produces = "text/script;charset=UTF-8")
     public String userReg(HttpServletRequest request, String callback) {
         String uname = request.getParameter("uname");
