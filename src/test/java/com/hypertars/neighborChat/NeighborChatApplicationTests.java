@@ -1,8 +1,6 @@
 package com.hypertars.neighborChat;
 
-import com.hypertars.neighborChat.dao.BlocksDAO;
-import com.hypertars.neighborChat.dao.UserBlockDAO;
-import com.hypertars.neighborChat.dao.UsersDAO;
+import com.hypertars.neighborChat.dao.*;
 import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -18,13 +16,40 @@ import javax.annotation.Resource;
 class NeighborChatApplicationTests {
 
     @Resource
-    private UsersDAO usersDAO;
+    private BlockApplicationDAO blockApplicationDAO;
 
     @Resource
     private BlocksDAO blocksDAO;
 
     @Resource
+    private FriendApplicationDAO friendApplicationDAO;
+
+    @Resource
+    private FriendsDAO friendsDAO;
+
+    @Resource
+    private HoodsDAO hoodsDAO;
+
+    @Resource
+    private MailBoxDAO mailBoxDAO;
+
+    @Resource
+    private MessageDAO messageDAO;
+
+    @Resource
+    private NeighborsDAO neighborsDAO;
+
+    @Resource
+    private RecipientDAO recipientDAO;
+
+    @Resource
     private UserBlockDAO userBlockDAO;
+
+    @Resource
+    private ReplyDAO replyDAO;
+
+    @Resource
+    private UsersDAO usersDAO;
 
     @Resource
     private UserAccountService userService;
