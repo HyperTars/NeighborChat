@@ -118,29 +118,30 @@
                     
                     <div class="col-md-12 col-xs-12">
                         <div class="white-box">
-                            <form class="form-horizontal form-material" action = "dashboard.html">
+                            <form class="form-horizontal form-material">
                                 <div class="form-group">
                                     <label class="col-md-12">Title</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Input message's title" class="form-control form-control-line">
+                                        <input id = "inputTitle" type="text" placeholder="Input message's title" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Subject</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Input message's subject" class="form-control form-control-line">
+                                        <input id = "inputSubject" type="text" placeholder="Input message's subject" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Text</label>
                                     <div class="col-md-12">
-                                        <textarea rows="8" class="form-control form-control-line" placeholder="Input message's text"></textarea>
+                                        <textarea id = "inputText" rows="8" class="form-control form-control-line" placeholder="Input message's text"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-12">Select your message's receiver range:</label>
                                     <div class="col-sm-12">
-                                        <select class="form-control form-control-line">
+                                        <select id = "rRange" class="form-control form-control-line">
+                                            <option>Particular</option>
                                             <option>All friends</option>
                                             <option>All neighbors</option>
                                             <option>All people in the block</option>
@@ -157,7 +158,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type = "submit" class="btn btn-success">Post Message</button>
+                                        <input id = "submit" type = "submit" value = "Post Message" class="btn btn-success">
                                     </div>
                                 </div>
                             </form>
@@ -182,7 +183,7 @@
     <script src="../static/js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../static/js/custom.min.js"></script>
-    <script src = "../static/js/myMap.js"></script>
+    <!-- <script src = "../static/js/myMap.js"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuumuAQ19P2grC89fnlOD9aRgJHC48gw&callback=initMap" async defer></script>
 
     <script src="../static/js/post.js"></script>

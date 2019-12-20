@@ -24,8 +24,9 @@ function initMap() {
     　　    title: 'Hello World!'
     　　});
 
+        console.log(currentLatLng);
+        
         marker.setMap(map);
-
     });
 
     map2 = new google.maps.Map(document.getElementById('map2'), {
