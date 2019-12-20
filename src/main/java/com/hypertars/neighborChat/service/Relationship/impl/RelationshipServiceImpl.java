@@ -266,8 +266,7 @@ public class RelationshipServiceImpl implements RelationshipService {
      */
     @Override
     public List<FriendApplication> notifyNewFriendApplicationToRecipient(int recipient) {
-        friendApplicationDAO.notifyNewFriendApplication(recipient);
-        return null;
+        return friendApplicationDAO.notifyNewFriendApplication(recipient);
     }
 
     /**

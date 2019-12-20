@@ -49,7 +49,7 @@ public interface FriendApplicationDAO {
      * notify recipient if new friend application
      * @param recipient recipient uid
      */
-    void notifyNewFriendApplication(@Param("recipient") int recipient);
+    List<FriendApplication> notifyNewFriendApplication(@Param("recipient") int recipient);
 
     /**
      * add new friend application (if not exists)

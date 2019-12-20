@@ -10,7 +10,7 @@
         WHERE uidB = #{uid};
     </select>
 
-    <select id="getFriendsFromBlock">
+    <select id="getFriendsFromBlock" resultType="com.hypertars.neighborChat.model.Friends" parameterType="java.lang.Integer">
         SELECT uidA, uidB, fTime FROM Friends
         WHERE uidA = #{uid} AND uidB in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}))
         UNION
@@ -18,7 +18,7 @@
         WHERE uidB = #{uid} AND uidA in (SELECT uid FROM UserBlock WHERE bid = (SELECT bid FROM UserBlock WHERE uid = #{uid}));
     </select>
 
-    <select id="getFriendsFromHood">
+    <select id="getFriendsFromHood" resultType="com.hypertars.neighborChat.model.Friends" parameterType="java.lang.Integer">
         SELECT uidA, uidB, fTime FROM Friends
         WHERE uidA = #{uid} AND uidB in
         (SELECT uid FROM Blocks NATURAL JOIN UserBlock WHERE hid =

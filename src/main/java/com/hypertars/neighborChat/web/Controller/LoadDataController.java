@@ -250,8 +250,10 @@ public class LoadDataController extends NBCBaseController {
             @Override
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
+                int bid = 1;
+                bid = Integer.parseInt(request.getParameter("bid"));
                 Users user = loginUsers.get();
-                res.setResultObj(relationshipService.getUsersByBid(user.getUid()));
+                res.setResultObj(relationshipService.getUsersByBid(bid));
                 return res;
             }
         });

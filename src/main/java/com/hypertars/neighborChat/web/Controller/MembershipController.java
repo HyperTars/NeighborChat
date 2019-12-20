@@ -202,6 +202,7 @@ public class MembershipController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 if (membershipService.quitBlock(user.getUid())) {
+                    relationshipService.deleteAllNeighbors(user.getUid());
                     res.setResultObj("success");
                 } else {
                     res.setResultObj("failure");
