@@ -51,18 +51,20 @@ public class UserAccountController extends NBCBaseController {
         user.setPasswd(passEncode);
         Users selectedUser = usersDAO.getUserByUName(user.getUname());
         NBCResult<Object> res = new NBCResult<>();
+
         if (selectedUser == null) {
             res.setSuccess(false);
             res.setResultDesc("no such user");
             res.setResultObj("no such user, check user name");
-            return callback + "(" + JSON.toJSONString(res) + ")";
+            return JSON.toJSONString(res);
         }
         if (!selectedUser.getPasswd().equals(user.getPasswd())){
             res.setSuccess(false);
             res.setResultDesc("username and password do not match");
             res.setResultObj("username and password do not match");
-            return callback + "(" + JSON.toJSONString(res) + ")";
+            return JSON.toJSONString(res);
         }
+
         String session = userAccountService.loginIn(user);
         Cookie cookie = new Cookie("userSession", session);
         cookie.setPath("/");
