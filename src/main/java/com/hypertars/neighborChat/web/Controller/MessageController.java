@@ -95,6 +95,22 @@ public class MessageController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @RequestMapping(value = "getMessageByThread", produces = "text/script;charset=UTF-8")
+    public String getMessageByThread(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int msgid = Integer.parseInt(request.getParameter("msgid"));
+                res.setResultObj(messageService.getMessageByMsgid(msgid));
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
     @RequestMapping(value = "getReplyByThread", produces = "text/script;charset=UTF-8")
     public String getReplyByThread(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
