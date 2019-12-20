@@ -125,6 +125,63 @@ $(document).ready(function(e) {
         }
     });
 
+
+    // block members
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback",
+        url: "http://localhost:8084/loadData/loadAllUsersFromSameBlock",
+        success: function(callback) {
+            console.log(callback);
+
+            $("#blockMembersTable").empty();
+
+            for (var i = 0; i < callback.resultObj.length; i++) {
+                var id = callback.resultObj[i].uid;
+                var fName = callback.resultObj[i].fName;
+                var lName = callback.resultObj[i].lName;
+                var name = fName + "     " + lName;
+                var uName = callback.resultObj[i].uname;
+
+                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html'>@" + uName + "</a></td></tr>";
+                $("#blockMembersTable").append(tempRowHTML);
+            }
+        },
+        error: function(e) {
+            console.log(e);
+            alert("Error!");
+        }
+    });
+
+    // hood members
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback",
+        url: "http://localhost:8084/loadData/loadAllUsersFromSameHood",
+        success: function(callback) {
+            console.log(callback);
+
+            $("#hoodMembersTable").empty();
+
+            for (var i = 0; i < callback.resultObj.length; i++) {
+                var id = callback.resultObj[i].uid;
+                var fName = callback.resultObj[i].fName;
+                var lName = callback.resultObj[i].lName;
+                var name = fName + "     " + lName;
+                var uName = callback.resultObj[i].uname;
+
+                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html'>@" + uName + "</a></td></tr>";
+                $("#hoodMembersTable").append(tempRowHTML);
+            }
+        },
+        error: function(e) {
+            console.log(e);
+            alert("Error!");
+        }
+    });
+
     // blocks available
     $.ajax({
         type: 'get',
