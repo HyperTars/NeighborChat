@@ -9,7 +9,7 @@
 
     <select id="getMsgByMsgid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
         SELECT msgid, author, rRange, mtime, title, sub, txt, coord FROM Message
-        WHERE msgid = #{uid};
+        WHERE msgid = #{msgid};
     </select>
 
     <select id="getAllMsgByUid" resultType="com.hypertars.neighborChat.model.Message" parameterType="java.lang.Integer">
