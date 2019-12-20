@@ -1,37 +1,37 @@
 var eventCoord;
 var map;
 var marker;
+function initMap() {
+    myLatLng = {lat: 40.693809, lng: -73.986622}
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 14
+    });
 
+    marker = new google.maps.Marker({
+　　　　　position: myLatLng,
+　　　　　map: map,
+　　　　　title: 'Hello World!'
+　　});
+
+    google.maps.event.addListener(map,'click',function(event) {
+        if (marker != null) marker.setMap(null);
+        
+        currentLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
+        marker = new google.maps.Marker({
+    　　    position: currentLatLng,
+    　　    map: map,
+    　　    title: 'Hello World!'
+    　　});
+        eventCoord = currentLatLng.lat + "%2C" + currentLatLng.lng
+        console.log(eventCoord);
+        
+        marker.setMap(map);
+    });
+}
 
 $(document).ready(function(e) {
-    function initMap() {
-        myLatLng = {lat: 40.693809, lng: -73.986622}
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: myLatLng,
-            zoom: 14
-        });
-    
-        marker = new google.maps.Marker({
-    　　　　　position: myLatLng,
-    　　　　　map: map,
-    　　　　　title: 'Hello World!'
-    　　});
-    
-        google.maps.event.addListener(map,'click',function(event) {
-            if (marker != null) marker.setMap(null);
-            
-            currentLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
-            marker = new google.maps.Marker({
-        　　    position: currentLatLng,
-        　　    map: map,
-        　　    title: 'Hello World!'
-        　　});
-            eventCoord = currentLatLng.lat + "%2C" + currentLatLng.lng
-            console.log(eventCoord);
-            
-            marker.setMap(map);
-        });
-    }
+
     initMap();
     
     $.ajax({
@@ -84,7 +84,6 @@ $(document).ready(function(e) {
                 e.preventDefault();
             }
         });
-        e.preventDefault();
     });
 
     $("#logout").on("click", function() {
