@@ -2,6 +2,7 @@ package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.hypertars.neighborChat.model.BlockApplication;
+import com.hypertars.neighborChat.model.UserBlock;
 import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Message.MessageService;
@@ -285,7 +286,12 @@ public class MembershipController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 int uid = Integer.parseInt(request.getParameter("uid"));
-                res.setResultObj(membershipService.getBlocksInSameHoodByUid(uid));
+                UserBlock cub = membershipService.getCurrentMember(uid);
+                if (cub == null) {
+                    res.setResultObj("user not in any block");
+                } else {
+                    res.setResultObj(membershipService.getBlocksInSameHoodByUid(uid));
+                }
                 return res;
             }
         });

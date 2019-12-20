@@ -22,7 +22,7 @@
         VALUES (#{msgid}, #{uid}, #{rd});
     </insert>
 
-    <select id="getMailBoxByMsgid" parameterType="java.lang.Integer">
+    <select id="getMailBoxByMsgid" resultType="com.hypertars.neighborChat.model.MailBox" parameterType="java.lang.Integer">
         SELECT uid, msgid, rd FROM MailBox
         WHERE msgid = #{msgid};
     </select>

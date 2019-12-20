@@ -207,7 +207,7 @@ public class MessageServiceImpl implements MessageService {
         MailBox mailbox = new MailBox();
         mailbox.setUid(uid);
         mailbox.setMsgid(msgid);
-        mailBoxDAO.setMsgthreadRead(mailbox);
+        mailBoxDAO.setMsgthreadUnread(mailbox);
         return true;
     }
 
@@ -222,7 +222,7 @@ public class MessageServiceImpl implements MessageService {
         MailBox mailbox = new MailBox();
         mailbox.setUid(uid);
         mailbox.setMsgid(msgid);
-        mailBoxDAO.setMsgthreadUnread(mailbox);
+        mailBoxDAO.setMsgthreadRead(mailbox);
         return true;
     }
 

@@ -86,7 +86,8 @@ public class MessageController extends NBCBaseController {
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
-                int author = Integer.parseInt(request.getParameter("author"));
+                int author = 0;
+                author = Integer.parseInt(request.getParameter("author"));
                 res.setResultObj(messageService.getMessageByAuthor(author));
                 return res;
             }
