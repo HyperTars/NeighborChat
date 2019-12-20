@@ -26,18 +26,18 @@ $(document).ready(function(e) {
         }
     });
 
-    // $.ajax({
-    //     type: 'get',
-    //     dataType: "jsonp",
-    //     jsonp: "callback", 
-    //     url: "http://localhost:8084/user/getMsgidUnread",
-    //     success: function(callback) {
-    //         console.log(callback);
-    //     },
-    //     error: function() {
-    //         alert("Error!");
-    //     }
-    // });
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback", 
+        url: "http://localhost:8084/user/getMsgidUnread",
+        success: function(callback) {
+            console.log(callback);
+        },
+        error: function() {
+            alert("Error!");
+        }
+    });
 
     $.ajax({
         type: 'get',
