@@ -102,20 +102,15 @@ $(document).ready(function(e) {
             newlat = parseFloat(recordLatLng[0]);
             newlng = parseFloat(recordLatLng[1]);
 
-            marker = new google.maps.Marker({
-        // 　　    position: {lat: parseFloat(recordLatLng[0]), lng: parseFloat(recordLatLng[1])},
-                position: {lat: newlat, lng: newlng},
-        　　    map: map,
-                title: 'Hello World!'
-        　　});
 
-            if (callback.resultObjcoord == "" || callback.resultObj.coord == null);
+
+            if (callback.resultObj.coord == "" || callback.resultObj.coord == null) $("#mapContainer").empty();
             else {
-            //     marker = new google.maps.Marker({
-            // 　　　　　position: {lat: 40.693809, lng: -73.986622},
-            // 　　　　　map: map,
-            // 　　　　　title: 'Hello World!'
-            // 　　});
+                marker = new google.maps.Marker({
+                    position: {lat: newlat, lng: newlng},
+            　　     map: map,
+                    title: 'Hello World!'
+            　　});
             }
         },
         error: function() {
