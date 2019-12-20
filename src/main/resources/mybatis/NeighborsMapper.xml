@@ -4,7 +4,7 @@
 
     <select id="getNeighbors" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="java.lang.Integer">
         SELECT uidA, uidB, nTime FROM Neighbors
-        WHERE uidA = {#uid};
+        WHERE uidA = #{uid};
     </select>
 
     <select id="getNeighborsFromBlock" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="java.lang.Integer">
