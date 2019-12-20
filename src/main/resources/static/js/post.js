@@ -8,7 +8,7 @@ function initMap() {
     myLatLng = {lat: 40.693809, lng: -73.986622}
     map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
-        zoom: 14
+        zoom: 8
     });
 
     marker = new google.maps.Marker({

@@ -121,6 +121,8 @@ $(document).ready(function(e) {
         }
     });
 
+
+
     $("#logout").on("click", function() {
         function clearAllCookie() {
             var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
