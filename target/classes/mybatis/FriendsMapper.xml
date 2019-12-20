@@ -38,7 +38,7 @@
         WHERE uidB = #{uid} AND fTime &lt; (SELECT ubTime FROM UserBlock WHERE uid = #{uid} AND status = TRUE LIMIT 1);
     </select>
 
-    <select id="checkFriends" resultType="com.hypertars.neighborChat.model.Friends" parameterType="com.hypertars.neighborChat.model.Friends">
+    <select id="checkFriends" resultType="java.lang.Integer" parameterType="com.hypertars.neighborChat.model.Friends">
         SELECT COUNT(*) FROM Friends
         WHERE (uidA = #{uidA} AND uidB = #{uidB}) OR (uidA = #{uidB} AND uidB = #{uidA});
     </select>

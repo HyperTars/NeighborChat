@@ -73,7 +73,8 @@ public class RelationshipServiceImpl implements RelationshipService {
         FriendApplication fa = new FriendApplication();
         fa.setApplicant(applicant);
         fa.setRecipient(recipient);
-        return friendApplicationDAO.checkFriendApplication(fa) > 0;
+        int count = friendApplicationDAO.checkFriendApplication(fa);
+        return count > 0;
     }
 
     /**
@@ -220,7 +221,7 @@ public class RelationshipServiceImpl implements RelationshipService {
      */
     @Override
     public boolean addNeighbor(int uidA, int uidB) {
-        if (checkFriendship(uidA, uidB)) {
+        if (checkNeighborExist(uidA, uidB)) {
             return true;
         }
         Neighbors neighbors = new Neighbors();
@@ -238,7 +239,7 @@ public class RelationshipServiceImpl implements RelationshipService {
      */
     @Override
     public boolean deleteNeighbor(int uidA, int uidB) {
-        if (!checkFriendship(uidA, uidB)) {
+        if (!checkNeighborExist(uidA, uidB)) {
             return true;
         }
         Neighbors neighbors = new Neighbors();

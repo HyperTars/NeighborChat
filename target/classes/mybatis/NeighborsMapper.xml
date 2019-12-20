@@ -21,13 +21,13 @@
         (SELECT hid FROM UserBlock NATURAL JOIN Blocks WHERE uid = #{uid}));
     </select>
 
-    <select id="checkNeighbors" resultType="com.hypertars.neighborChat.model.Neighbors" parameterType="com.hypertars.neighborChat.model.Neighbors">
+    <select id="checkNeighbor" resultType="java.lang.Integer" parameterType="com.hypertars.neighborChat.model.Neighbors">
         SELECT COUNT(*)
         FROM Neighbors
         WHERE uidA = #{uidA} AND uidB = #{uidB};
     </select>
 
-    <insert id="addNeighbors" parameterType="com.hypertars.neighborChat.model.Neighbors">
+    <insert id="addNeighbor" parameterType="com.hypertars.neighborChat.model.Neighbors">
         INSERT INTO Neighbors (uidA, uidB)
         VALUES (#{uidA}, #{uidB});
     </insert>

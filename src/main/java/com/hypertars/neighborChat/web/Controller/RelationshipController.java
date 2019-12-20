@@ -113,6 +113,12 @@ public class RelationshipController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    /**
+     * decide friend application as recipient
+     * @param request applicant - uid / decision: true or false
+     * @param callback callback
+     * @return result
+     */
     @RequestMapping(value = "decideFriendApplication", produces = "text/script;charset=UTF-8")
     public String decideFriendApplication(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();
@@ -123,6 +129,10 @@ public class RelationshipController extends NBCBaseController {
                 Users user = loginUsers.get();
                 int applicant = Integer.parseInt(request.getParameter("applicant"));
                 boolean decision = Boolean.parseBoolean(request.getParameter("decision"));
+                if (!relationshipService.checkFriendApplicationExist(applicant, user.getUid())) {
+                    res.setResultObj("friend application does not exist");
+                    return res;
+                }
                 if (!decision) {
                     if (relationshipService.rejectFriendApplication(applicant, user.getUid()))
                         res.setResultObj("reject application succeeded");
@@ -169,9 +179,9 @@ public class RelationshipController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 int friend = Integer.parseInt(request.getParameter("friendUid"));
-                if (!relationshipService.checkFriendship(user.getUid(), friend))
+                if (!relationshipService.checkFriendship(user.getUid(), friend)) {
                     res.setResultObj("You are not friend");
-                if (relationshipService.deleteFriend(user.getUid(), friend)) {
+                } else if (relationshipService.deleteFriend(user.getUid(), friend)) {
                     res.setResultObj("success");
                 } else res.setResultObj("failure");
                 return res;
@@ -189,9 +199,9 @@ public class RelationshipController extends NBCBaseController {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
                 int neighbor = Integer.parseInt(request.getParameter("neighborUid"));
-                if (!relationshipService.checkNeighborExist(user.getUid(), neighbor))
+                if (!relationshipService.checkNeighborExist(user.getUid(), neighbor)) {
                     res.setResultObj("Not your neighbor");
-                if (relationshipService.deleteNeighbor(user.getUid(), neighbor)) {
+                } else if (relationshipService.deleteNeighbor(user.getUid(), neighbor)) {
                     res.setResultObj("success");
                 } else res.setResultObj("failure");
                 return res;
