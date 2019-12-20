@@ -1,6 +1,7 @@
 package com.hypertars.neighborChat.web.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.hypertars.neighborChat.model.Message;
 import com.hypertars.neighborChat.model.Users;
 import com.hypertars.neighborChat.service.Membership.MembershipService;
 import com.hypertars.neighborChat.service.Message.MessageService;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RestController
 @RequestMapping("message")
@@ -123,6 +125,8 @@ public class MessageController extends NBCBaseController {
                 String sub = request.getParameter("sub");
                 String txt = request.getParameter("txt");
                 String coord = request.getParameter("coord");
+                if (!coord.isEmpty())
+                    coord = '('+coord+')';
                 if (!messageService.addNewMsg(recipient, user.getUid(), rRange, title, sub, txt, coord)) {
                     res.setResultObj("insert new message error");
                 } else res.setResultObj("success");
@@ -187,4 +191,53 @@ public class MessageController extends NBCBaseController {
         });
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
+
+    @RequestMapping(value = "countNewMessageFromHood", produces = "text/script;charset=UTF-8")
+    public String countNewMessageFromHood(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int msgSameHood = 0;
+                List<Users> usersSameHood = relationshipService.getUsersInSameHoodByUid(user.getUid());
+                for (Users userSameHood : usersSameHood) {
+                    List<Message> tmsg = messageService.getMessageByAuthor(userSameHood.getUid());
+                    for (Message msg : tmsg) {
+                        if (msg.getrRange() == 4 && msg.getMtime().after(user.getLastLog()));
+                            msgSameHood++;
+                    }
+                }
+                res.setResultObj(msgSameHood);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
+    @RequestMapping(value = "countNewMessageFromBlock", produces = "text/script;charset=UTF-8")
+    public String countNewMessageFromBlock(HttpServletRequest request, String callback) {
+        NBCResult<Object> result = new NBCResult<>();
+        result = protectController(request, null, new NBCLogicCallBack() {
+            @Override
+            public NBCResult<Object> execute() throws Exception {
+                NBCResult<Object> res = new NBCResult<>();
+                Users user = loginUsers.get();
+                int msgSameBlock = 0;
+                List<Users> usersSameBlock = relationshipService.getUsersInSameBlockByUid(user.getUid());
+                for (Users userSameBlock : usersSameBlock) {
+                    List<Message> tmsg = messageService.getMessageByAuthor(userSameBlock.getUid());
+                    for (Message msg : tmsg) {
+                        if (msg.getrRange() == 3 && msg.getMtime().after(user.getLastLog()));
+                        msgSameBlock++;
+                    }
+                }
+                res.setResultObj(msgSameBlock);
+                return res;
+            }
+        });
+        return callback + "(" + JSON.toJSONString(result) + ")";
+    }
+
 }
