@@ -19,6 +19,19 @@ $(document).ready(function(e) {
         }
     });
 
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback", 
+        url: "http://localhost:8084/loadData/loadFriendCompleteList",
+        success: function(callback) {
+            console.log(callback);
+        },
+        error: function() {
+            alert("Load messages error!");
+        }
+    });
+
     $("#logout").on("click", function() {
         function clearAllCookie() {
             var keys = document.cookie.match(/[^ =;]+(?=\=)/g);

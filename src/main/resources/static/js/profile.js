@@ -26,7 +26,7 @@ $(document).ready(function(e) {
                 $("#addr2").val(callback.resultObj.addr2);
                 $("#intro").html(callback.resultObj.intro);
 
-                if (callback.resultObj.notify == 1) $("#email_receive").attr("checked", "true");
+                if (callback.resultObj.notify == 1) $("#email_receive").attr("checked", true);
                 $("#nRange").get(0).selectedIndex = callback.resultObj.nRange; 
             }
         },
@@ -82,7 +82,6 @@ $(document).ready(function(e) {
             
             success: function(callback) {
                 console.log(callback);
-                window.location.href ="profile.html";
             },
             error: function(e) {
                 console.log(e);
@@ -98,7 +97,18 @@ $(document).ready(function(e) {
         
         success: function(callback) {
             console.log(callback);
+            $("#password").val(callback.resultObj.passwd);
+            $("#email").val(callback.resultObj.email);
+            $("#fName").val(callback.resultObj.fName);
+            $("#lName").val(callback.resultObj.lName);
+            $("#addr1").val(callback.resultObj.addr1);
+            $("#addr2").val(callback.resultObj.addr2);
+            $("#intro").html(callback.resultObj.intro);
+
+            if (callback.resultObj.notify == 1) $("#email_receive").attr("checked", true);
+            else $("#email_receive").attr("checked", false);
             
+            $("#nRange").get(0).selectedIndex = callback.resultObj.nRange;
         },
         error: function(e) {
             console.log(e);
