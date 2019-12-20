@@ -184,6 +184,7 @@ $(document).ready(function(e) {
         }
     });
 
+
     // blocks available
     $.ajax({
         type: 'get',
@@ -196,7 +197,7 @@ $(document).ready(function(e) {
             $("#blockAvailable").empty();
 
             for (var i = 0; i < callback.resultObj.length; i++) {
-                var tempRowHTML = "<tr><td>" + callback.resultObj[i].bid + "</td><td>" + callback.resultObj[i].bname + "</td><td><div class='form-group'><div class='col-sm-12'><button class='btn btn-success'>Send</button></div></div></td></tr>";
+                var tempRowHTML = "<tr><td>" + callback.resultObj[i].bid + "</td><td>" + callback.resultObj[i].bname + "</td><td><div class='form-group'><div class='col-sm-12'><button class='btn btn-success' onclick = 'sendApplication()'>Send</button></div></div></td></tr>";
 
                 $("#blockAvailable").append(tempRowHTML);
             }
@@ -206,6 +207,23 @@ $(document).ready(function(e) {
             alert("Error!");
         }
     });
+
+    // function sendApplication() {
+    //     $.ajax({
+    //         type: 'get',
+    //         dataType: "jsonp",
+    //         jsonp: "callback",
+    //         url: "http://localhost:8084/membership/applyBlock",
+    //         success: function(callback) {
+    //             console.log(callback);
+    //         },
+    //         error: function(e) {
+    //             console.log(e);
+    //             alert("Error!");
+    //         }
+    //     });
+    // }
+
 
     // leave block
     $("#leaveBlock").on("click", function() {
