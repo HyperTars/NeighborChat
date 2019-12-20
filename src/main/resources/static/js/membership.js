@@ -82,9 +82,9 @@ $(document).ready(function(e) {
             if (callback.resultObj != null) {
                 $("#allApplications").empty();
                 
-
+                var uid;
                 for (var i = 0; i < callback.resultObj.length; i++) {
-                    var uphoto, uname;
+                    var uphoto, uname, uid;
                     var applicant = callback.resultObj[i].applicant;
                     var appliTime = convertTime(callback.resultObj[i].baTime);
                     var appliTXT = callback.resultObj[i].txt;
@@ -99,6 +99,8 @@ $(document).ready(function(e) {
                             console.log(callback);
                             uname = callback.resultObj.fName + "    " + callback.resultObj.lName;
                             uphoto = callback.resultObj.photo;
+                            uid = callback.resultObj.uid;
+
                         },
                         error: function(e) {
                             console.log(e);
@@ -107,10 +109,10 @@ $(document).ready(function(e) {
                     });
 
                     $.when(myajax).done(function(){
-                        var tempRowHTML1 = "<div class='user-img'> <a href='profile_display.html'><img src=" + uphoto + " alt='user' class='img-circle'></a></div>"
+                        var tempRowHTML1 = "<div class='comment-body'><div class='user-img'> <a href='profile_display.html?uid=" + uid + "'><img src=" + uphoto + " alt='user' class='img-circle'></a></div>"
 
                         var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname + "</h5><span class='time'>" + appliTime
-                         + "</span><br/><span class='mail-desc'>" + appliTXT + "</span> <a href='#' class='btn btn btn-rounded btn-default btn-outline m-r-5'><i class='ti-check text-success m-r-5'></i>Approve</a><a href='#' class='btn-rounded btn btn-default btn-outline'><i class='ti-close text-danger m-r-5'></i> Reject</a></div>";
+                         + "</span><br/><span class='mail-desc'>" + appliTXT + "</span> <a href='#' class='btn btn btn-rounded btn-default btn-outline m-r-5'><i class='ti-check text-success m-r-5'></i>Approve</a><a href='#' class='btn-rounded btn btn-default btn-outline'><i class='ti-close text-danger m-r-5'></i> Reject</a></div></div>";
     
                         $("#allApplications").append(tempRowHTML1 + tempRowHTML2);
                     });
@@ -142,9 +144,9 @@ $(document).ready(function(e) {
                 var fName = callback.resultObj[i].fName;
                 var lName = callback.resultObj[i].lName;
                 var name = fName + "     " + lName;
-                var uName = callback.resultObj[i].uname;
+                var uName = callback.resultObj[i].uname
 
-                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html'>@" + uName + "</a></td></tr>";
+                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html?uid=" + id + "'>@" + uName + "</a></td></tr>";
                 $("#blockMembersTable").append(tempRowHTML);
             }
         },
@@ -172,7 +174,7 @@ $(document).ready(function(e) {
                 var name = fName + "     " + lName;
                 var uName = callback.resultObj[i].uname;
 
-                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html'>@" + uName + "</a></td></tr>";
+                var tempRowHTML = "<tr><td>" + id + "</td><td>" + name + "</td><td><a href='profile_display.html?uid=" + id + "'>@" + uName + "</a></td></tr>";
                 $("#hoodMembersTable").append(tempRowHTML);
             }
         },

@@ -21,12 +21,16 @@ $("#form").submit(function (e) {
         url: "http://localhost:8084/user/loginIn?uname=" + InputName + "&pass=" + InputPassword,
         success: function(callback) {
             console.log(callback);
+            if (callback.resultDesc == "username and password do not match") {
+                alert("No such user, or wrong password!");
+                return;
+            }
 
             $.cookie('cookieName', 'userSession');
             window.location.href ="dashboard.html";
         },
         error: function() {
-            alert("No such user, or wrong password!");
+            
         }
     });
     e.preventDefault();

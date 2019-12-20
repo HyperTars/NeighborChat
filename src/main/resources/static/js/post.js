@@ -2,6 +2,8 @@ var eventCoord;
 var map;
 var marker;
 
+var isInBlock = false;
+
 function initMap() {
     myLatLng = {lat: 40.693809, lng: -73.986622}
     map = new google.maps.Map(document.getElementById('map'), {
@@ -52,6 +54,39 @@ $(document).ready(function(e) {
         }
     });
 
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback",
+        url: "http://localhost:8084/membership/getCurrentBlockInfo",
+        success: function(callback) {
+            console.log(callback);
+    
+            if (callback.resultObj != null) {
+                isInBlock = true;
+            }
+            else {
+                alert("You need to join a block to post!")
+                window.location.href ="membership.html";
+            }
+        },
+        error: function(e) {
+            console.log(e);
+            alert("Error!");
+        }
+    });
+
+    function getParams(key) {
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    };
+
+    var recipient = getParams("recipient");
+
     $("#submit").on("click", function(e) {
         var inputTitle = $("#inputTitle").val();
         var inputSubject = $("#inputSubject").val();
@@ -62,10 +97,15 @@ $(document).ready(function(e) {
             return;
         }
 
-        var recipient;
         if ($("#rRange").val() != "Particular") recipient = 0;
-        else recipient = 6;
-        
+        else if (recipient != null) {
+            recipient = recipient;
+        }
+        else if (recipient == null) {
+            alert("Cannot post particular message without specifying someone");
+            window.location.href ="post.html";
+        }
+
         var temprRange;
         if ($("#rRange").val() == "Particular") temprRange = 0;
         else if ($("#rRange").val() == "All friends") temprRange = 1;

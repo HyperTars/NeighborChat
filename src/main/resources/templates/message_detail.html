@@ -131,11 +131,15 @@
                             <h3 class="box-title">Messages</h3>
                             <div class="comment-center p-t-10">
                                 <div class="comment-body">
-                                    <div class="user-img"> <a href="profile_display.html"><img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"></a>
+                                    <div class="user-img"> <a id = "profileLink" href="profile_display.html"><img id = "avatar" src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"></a>
                                     </div>
                                     <div class="comment-body">
-                                        <h5>Pavan kumar</h5><span class="time">10:20 AM   20  may 2016</span>
-                                        <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus.
+                                        
+                                        <h5 id = "uname" >Pavan kumar</h5><span id = "time" class="time">10:20 AM   20  may 2016</span>
+                                        <br/>
+                                        <h5 id = "title">Title</h5>
+
+                                        <span id = "text" class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus.
                                         Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean
                                         commodo dui pellentesque molestie feugiat Donec ac condimentum massa. Etiam pellentesque pretium
                                         lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.
@@ -143,7 +147,7 @@
                                         pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.
                                         Aenean commodo dui pellentesque molestie feugiat</span>
 
-                                        <div class="white-box">
+                                        <div id = "mapContainer" class="white-box">
                                             <div id="map" class="gmaps"></div>
                                         </div>
                                     </div>
@@ -160,7 +164,7 @@
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Replies</h3>
-                            <div class="comment-center p-t-10">
+                            <div id = "allReplies" class="comment-center p-t-10">
                                 <div class="comment-body">
                                     <div class="user-img"> <img src="../static/plugins/images/users/pawandeep.jpg" alt="user" class="img-circle">
                                     </div>
@@ -197,7 +201,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Reply</label>
                                     <div class="col-md-12">
-                                        <textarea rows="8" class="form-control form-control-line" placeholder="Add your reply here..."></textarea>
+                                        <textarea id = "reply_txt" rows="8" class="form-control form-control-line" placeholder="Add your reply here..."></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -205,9 +209,10 @@
                                         <div id="map2" class="gmaps"></div>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type = "submit" class="btn btn-success">Post Reply</button>
+                                        <input id = "submit" value = "submit" class="btn btn-success">
                                     </div>
                                 </div>
                             </form>
@@ -244,10 +249,10 @@
     <script src="../static/js/custom.min.js"></script>
     <script src="../static/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 
-    <script src = "../static/js/myMap.js"></script>
+    <!-- <script src = "../static/js/myMap.js"></script> -->
+    <script src="../static/js/message_detail.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuumuAQ19P2grC89fnlOD9aRgJHC48gw&callback=initMap" async defer></script>
 
-    <script src="../static/js/message_detail.js"></script>
     <script src="../static/js/jquery.cookie.js"></script>
 </body>
 

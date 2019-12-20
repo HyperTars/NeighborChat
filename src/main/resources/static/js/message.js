@@ -60,6 +60,7 @@ $(document).ready(function(e) {
                 msgid_list = [];
                 uphoto_list = [];
                 uname_list = [];
+                uid_list = [];
                 author_list = [];
                 mTime_list = [];
                 title_list = [];
@@ -89,9 +90,11 @@ $(document).ready(function(e) {
                             console.log(callback);
                             uname = callback.resultObj.fName + "    " + callback.resultObj.lName;
                             uphoto = callback.resultObj.photo;
+                            uid = callback.resultObj.uid;
 
                             uphoto_list.push(uphoto);
                             uname_list.push(uname);
+                            uid_list.push(uid);
                         },
                         error: function(e) {
                             console.log(e);
@@ -102,9 +105,9 @@ $(document).ready(function(e) {
                 
                 $.when(myajax).done(function(){
                     for (var i = 0; i < message_count; i++) {
-                        var tempRowHTML1 = "<div class='comment-body'><div class='user-img'> <a href='profile_display.html'><img src=" + uphoto_list[i] + " alt='user' class='img-circle'></a></div>"
+                        var tempRowHTML1 = "<div class='comment-body'><div class='user-img'> <a href='profile_display.html?uid=" + uid_list[i] + "'><img src=" + uphoto_list[i] + " alt='user' class='img-circle'></a></div>"
 
-                        var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname_list[i] + "</h5><span class='time'>" + mTime_list[i] + "</span><br/><span class='mail-desc'><a href = 'message_detail.html'><h5>" + title_list[i] + "</h5>" + txt_list[i] + "</div></div>";
+                        var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname_list[i] + "</h5><span class='time'>" + mTime_list[i] + "</span><br/><span class='mail-desc'><a href = 'message_detail.html?msgid=" + msgid_list[i] + "&photo=" + uphoto_list[i] + "&uname=" + uname_list[i] + "'><h5>" + title_list[i] + "</h5>" + txt_list[i] + "</div></div>";
 
                         if (unread_list.indexOf(msgid_list[i])) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
                         else $("#allMessages").append(tempRowHTML1 + tempRowHTML2);
