@@ -30,9 +30,14 @@ $(document).ready(function(e) {
         type: 'get',
         dataType: "jsonp",
         jsonp: "callback", 
-        url: "http://localhost:8084/user/getMsgidUnread",
+        url: "http://localhost:8084/message/getMsgidUnread",
         success: function(callback) {
             console.log(callback);
+            if (callback.resultObj != null) {
+                for (var i = 0; i < callback.resultObj.length; i++) {
+                    unread_list.push(callback.resultObj[i]);
+                }
+            }
         },
         error: function() {
             alert("Error!");
@@ -52,6 +57,7 @@ $(document).ready(function(e) {
 
                 message_count = callback.resultObj.length;
 
+                msgid_list = [];
                 uphoto_list = [];
                 uname_list = [];
                 author_list = [];
@@ -61,11 +67,13 @@ $(document).ready(function(e) {
 
                 for (var i = 0; i < callback.resultObj.length; i++) {
                     var uphoto, uname;
+                    var msgid = callback.resultObj[i].msgid;
                     var author = callback.resultObj[i].author;
                     var mTime = convertTime(callback.resultObj[i].mTime);
                     var title = callback.resultObj[i].title;
                     var txt = callback.resultObj[i].txt;
 
+                    msgid_list.push(msgid);
                     author_list.push(author);
                     mTime_list.push(mTime);
                     title_list.push(title);
@@ -98,7 +106,8 @@ $(document).ready(function(e) {
 
                         var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname_list[i] + "</h5><span class='time'>" + mTime_list[i] + "</span><br/><span class='mail-desc'><a href = 'message_detail.html'><h5>" + title_list[i] + "</h5>" + txt_list[i] + "</div></div>";
 
-                        $("#allMessages").append(tempRowHTML1 + tempRowHTML2);
+                        if (unread_list.indexOf(msgid_list[i])) $("#allMessages").append("<b>" + tempRowHTML1 + tempRowHTML2 + "</b>");
+                        else $("#allMessages").append(tempRowHTML1 + tempRowHTML2);
                     }
                 });
             }

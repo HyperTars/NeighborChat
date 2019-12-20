@@ -23,6 +23,42 @@ $(document).ready(function(e) {
         }
     });
 
+    // block number
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback", 
+        url: "http://localhost:8084/message/countNewMessageFromBlock",
+        success: function(callback) {
+            console.log(callback);
+            if (callback.resultObj != null) {
+                $("#block_count").html(callback.resultObj);
+            }
+            else $("#block_count").html("0");
+        },
+        error: function() {
+            alert("Error!");
+        }
+    });
+
+    // hood number
+    $.ajax({
+        type: 'get',
+        dataType: "jsonp",
+        jsonp: "callback", 
+        url: "http://localhost:8084/message/countNewMessageFromHood",
+        success: function(callback) {
+            console.log(callback);
+            if (callback.resultObj != null) {
+                $("#hood_count").html(callback.resultObj);
+            }
+            else $("#hood_count").html("0");
+        },
+        error: function() {
+            alert("Error!");
+        }
+    });
+
     particular_msg = [];
     friend_msg = [];
     neighbor_msg = [];
