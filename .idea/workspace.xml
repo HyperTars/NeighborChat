@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="new Controller">
+    <list default="true" id="0fce3e33-82e6-4c5c-a3e6-97669af0d84c" name="Default Changelist" comment="update XSS &amp; SQL Filter">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/filter/XssHttpServletRequestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/filter/XssHttpServletRequestWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/NBCBaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/membership.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/membership.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/message_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/message_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/profile_display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile_display.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/relationship.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/relationship.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/message_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile_display.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/relationship.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/relationship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/membership.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/membership.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/dao/MessageDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/dao/MessageDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/UserAccount/UserAccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/UserAccount/UserAccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/UserAccount/impl/UserAccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/service/UserAccount/impl/UserAccountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MembershipController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/Controller/UserAccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/NBCBaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hypertars/neighborChat/web/NBCBaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/membership.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/membership.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/message_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/message_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/relationship.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/relationship.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/message.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +81,7 @@
         <option value="Tag Library Descriptor" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -99,6 +135,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.hypertars.neighborChat" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hypertars.neighborChat.web.Controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.NeighborChatApplication">
@@ -185,77 +224,8 @@
       <workItem from="1575825094428" duration="1570000" />
       <workItem from="1576681395120" duration="25053000" />
       <workItem from="1576711531004" duration="33252000" />
-      <workItem from="1576779971247" duration="28717000" />
-    </task>
-    <task id="LOCAL-00001" summary="update">
-      <created>1575725887937</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1575725887937</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1575727341580</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1575727341580</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1575728208314</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728208314</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update">
-      <created>1575728239315</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728239315</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1575728733120</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1575728733120</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1575729197274</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1575729197274</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update">
-      <created>1575729363734</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1575729363734</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update">
-      <created>1575759621216</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1575759621216</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update">
-      <created>1575761310333</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1575761310333</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1575761391120</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1575761391120</updated>
+      <workItem from="1576779971247" duration="14075000" />
+      <workItem from="1576805441912" duration="35387000" />
     </task>
     <task id="LOCAL-00011" summary="update">
       <created>1575762104874</created>
@@ -495,7 +465,112 @@
       <option name="project" value="LOCAL" />
       <updated>1576779548247</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="user password check">
+      <created>1576808426213</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1576808426213</updated>
+    </task>
+    <task id="LOCAL-00046" summary="update NeighborsMapper.xml">
+      <created>1576809633566</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1576809633566</updated>
+    </task>
+    <task id="LOCAL-00047" summary="update NeighborsMapper.xml">
+      <created>1576811229038</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1576811229038</updated>
+    </task>
+    <task id="LOCAL-00048" summary="update MessageController">
+      <created>1576847695203</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1576847695204</updated>
+    </task>
+    <task id="LOCAL-00049" summary="repair msg">
+      <created>1576848719053</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1576848719053</updated>
+    </task>
+    <task id="LOCAL-00050" summary="update FriendApplication">
+      <created>1576850406523</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1576850406524</updated>
+    </task>
+    <task id="LOCAL-00051" summary="update MessageController">
+      <created>1576851831273</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1576851831273</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update RelationshipController">
+      <created>1576853649087</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1576853649087</updated>
+    </task>
+    <task id="LOCAL-00053" summary="update MessageController">
+      <created>1576856270488</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1576856270489</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update MessageController">
+      <created>1576858328282</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1576858328282</updated>
+    </task>
+    <task id="LOCAL-00055" summary="update MessageController">
+      <created>1576862365677</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1576862365678</updated>
+    </task>
+    <task id="LOCAL-00056" summary="add Xss Filter">
+      <created>1576863367427</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1576863367427</updated>
+    </task>
+    <task id="LOCAL-00057" summary="update XSS &amp; SQL Filter">
+      <created>1576865203567</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1576865203567</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update XSS &amp; SQL Filter">
+      <created>1576866141320</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1576866141320</updated>
+    </task>
+    <task id="LOCAL-00059" summary="update XSS &amp; SQL Filter">
+      <created>1576869459429</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1576869459429</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,17 +630,21 @@
     <MESSAGE value="Update services" />
     <MESSAGE value="update mybatis - all SQL checked" />
     <MESSAGE value="new Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="new Controller" />
+    <MESSAGE value="user password check" />
+    <MESSAGE value="update NeighborsMapper.xml" />
+    <MESSAGE value="repair msg" />
+    <MESSAGE value="update FriendApplication" />
+    <MESSAGE value="update RelationshipController" />
+    <MESSAGE value="update MessageController" />
+    <MESSAGE value="add Xss Filter" />
+    <MESSAGE value="update XSS &amp; SQL Filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="update XSS &amp; SQL Filter" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="180" key="#Notifications" timestamp="1576711013207">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="499" y="180" key="#Notifications/0.23.1680.1027@0.23.1680.1027" timestamp="1576711013207" />
-    <state x="310" y="128" key="#Project_Structure" timestamp="1576797482994">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="310" y="128" key="#Project_Structure/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576797482994" />
     <state x="611" y="276" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576699488364">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -574,10 +653,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="575" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576726988171" />
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576728095071">
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser" timestamp="1576865180382">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576728095071" />
+    <state x="979" y="388" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576865180382" />
     <state x="461" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576779975476">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -595,119 +674,115 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="643" y="404" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027@0.23.1680.1027" timestamp="1576770960268" />
-    <state x="674" y="134" key="CommitChangelistDialog2" timestamp="1576779547995">
+    <state x="674" y="63" width="924" height="866" key="CommitChangelistDialog2" timestamp="1576869459028">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="674" y="134" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576779547995" />
+    <state x="674" y="63" width="924" height="866" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1576869459028" />
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog" timestamp="1576711380157">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="20" y="84" width="1344" height="821" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711380157" />
-    <state width="1379" height="127" key="GridCell.Tab.0.bottom" timestamp="1576863726541">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726541" />
-    <state width="1388" height="96" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
-    <state width="1379" height="302" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1576815156089" />
-    <state width="1096" height="217" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703390" />
-    <state width="1379" height="127" key="GridCell.Tab.0.center" timestamp="1576863726540">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726540" />
-    <state width="1388" height="96" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
-    <state width="1379" height="302" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1576815156089" />
-    <state width="1096" height="217" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703389" />
-    <state width="1379" height="127" key="GridCell.Tab.0.left" timestamp="1576863726539">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726539" />
-    <state width="1388" height="96" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
-    <state width="1379" height="302" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1576815156088" />
-    <state width="1096" height="217" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703388" />
-    <state width="1379" height="127" key="GridCell.Tab.0.right" timestamp="1576863726540">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726540" />
-    <state width="1388" height="96" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
-    <state width="1379" height="302" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1576815156089" />
-    <state width="1096" height="217" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703389" />
-    <state width="1379" height="127" key="GridCell.Tab.1.bottom" timestamp="1576863726542">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726542" />
-    <state width="1388" height="96" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
-    <state width="1379" height="302" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1576815156091" />
-    <state width="1096" height="217" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703392" />
-    <state width="1379" height="127" key="GridCell.Tab.1.center" timestamp="1576863726541">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726541" />
-    <state width="1388" height="96" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
-    <state width="1379" height="302" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1576815156090" />
-    <state width="1096" height="217" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703391" />
-    <state width="1379" height="127" key="GridCell.Tab.1.left" timestamp="1576863726541">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726541" />
-    <state width="1388" height="96" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
-    <state width="1379" height="302" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1576815156090" />
-    <state width="1096" height="217" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703390" />
-    <state width="1379" height="127" key="GridCell.Tab.1.right" timestamp="1576863726542">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="127" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576863726542" />
-    <state width="1388" height="96" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
-    <state width="1379" height="302" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1576815156090" />
-    <state width="1096" height="217" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576778703391" />
-    <state width="1379" height="302" key="GridCell.Tab.2.bottom" timestamp="1576820241391">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="302" key="GridCell.Tab.2.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576820241391" />
-    <state width="1379" height="302" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1576815156092" />
-    <state width="1326" height="320" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250829" />
-    <state width="1379" height="302" key="GridCell.Tab.2.center" timestamp="1576820241390">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="302" key="GridCell.Tab.2.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576820241390" />
-    <state width="1379" height="302" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1576815156091" />
-    <state width="1326" height="320" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
-    <state width="1379" height="302" key="GridCell.Tab.2.left" timestamp="1576820241389">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="302" key="GridCell.Tab.2.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576820241389" />
-    <state width="1379" height="302" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1576815156091" />
-    <state width="1326" height="320" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250827" />
-    <state width="1379" height="302" key="GridCell.Tab.2.right" timestamp="1576820241390">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1379" height="302" key="GridCell.Tab.2.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576820241390" />
-    <state width="1379" height="302" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1576815156092" />
-    <state width="1326" height="320" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1575696250828" />
-    <state x="202" y="93" key="MergeDialog" timestamp="1576712089867">
+    <state width="988" height="214" key="GridCell.Tab.0.bottom" timestamp="1576876156841">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="202" y="93" key="MergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576712089867" />
-    <state x="501" y="206" key="MultipleFileMergeDialog" timestamp="1576811779211">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1379" height="127" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633350" />
+    <state width="1388" height="96" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
+    <state width="988" height="214" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156841" />
+    <state width="988" height="214" key="GridCell.Tab.0.center" timestamp="1576876156840">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="501" y="206" key="MultipleFileMergeDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576811779211" />
-    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576772197616" />
+    <state width="1379" height="127" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633349" />
+    <state width="1388" height="96" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
+    <state width="988" height="214" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156840" />
+    <state width="988" height="214" key="GridCell.Tab.0.left" timestamp="1576876156840">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633349" />
+    <state width="1388" height="96" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809984" />
+    <state width="988" height="214" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156840" />
+    <state width="988" height="214" key="GridCell.Tab.0.right" timestamp="1576876156841">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633350" />
+    <state width="1388" height="96" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
+    <state width="988" height="214" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156841" />
+    <state width="988" height="214" key="GridCell.Tab.1.bottom" timestamp="1576876156843">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633352" />
+    <state width="1388" height="96" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
+    <state width="988" height="214" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156843" />
+    <state width="988" height="214" key="GridCell.Tab.1.center" timestamp="1576876156842">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633351" />
+    <state width="1388" height="96" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
+    <state width="988" height="214" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156842" />
+    <state width="988" height="214" key="GridCell.Tab.1.left" timestamp="1576876156842">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633351" />
+    <state width="1388" height="96" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809985" />
+    <state width="988" height="214" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156842" />
+    <state width="988" height="214" key="GridCell.Tab.1.right" timestamp="1576876156843">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="127" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576794633352" />
+    <state width="1388" height="96" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1575861809986" />
+    <state width="988" height="214" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576876156843" />
+    <state width="997" height="225" key="GridCell.Tab.2.bottom" timestamp="1576856337792">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="302" key="GridCell.Tab.2.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576791626034" />
+    <state width="997" height="225" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576856337792" />
+    <state width="997" height="225" key="GridCell.Tab.2.center" timestamp="1576856337791">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="302" key="GridCell.Tab.2.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576791626034" />
+    <state width="997" height="225" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576856337791" />
+    <state width="997" height="225" key="GridCell.Tab.2.left" timestamp="1576856337790">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="302" key="GridCell.Tab.2.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576791626033" />
+    <state width="997" height="225" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576856337790" />
+    <state width="997" height="225" key="GridCell.Tab.2.right" timestamp="1576856337791">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1379" height="302" key="GridCell.Tab.2.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576791626034" />
+    <state width="997" height="225" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576856337791" />
+    <state x="443" y="372" key="Maven.ArtifactSearchDialog" timestamp="1576863168349">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="443" y="372" key="Maven.ArtifactSearchDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576863168349" />
+    <state x="202" y="93" key="MergeDialog" timestamp="1576874015382">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="202" y="93" key="MergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576874015382" />
+    <state x="585" y="237" key="MultipleFileMergeDialog" timestamp="1576874017533">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="501" y="206" key="MultipleFileMergeDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576790755940" />
+    <state x="585" y="237" key="MultipleFileMergeDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576874017533" />
     <state x="393" y="291" key="RollbackChangesDialog" timestamp="1575727631995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="393" y="291" key="RollbackChangesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575727631995" />
-    <state x="271" y="172" width="1024" height="722" key="SettingsEditor" timestamp="1576772779448">
+    <state x="271" y="172" width="1024" height="722" key="SettingsEditor" timestamp="1576813862309">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="271" y="172" width="1024" height="722" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576772779448" />
+    <state x="271" y="172" width="1024" height="722" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576813862309" />
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1576807341067">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576807341067" />
     <state x="627" y="237" key="VCS.ChangeListViewerDialog" timestamp="1576711422712">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="237" key="VCS.ChangeListViewerDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711422712" />
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576779570999">
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2" timestamp="1576869483791">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576779570999" />
+    <state x="292" y="245" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576869483791" />
     <state x="611" y="247" key="VcsDiffUtil.ChangesDialog" timestamp="1575759013164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -716,15 +791,23 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="472" y="291" key="chooseDestDirectoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1575758931726" />
-    <state x="593" y="401" key="com.intellij.ide.util.TipDialog" timestamp="1576711531120">
+    <state x="593" y="401" key="com.intellij.ide.util.TipDialog" timestamp="1576805454599">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="593" y="401" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576711531120" />
-    <state x="526" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576815955117">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="593" y="401" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576805454599" />
+    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576873952878">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="526" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576815955117" />
-    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576772195341" />
+    <state x="526" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1576797454561" />
+    <state x="472" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576873952878" />
+    <state x="397" y="271" width="901" height="590" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1576809202452">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="397" y="271" width="901" height="590" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1680.1027@0.23.1680.1027" timestamp="1576809202452" />
+    <state x="506" y="171" width="724" height="714" key="find.popup" timestamp="1576807461361">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="506" y="171" width="724" height="714" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576807461361" />
     <state x="412" y="304" key="git4idea.merge.GitMergeDialog" timestamp="1576711271995">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -745,12 +828,431 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="391" y="452" width="710" height="293" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576683279940" />
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576778221533">
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1576873782326">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576778221533" />
+    <state x="610" y="288" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576873782326" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserAccountController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserAccountController.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/UserAccountController.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>280</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>281</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>283</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>284</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>285</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>286</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MembershipController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>226</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>227</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>228</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>229</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>186</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/RelationshipController.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>291</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Relationship/impl/RelationshipServiceImpl.java</url>
+          <line>290</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>273</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>272</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>274</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>275</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>276</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/service/Message/impl/MessageServiceImpl.java</url>
+          <line>271</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>250</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/LoadDataController.java</url>
+          <line>282</line>
+          <properties method="execute">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/NotifyController.java</url>
+          <line>96</line>
+          <properties method="execute">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>90</line>
+          <properties method="execute">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hypertars/neighborChat/web/Controller/MessageController.java</url>
+          <line>123</line>
+          <properties method="execute">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/neighborchat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576876156790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/neighborChat$NeighborChatApplication.ic" NAME="NeighborChatApplication Coverage Results" MODIFIED="1576794633310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

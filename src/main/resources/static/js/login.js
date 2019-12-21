@@ -24,10 +24,10 @@ $("#form").submit(function (e) {
             if (callback.resultDesc == "username and password do not match") {
                 alert("No such user, or wrong password!");
                 return;
+            } else {
+                $.cookie('cookieName', 'userSession');
+                window.location.href ="dashboard.html";
             }
-
-            $.cookie('cookieName', 'userSession');
-            window.location.href ="dashboard.html";
         },
         error: function() {
             

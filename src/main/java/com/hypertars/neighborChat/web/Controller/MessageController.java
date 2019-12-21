@@ -11,6 +11,7 @@ import com.hypertars.neighborChat.service.UserAccount.UserAccountService;
 import com.hypertars.neighborChat.web.NBCBaseController;
 import com.hypertars.neighborChat.web.NBCLogicCallBack;
 import com.hypertars.neighborChat.web.NBCResult;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -131,6 +132,7 @@ public class MessageController extends NBCBaseController {
         return callback + "(" + JSON.toJSONString(result) + ")";
     }
 
+    @Transactional
     @RequestMapping(value = "addMessage", produces = "text/script;charset=UTF-8")
     public String addMessage(HttpServletRequest request, String callback) {
         NBCResult<Object> result = new NBCResult<>();

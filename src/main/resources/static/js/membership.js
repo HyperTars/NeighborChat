@@ -81,14 +81,14 @@ $(document).ready(function(e) {
 
             if (callback.resultObj != null) {
                 $("#allApplications").empty();
-                
+
                 var uid;
                 for (var i = 0; i < callback.resultObj.length; i++) {
                     var uphoto, uname, uid;
                     var applicant = callback.resultObj[i].applicant;
                     var appliTime = convertTime(callback.resultObj[i].baTime);
                     var appliTXT = callback.resultObj[i].txt;
-                    
+
                     myajax = $.ajax({
                         type: 'get',
                         dataType: "jsonp",
@@ -109,12 +109,14 @@ $(document).ready(function(e) {
                     });
 
                     $.when(myajax).done(function(){
-                        var tempRowHTML1 = "<div class='comment-body'><div class='user-img'> <a href='profile_display.html?uid=" + uid + "'><img src=" + uphoto + " alt='user' class='img-circle'></a></div>"
+                        // var tempRowHTML1 = "<div class='comment-body'><div class='user-img'> <a href='profile_display.html?uid=" + uid + "'><img src=" + uphoto + " alt='user' class='img-circle'></a></div>"
+                        //
+                        // var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname + "</h5><span class='time'>" + appliTime
+                        //  + "</span><br/><span class='mail-desc'>" + appliTXT + "</span> </div>";
+                        //
+                        // $("#allApplications").append(tempRowHTML1 + tempRowHTML2);
 
-                        var tempRowHTML2 = "<div class='mail-contnet'><h5>" + uname + "</h5><span class='time'>" + appliTime
-                         + "</span><br/><span class='mail-desc'>" + appliTXT + "</span> <a href='#' class='btn btn btn-rounded btn-default btn-outline m-r-5'><i class='ti-check text-success m-r-5'></i>Approve</a><a href='#' class='btn-rounded btn btn-default btn-outline'><i class='ti-close text-danger m-r-5'></i> Reject</a></div></div>";
-    
-                        $("#allApplications").append(tempRowHTML1 + tempRowHTML2);
+                        $("#PendingBlockApplications").empty();
                     });
                 }
             }

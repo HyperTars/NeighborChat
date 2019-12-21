@@ -149,204 +149,24 @@ $(document).ready(function(e) {
     });
 
 
-    $("#logout").on("click", function(e) {
-        function clearAllCookie() {
-            var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
-            if (keys) {
-                for (var i = keys.length; i--;)
-                    document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
-            }
-        }
-        clearAllCookie();
-
+    $("#logout").on("click", function() {
         $.ajax({
             type: 'get',
             dataType: "jsonp",
-            jsonp: "callback", 
+            jsonp: "callback",
             url: "http://localhost:8084/user/logOut",
             success: function(callback) {
-                if (callback.resultObj == "clean cookie succeeded") {
-                    console.log(callback);
-                    window.location.href ="login.html";
-                }
+                console.log(callback);
+                alert("successfully logged out");
+                window.location.href ="login.html";
             },
             error: function() {
-                alert("Clean cookie error!");
+                alert("No such user, or wrong password!");
             }
         });
     })
 
-    var timer = setInterval(function() {
-        // notify new block application as recipient
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewBlockApplicationAsRecipient",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
 
-
-        // notify accepted block application as applicant
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyAcceptedBlockApplicationAsApplicant",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-        
-        // notify rejected block application as applicant
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyRejectedBlockApplicationAsApplicant",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new friend application as recipient
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewFriendApplicationAsRecipient",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new friend application made as applicant
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewFriendApplicationMadeAsApplicant",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify accepted friend application as applicant
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyAcceptedFriendApplicationAsApplicant",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify rejected friend application as applicant
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyRejectedFriendApplicationAsApplicant",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new message
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewMessage",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new reply
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewReply",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new message or reply as thread
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewMsgOrReplyAsThread",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        // notify new block member
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/notifyNewBlockMember",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Notify error!");
-            }
-        });
-
-        
-        // update last log
-        $.ajax({
-            type: 'get',
-            dataType: "jsonp",
-            jsonp: "callback", 
-            url: "http://localhost:8084/notify/updateLastLog",
-            success: function(callback) {
-                console.log(callback);
-            },
-            error: function() {
-                alert("Update error!");
-            }
-        });
-    }, 1000)
 
 
 

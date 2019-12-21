@@ -1,10 +1,11 @@
 var eventCoord;
+var map, map2;
 
 function initMap() {
     myLatLng = {lat: 40.693809, lng: -73.986622}
     map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
-        zoom: 14
+        zoom: 8
     });
 
     marker = new google.maps.Marker({
@@ -16,7 +17,7 @@ function initMap() {
 
     map2 = new google.maps.Map(document.getElementById('map2'), {
         center: myLatLng,
-        zoom: 14
+        zoom: 8
     });
 
     marker = new google.maps.Marker({
@@ -88,6 +89,20 @@ $(document).ready(function(e) {
         url: "http://localhost:8084/message/getMessageByThread?msgid=" + msg_id,
         success: function(callback) {
             console.log(callback);
+
+            $.ajax({
+                type: 'get',
+                dataType: "jsonp",
+                jsonp: "callback", 
+                url: "http://localhost:8084/message/setMessageRead?msgid=" + msg_id,
+                success: function(callback) {
+                    console.log(callback);
+                },
+                error: function() {
+                    alert("Error!");
+                }
+            });
+
             author = callback.resultObj.author;
             $("#profileLink").attr("href", "profile_display.html?uid=" + author);
             $("#avatar").attr("src", photo);
@@ -95,11 +110,22 @@ $(document).ready(function(e) {
             $("#time").html(convertTime(callback.resultObj.mTime));
             $("#title").html(callback.resultObj.title);
             $("#text").html(callback.resultObj.txt);
+            
 
-            // if (callback.resultObjcoord == "" || callback.resultObj.coord == NULL) $("#mapContainer").empty();
-            // else {
+            recordLatLng = callback.resultObj.coord.split(",");
+            newlat = parseFloat(recordLatLng[0]);
+            newlng = parseFloat(recordLatLng[1]);
 
-            // }
+
+
+            if (callback.resultObj.coord == "" || callback.resultObj.coord == null) $("#mapContainer").empty();
+            else {
+                marker = new google.maps.Marker({
+                    position: {lat: newlat, lng: newlng},
+            　　     map: map,
+                    title: 'Hello World!'
+            　　});
+            }
         },
         error: function() {
             alert("Error!");

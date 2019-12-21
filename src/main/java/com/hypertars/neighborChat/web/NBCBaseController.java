@@ -43,13 +43,11 @@ public class NBCBaseController {
             result.setSuccess(false);
             result.setResultCode(ge.getErrorCode().getCode());
             result.setResultDesc(ge.getMessage());
-
             return result;
         } catch (Exception e) {
             result.setSuccess(false);
             result.setResultCode(NBCResultCodeEnum.SYSTEM_ERROR.getCode());
             result.setResultDesc(NBCResultCodeEnum.SYSTEM_ERROR.getDescription());
-
             return result;
         }
         result.setSuccess(true);
@@ -64,7 +62,7 @@ public class NBCBaseController {
      */
     private void verifyLogin(HttpServletRequest request) {
         try {
-            // 取出request header 中的 session 值
+            // retrieve Cookie in request header
             String session = "";
             for (Cookie cookie: request.getCookies()) {
                 if (StringUtils.equal(USER_COOKIE, cookie.getName())) {
@@ -73,12 +71,10 @@ public class NBCBaseController {
                 }
             }
             AssertUtils.stringNotEmpty(session);
-
-            // 取出缓存中的user
+            // retrieve user in session
             Users user = useraccountService.getUserBySession(session);
             AssertUtils.assertNotNull(user);
             loginUsers.set(user);
-
         } catch (Exception e) {
             throw new NBCException("User not logged in，redirect to log in page...", NBCResultCodeEnum.USER_NOT_LOGIN_IN);
         }

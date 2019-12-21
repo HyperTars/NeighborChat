@@ -204,6 +204,10 @@ public class MembershipController extends NBCBaseController {
             public NBCResult<Object> execute() throws Exception {
                 NBCResult<Object> res = new NBCResult<>();
                 Users user = loginUsers.get();
+                UserBlock cub = membershipService.getCurrentMember(user.getUid());
+                if (cub == null) {
+                    res.setResultObj("You do not belong to any block currently");
+                }
                 if (membershipService.quitBlock(user.getUid())) {
                     relationshipService.deleteAllNeighbors(user.getUid());
                     res.setResultObj("success");

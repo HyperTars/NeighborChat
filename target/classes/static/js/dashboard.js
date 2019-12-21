@@ -150,14 +150,20 @@ $(document).ready(function(e) {
 
 
     $("#logout").on("click", function() {
-        function clearAllCookie() {
-            var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
-            if (keys) {
-                for (var i = keys.length; i--;)
-                    document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+        $.ajax({
+            type: 'get',
+            dataType: "jsonp",
+            jsonp: "callback",
+            url: "http://localhost:8084/user/logOut",
+            success: function(callback) {
+                console.log(callback);
+                alert("successfully logged out");
+                window.location.href ="login.html";
+            },
+            error: function() {
+                alert("No such user, or wrong password!");
             }
-        }
-        clearAllCookie();
+        });
     })
 
 
