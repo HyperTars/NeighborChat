@@ -1,4 +1,4 @@
-# neighborChat
+# NeighborChat
 Project for NYU-CS-6083-Fall-2019
 
 ![](https://img.shields.io/badge/Java-12-green)
@@ -15,8 +15,8 @@ Project for NYU-CS-6083-Fall-2019
 ![](https://img.shields.io/badge/Bootstrap-4.3.1-blue)
 
 - Overview
-    - This project is designed to let neighbors chat and make socials through Internet. It's like a tiny Facebook for neightbors.
-    - Tech Stack: SpringBoot, Java
+    - This project is designed to let neighbors chat and make social relationships through Internet. It's like a tiny Facebook for neightbors.
+    - **Tech Stack: SpringBoot, Thymeleaf, Bootstrap, jQuery, chat.js**
 
 - Functional Designs
     1. Users should register for the service, specify where they live, post profiles, introduce themselves, upload photos and specify neighbors.
